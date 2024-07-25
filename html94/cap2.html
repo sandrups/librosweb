@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="prism.css">
+  <title>HTML, Manual de Estilo | Capítulo 2: El Lenguaje HTML</title>
+</head>
+<body> 
+
+  <a href="cap1.html">Cápitulo 1</a> &#9664; | &#9679 <a href="index.html">Indice</a> | &#9654; <a href="cap3.html">Cápitulo 3</a>
+  <hr>
+
+ <h1>Capítulo 2<br>
+    El Lenguaje HTML</h1>
+  <p>Este capítulo presenta los diversos elementos del lenguaje HTML - la sintaxis de las entidades de caracteres y las etiquetas de marcado y cómo son interpretadas por un navegador para mostrar una página. Esta descripción corresponde a la especificación recién finalizada de HTML nivel 2 y, por lo tanto, estos elementos deberían ser reconocidos por la mayoría de los navegadores gráficos que están disponibles ahora y los que estarán disponibles en el futuro a medida que la tecnología HTML continúe evolucionando. Algunas compañías ya han lanzado navegadores que van más allá de la especificación HTML nivel 2 con etiquetas para formato especial y control de estilo. Hay un debate en curso en conferencias y por correo electrónico sobre estas características y cómo extender mejor el lenguaje para todos los navegadores sin sacrificar su simplicidad. Si bien no es práctico abordar aquí todas las posibles direcciones que tomará el lenguaje, el material proporcionado en este capítulo es suficiente para presentar su información de manera profesional y atractiva.</p>
+
+  <h2>Sintaxis HTML</h2>
+  <p>Hay solo unas pocas reglas de sintaxis generales para aprender en la construcción de documentos web en HTML. Cada documento o página HTML se divide en dos partes, un encabezado y un cuerpo. El encabezado contiene información sobre el documento y el cuerpo contiene el texto del documento. Las etiquetas de marcado se utilizan para definir las dos partes, como en esta página HTML mínima:</p>
+  <pre>
+    <code class="language-html">
+      &lt;head&gt;
+      &lt;title&gt;P&aacute;gina HTML M&iacute;nima&lt;/title&gt;
+      &lt;/head&gt;
+    
+      &lt;body&gt;
+      Texto. Posiblemente con elementos HTML incrustados.
+      &lt;/body&gt;
+    </code>
+  </pre>
+  <p>En este ejemplo, la única información especificada en el encabezado del documento es el título del documento. Esto es todo lo que normalmente encontrará en el encabezado del documento. Ciertas otras etiquetas informativas pueden ir allí, pero representan características avanzadas que su servidor web puede o no soportar. El cuerpo del documento, en este ejemplo, contiene un párrafo de texto. Parece una línea de texto, pero formalmente la llamamos un párrafo porque es posible que algún lector utilizando un navegador en una ventana de visualización estrecha en su PC vea que el texto se ajuste en múltiples líneas. El término líneas tiene sentido solo en el contexto de texto pre-formateado, un estilo de marcado que preserva los saltos de línea y los espacios en blanco. De lo contrario, un párrafo de texto se ajusta a la anchura de la pantalla del lector de la misma manera que el texto del párrafo se ajusta en la mayoría de los programas de procesamiento de textos.</p>
+  <p>Cada documento o página HTML debería tener un título; preferiblemente uno corto que sea significativo en el contexto más amplio del trabajo. Con la mayoría de los navegadores, el título aparece como el título de la ventana de visualización o en la parte superior de esa ventana. Los títulos no son absolutamente requeridos; muchos documentos de texto en la Web son simplemente archivos de texto, que no contienen elementos de marcado y no tienen títulos. Mosaic y la mayoría de los otros navegadores son bastante indulgentes y le permitirán omitir las etiquetas de encabezado y cuerpo, aunque es una buena idea mantenerlas.</p>
+  <p>Hay dos tipos de elementos HTML: entidades de caracteres y etiquetas de marcado. Una entidad de carácter comienza con un ampersand (&), seguido por el nombre de una entidad predefinida o un signo de numeral, seguido por el número decimal del carácter, y, finalmente, por un punto y coma para terminar la entidad de carácter. La tilde (~), por ejemplo, se puede generar con la secuencia <code>&amp;#126;</code>.</p>
+  <p>Muchas entidades de caracteres están predefinidas con el propósito de colocar caracteres especiales en el texto, como caracteres del alfabeto ISO Latin-1 que no están definidos en ASCII, y caracteres que se necesitan para definir elementos HTML. Una lista completa de las entidades de caracteres predefinidas de HTML nivel 2 se puede encontrar en el Apéndice A. Algunas de las más útiles son:</p>
+    <pre>
+      &amp;lt; Signo de corchete angular izquierdo o menor que
+      &amp;gt;  Signo de corchete angular derecho o mayor que
+      &amp;amp; Ampersand
+    </pre>
+  <p>También son útiles:</p>
+  <pre>
+    &amp;quot; Comillas dobles
+    &amp;nbsp; Espacio de no separación
+  </pre>
+  <p>Cada etiqueta de marcado tiene un ID de etiqueta (o nombre) y posiblemente algunos atributos. Las etiquetas de marcado son vacías o no vacías. Las etiquetas no vacías actúan sobre texto encerrado en un par de etiquetas de inicio y finalización. Una etiqueta de inicio comienza con el corchete angular izquierdo (<) seguido inmediatamente por el ID de etiqueta, cualquier atributo, luego el corchete angular derecho (>) para cerrar la etiqueta. Las etiquetas de finalización son exactamente iguales, excepto que hay una barra diagonal (/) inmediatamente entre el corchete de apertura y el ID de etiqueta y las etiquetas de finalización no pueden contener atributos. Si la etiqueta es una etiqueta vacía, entonces no hay texto encerrado y se omite la etiqueta de finalización. Aquí hay algunos ejemplos de etiquetas vacías:</p>
+  <pre>
+    &lt;P&gt;      Comenzar un nuevo párrafo
+    &lt;HR&gt;     Insertar una regla horizontal
+  </pre>
+  <p>La siguiente etiqueta vacía especifica que se inserte una imagen en línea. Tiene un atributo, el atributo SRC, cuyo valor es el nombre (fuente) del archivo que contiene la imagen:</p>
+  <pre>
+    &lt;IMG SRC="company_logo.gif"&gt;
+  </pre>
+  <p>Los atributos toman la forma NOMBRE=VALOR, donde el valor es apropiado para el dominio del atributo. El valor debe estar encerrado entre comillas dobles, aunque es seguro omitir las comillas cuando el valor es un número o nombre simple. Si hay más de un atributo en una etiqueta, se separan por espacios en blanco, no por comas. Algunos atributos pueden tomar el mismo valor que el nombre del atributo. En esos casos, el atributo se puede escribir en una forma abreviada, por ejemplo:</p>
+  <pre>
+    "&lt;DL COMPACT&gt;" para &lt;DL COMPACT="COMPACT"&gt;&lt;/DL&gt;
+  </pre>
+  <p>Aquí hay algunos ejemplos de etiquetas no vacías:</p>
+  <pre>
+    &lt;TITLE&gt;Don Quixote&lt;/TITLE&gt;
+    &lt;I&gt;Esto debería aparecer en cursiva&lt;/I&gt;
+    &lt;TT&gt;Ancho fijo, fuente de máquina de escribir&lt;/TT&gt;
+    &lt;A HREF="catalog.html"&gt;nuestro catálogo actual&lt;/A&gt;
+  </pre>
+  <p>El último ejemplo de arriba es un ancla. Los anclas son etiquetas que definen los nodos de enlaces de hipertexto. En este ejemplo, la frase "nuestro catálogo actual" será resaltada por el navegador para mostrar que es un enlace. Si haces clic en ella (o la seleccionas si estás usando un navegador no gráfico), se le indicará al navegador que cargue la siguiente página de hipertexto desde el archivo catalog.html, especificado como el valor del atributo HREF (Referencia de Hipertexto). (Consulta "Anclas y enlaces" más adelante en este capítulo para obtener más información sobre los formatos de direccionamiento de hipertexto de anclas).</p>
+  <p>Aquí hay un ejemplo sencillo que ilustra el uso de etiquetas de marcado y entidades de caracteres:</p>
+  <pre>
+    <code class="language-html">
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Simple Ejemplo HTML&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY&gt;
+    &lt;H1&gt;Encabezados de nivel 1&lt;/H1&gt;
+    Mientras que las &lt;STRONG&gt;Títulos&lt;/STRONG&gt; deberían tener alguna 
+    relación con el mundo exterior, los Encabezados de nivel 1 deberían 
+    introducir las secciones principales del trabajo.
+    &lt;P&gt;
+    Este es un segundo párrafo de texto insertado para mostrar cómo se 
+    utilizan las etiquetas de párrafo para separar el texto y para señalar 
+    el uso de la etiqueta &amp;lt;STRONG&amp;gt; en el primer párrafo.
+    &lt;/BODY&gt;
+    </code>
+  </pre>
+  <p>La Figura 2.1 muestra cómo se ve este ejemplo en un Macintosh usando Mosaic con las preferencias predeterminadas.</p>
+  <figure>
+    <img src="images/fig2.1.webp" alt="fig 2.1 titulos y encabezados html">
+    <figcaption>Figura 2.1: Títulos y encabezados en HTML</figcaption>
+  </figure>
+  <p>Primero, note que el título de la página, Simple Ejemplo HTML, aparece como el título de la ventana. El cuerpo de esta página de ejemplo consiste en un encabezado de nivel 1 marcado con las etiquetas &lt;H1&gt; y &lt;/H1&gt;, y dos párrafos de texto separados por la etiqueta de párrafo, &lt;P&gt;. También puede ver cómo Mosaic ha ignorado los retornos de carro colocados en la página HTML y ha ajustado el texto para que quepa en el ancho de su ventana.</p>
+  <p>En el segundo párrafo, para que la cadena &lt;STRONG&gt; aparezca sin ser interpretada como una etiqueta, se utilizan entidades de caracteres: &amp;lt; para el signo menor que (<), y &amp;gt; para el signo mayor que (>).</p>
+  <p>Aunque el texto HTML en este ejemplo está formateado de manera ordenada, no importa dónde se coloquen las etiquetas con respecto a la página. Los siguientes segmentos HTML producirán exactamente el mismo resultado que en la ilustración anterior:</p>
+  <pre>
+    &lt;H1&gt;Encabezados Nivel 1&lt;/H1&gt;
+
+    &lt;h1&gt;
+    Encabezados Nivel 1
+    &lt;/h1&gt;
+
+    &lt;H1&gt;Encabezados Nivel 1&lt;/h1&gt;
+  </pre>
+  <p>¡Eso es correcto! Los IDs de etiqueta no distinguen mayúsculas y minúsculas. Puedes mezclar libremente letras mayúsculas y minúsculas. El espacio en blanco (espacios redundantes, tabuladores, avances de línea, retornos de carro y la mayoría de los otros caracteres de control ASCII) solo se permite después del ID de etiqueta y antes del corchete de cierre; en otras palabras, la cadena</p>
+  <pre>
+    &lt; H1 &gt;¡Incorrecto, Incorrecto, Incorrecto!&lt; /H1 &gt;
+  </pre>
+  <p>no se procesará como un encabezado. Los corchetes y su contenido serán ignorados y solo aparecerá el texto encerrado, ¡Incorrecto, Incorrecto, Incorrecto! Este es el procedimiento estándar que siguen los navegadores para la mayoría de los errores: los ignoran. Si una etiqueta de anclaje es correcta pero el enlace tiene un error, entonces Mosaic y otros navegadores mostrarán un mensaje de estado como No se pudo conectar al host remoto o No se pudo acceder al documento.</p>
+  <p>Las etiquetas generalmente se pueden anidar, por ejemplo, anclas dentro de estructuras de listas. Sin embargo, algunos anidamientos no están permitidos, por ejemplo, anclas dentro de otras anclas o un encabezado dentro de texto preformateado. Otros anidamientos están permitidos pero se desaconsejan, por ejemplo, usar una estructura de lista dentro de un encabezado o combinar etiquetas de estilo. Las siguientes dos estructuras de etiquetas, aplicando énfasis y cursivas al texto, pueden o no mostrarse de igual manera, dependiendo del navegador.</p>
+  <pre>
+    &lt;EM&gt;Noticias importantes con un &lt;I&gt;slant&lt;/I&gt;&lt;/EM&gt;
+    &lt;EM&gt;Noticias importantes con un &lt;/EM&gt;&lt;I&gt;slant&lt;/I&gt;
+  </pre>
+  <p>Puedes colocar comentarios en un documento HTML para anotar tu trabajo, así como lo harías con otros lenguajes de programación. Los comentarios son completamente ignorados por el navegador. Un comentario HTML es en realidad un comentario SGML. Comienza con la cadena &lt;!--, puede contener cualquier carácter y termina con la primera ocurrencia de la cadena --&gt;. Como regla general, coloca cada comentario en una línea separada y evitar el uso cualquiera de los caracteres especiales, como <, >, &, o !. Algunos navegadores más antiguos pueden no analizar correctamente el comentario. Los comentarios no pueden anidarse.</p>
+
+  <h2>ETIQUETAS DE FORMATO</h2>
+  <p>Las etiquetas de formato HTML se pueden dividir en dos clases generales: las que proporcionan estructura al texto de una página y las que cambian el estilo del texto. En la clase de estructura entran los encabezados, párrafos y listas. En la clase de estilo entran las etiquetas para agregar énfasis y designar estilos de fuente. Las clases son generales en el sentido de que algunas etiquetas de estructura —los encabezados, por ejemplo— implican cualquier cambio de fuente necesario para diferenciar el encabezado del resto del texto; y algunas etiquetas de estilo —cita textual, por ejemplo— implican un salto de párrafo antes y después del texto marcado.</p>
+  <h3>ENCABEZADOS</h3>
+  <p>HTML admite seis niveles de encabezados, designados por las etiquetas &lt;H1&gt;, &lt;H2&gt;, &lt;H3&gt;, &lt;H4&gt;, &lt;H5&gt; y &lt;H6&gt;. Esto es suficiente para la mayoría de las aplicaciones de hipertexto, porque gran parte de la estructura de un trabajo de hipertexto se encuentra en la red de enlaces, y se puede generar estructura adicional utilizando las diversas estructuras de listas.</p>
+  <p>H1 es el nivel más alto de encabezado, y es habitual colocar un encabezado de nivel 1 como el primer elemento en el cuerpo del documento. Un elemento de encabezado implica un cambio de estilo, incluido un salto de párrafo antes y después del encabezado, y cualquier espacio en blanco necesario para representar un encabezado de ese nivel. Agregar etiquetas de estilo a un encabezado o insertar etiquetas de párrafo para separar el encabezado no es necesario ni recomendado.</p>
+  <p>Los encabezados se deben usar en su orden jerárquico natural, como en un esquema. Aunque es legal omitir niveles de encabezado (seguir un H1 con un H3, por ejemplo), no se recomienda, ya que puede producir resultados extraños cuando se procese el documento con un analizador que no sea un navegador HTML. Aquí hay una página HTML que ilustra los seis niveles de encabezado diferentes:</p>
+  <pre>
+    <code class="language-html">
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Niveles de encabezado&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+
+    &lt;BODY&gt;
+    &lt;H1&gt;Encabezado de nivel 1&lt;/H1&gt;
+    Primer p&aacute;rrafo de texto.
+    &lt;H2&gt;Encabezado de nivel 2&lt;/H2&gt;
+    Segundo p&aacute;rrafo de texto.
+    &lt;H3&gt;Encabezado de nivel 3&lt;/H3&gt;
+    Tercer p&aacute;rrafo de texto.
+    &lt;H4&gt;Encabezado Nivel 4&lt;/H4&gt;
+    Cuarto p&aacute;rrafo de texto.
+    &lt;H5&gt;Encabezado Nivel 5&lt;/H5&gt;
+    Quinto p&aacute;rrafo de texto.
+    &lt;H6&gt;Encabezado Nivel 6&lt;/H6&gt;
+    Sexto p&aacute;rrafo de texto.
+    &lt;/BODY&gt;
+    </code>
+  </pre>
+  <p>Figura 2.2 muestra cómo se verán estos encabezados en Mosaic.</p>
+  <figure>
+    <img src="images/fig2.2.webp" alt="fig 2.2 Los seis niveles de encabezado HTML">
+    <figcaption>Figura 2.2: Los seis niveles de encabezado HTML</figcaption>
+  </figure>
+  <p>Los distintos navegadores pueden formatear la página HTML de manera diferente a como lo hace Mosaic, pero el aspecto general y la sensación de la página formateada deberían ser iguales que el ejemplo anterior para todos los navegadores gráficos.</p>
+
+  <h3>PÁRRAFOS</h3>
+
+  <p>Como se mencionó anteriormente, los retornos de carro, tabulaciones y otros espacios en blanco son ignorados por el navegador. Para marcar el inicio de un nuevo párrafo en una página HTML, debes usar la etiqueta de párrafo, <code>&lt;P&gt;</code>. La etiqueta de párrafo está vacía, es decir, no tiene una etiqueta de cierre correspondiente. Los párrafos pueden o no aparecer indentados; eso depende del navegador. La mayoría de los navegadores insertan un espacio en blanco adicional para separar un párrafo del anterior.</p>
+
+  <p>Otra forma de separar bloques de texto es con una línea dibujada a través del ancho de la página. Esto se llama una regla horizontal, y la etiqueta para esto es &lt;HR&gt;.<br>
+    Esta es una característica útil, ya que el navegador ajustará la longitud de la línea para que quepa en el ancho de la página mostrada. El siguiente ejemplo tiene etiquetas de párrafo, saltos de línea y reglas horizontales.</p>
+  <figure>
+  <pre>
+    <code class="language-html">
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;P&aacute;rrafos y Saltos de L&iacute;nea&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+
+    &lt;BODY&gt;
+    &lt;H1&gt;Doce&lt;/H1&gt;
+    &lt;HR&gt;
+    Los cinco colores ciegan la vista.&lt;BR&gt;
+    Los cinco tonos ensordecen el oído.&lt;BR&gt;
+    Los cinco sabores opacan el gusto.&lt;BR&gt;
+    Las carreras y la caza enloquecen la mente.&lt;BR&gt;
+    Las cosas preciosas nos llevan por mal camino.
+    &lt;P&gt;
+    Por lo tanto, el sabio se guía por lo que siente y no por lo que ve.&lt;BR&gt;
+    Deja eso y elige esto.
+    &lt;HR&gt;
+    &lt;/BODY&gt;
+    </code>
+  </pre>
+  <figcaption>La Figura 2.3 muestra este ejemplo.</figcaption>
+  </figure>
+  <h3>LISTAS</h3>
+  <p>HTML soporta varios tipos de estructuras de listas que se pueden usar en un documento. Una lista se define como una secuencia de párrafos, cada uno marcado con la etiqueta de elemento de lista, &lt;LI&gt;. Toda la secuencia de elementos de lista está encerrada con las etiquetas de inicio y fin apropiadas para el tipo de lista. Estas son:</p>
+  <table>
+    <tr>
+      <td><pre>&lt;OL&gt;&lt;/OL&gt;</pre></td>
+      <td>Una lista ordenada, típicamente con sangría e espacio adicional entre párrafos numerados</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;UL&gt;&lt;/UL&gt;</pre></td>
+      <td>Una lista desordenada; como una lista ordenada pero con viñetas en lugar de números</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;MENU&gt;&lt;/MENU&gt;</pre></td>
+      <td>Una lista de elementos cortos, usualmente de una línea, renderizada de forma más compacta que &lt;UL&gt;</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;DIR&gt;&lt;/DIR&gt;</pre></td>
+      <td>Una lista de elementos muy cortos, como nombres de archivo, posiblemente renderizada en múltiples columnas</td>
+    </tr>
+  </table>
+  <figure>
+    <img src="images/fig2.3.webp" alt="Figura 2.3: Párrafos y saltos de línea en HTML">
+    <figcaption>Figura 2.3: Párrafos y saltos de línea en HTML</figcaption>
+  </figure>
+  <p>Al igual que los encabezados, hay marcas de párrafo implícitas antes y después de una lista. Las listas pueden anidarse, haciéndolas ideales para implementar esquemas y tablas de contenido. Aquí hay un ejemplo utilizando listas ordenadas, desordenadas y menús:</p>
+  <pre>
+    <code class="language-html">
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Ejemplos de Listas&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY&gt;
+    &lt;H1&gt;Libro HTML&lt;/H1&gt;
+    &lt;HR&gt;
+    &lt;!--Usa encabezados para secciones principales--&gt;
+    &lt;H2&gt;Tabla de Contenidos&lt;/H2&gt;
+    &lt;H3&gt;Cap&iacute;tulos&lt;/H3&gt;
+    &lt;OL&gt;
+    &lt;LI&gt;Introducci&oacute;n
+    &lt;LI&gt;El Lenguaje
+    &lt;!--Usa vi&ntilde;etas para el siguiente nivel--&gt;
+      &lt;UL&gt;
+      &lt;LI&gt;Sintaxis
+      &lt;LI&gt;Formateo
+      &lt;/UL&gt;
+    &lt;LI&gt;Escribiendo Documentos
+    &lt;/OL&gt;
+    &lt;!--Usa un men&uacute; para el Ap&eacute;ndice--&gt;
+    &lt;H3&gt;Ap&eacute;ndix&lt;/H3&gt;
+    &lt;MENU&gt;
+    &lt;LI&gt;Ap&eacute;ndix A
+    &lt;/MENU&gt;
+    &lt;HR&gt;
+    &lt;!--  Uy. No debo olvidar firmar mi trabajo --&gt;
+    &lt;I&gt;L.Aronson&lt;/I&gt; &amp;lt;laronson@acm.org&amp;gt;
+    &lt;/BODY&gt;
+    </code>
+  </pre>
+  <p>Las indentaciones en el texto anterior están solo allí para hacer el HTML más fácil de leer; de ninguna manera afectan cómo Mosaic u otro navegador formatea el texto. Observe que no hay etiquetas de lista finales (&lt;/LI>). Puedes ponerlas pero serán ignoradas por la mayoría de los navegadores. La Figura 2.4 muestra cómo se ve el ejemplo.</p>
+  <figure>
+    <img src="images/fig2.4.webp" alt="Figura 2.4: Usando listas HTML">
+    <figcaption>Figura 2.4: Usando listas HTML</figcaption>
+  </figure>
+  <p>Hay otro tipo de lista llamada lista de definición o glosario. Es una lista de párrafos cada uno de los cuales tiene un título corto. Esto es útil para presentar una lista de elementos nombrados al lector, cada uno con un párrafo de acompañamiento de definición o explicación. Toda la lista de definición está encerrada con las etiquetas &lt;DL&gt; y &lt;/DL&gt;. Cada elemento de la lista de definición está compuesto por un par de término y definición como en el siguiente ejemplo:</p>
+  <pre>
+    <code class="language-html">
+    &lt;H2&gt;Elenco de Personajes&lt;/H2&gt;
+    &lt;DL&gt;
+    &lt;DT&gt;Orsino &lt;DD&gt;Duque de Ilyria.
+    &lt;DT&gt;Sebasti&aacute;n &lt;DD&gt;Hermano de Viola.
+    &lt;DT&gt;Antonio &lt;DD&gt;Un capit&aacute;n de mar, amigo de Sebasti&aacute;n.
+    &lt;DT&gt;Fabian &lt;DD&gt;Una estrella pop de principios de los sesenta.
+    &lt;/DL&gt;
+    </code>
+  </pre>
+  <p>La Figura 2.5 muestra cómo se ve este ejemplo en la pantalla.</p>
+  <figure>
+    <img src="images/fig2.5.webp" alt="Figura 2.5: Ejemplo de lista de definición">
+    <figcaption>Figura 2.5: Ejemplo de lista de definición</figcaption>
+  </figure>
+  <p>Las etiquetas de lista se pueden especificar con el atributo COMPACT &lt;DL COMPACT&gt;, lo que reducirá la cantidad de sangría y espacio en blanco utilizado al renderizar la lista.</p>
+  <h3>ESTILOS</h3>
+  <p>Las etiquetas de estilo son una característica de nivel 1 de HTML; pueden ser ignoradas por los navegadores de línea de comandos y otros navegadores minimalistas. Sin embargo, los navegadores gráficos deben renderizar el texto con estilo de manera diferente al texto sin formato. Las etiquetas de estilo siempre ocurren en pares de inicio y fin y se pueden anidar dentro de párrafos y listas. La mayoría de las otras etiquetas de marcado pueden ocurrir dentro de las etiquetas de estilo, aunque el uso de etiquetas que crean estructura dentro de una página - encabezados y listas, por ejemplo - deben evitarse. Estos son las etiquetas de estilo HTML más comunes:</p>
+  <table>
+    <tr>
+      <td><pre>&lt;EM&gt;&lt;/EM&gt;</pre></td>
+      <td>Énfasis, generalmente renderizado en cursiva o subrayado para resaltar ligeramente el texto del texto de fondo</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;STRONG&gt;&lt;/STRONG&gt;</pre></td>
+      <td>Énfasis fuerte, generalmente renderizado en negrita. Debe ser renderizado de manera diferente al énfasis normal</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;CITE&gt;&lt;/CITE&gt;</pre></td>
+      <td>Cita, para títulos y referencias dentro del texto, típicamente renderizado en cursiva o subrayado</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;TT&gt;&lt;/TT&gt;</pre></td>
+      <td>Máquina de escribir, un tipo de letra monoespaciado (todos los caracteres tienen la misma anchura), como Courier</td>
+    </tr>
+  </table>
+  <p>Nuevamente, diferentes navegadores renderizarán los estilos anteriores de manera diferente, y muchos navegadores no renderizarán cada estilo de forma distinta a los demás. La Figura 2.6 muestra el resultado en Mosaic de usar el texto anterior en una lista de definición (y agregar etiquetas finales).</p>
+  <figure>
+    <img src="images/fig2.6.webp" alt="Figura 2.6: Etiquetas de estilo HTML básicas">
+    <figcaption>Figura 2.6: Etiquetas de estilo HTML básicas</figcaption>
+  </figure>
+  <p>Las etiquetas en negrita, cursiva y subrayado se definen como &lt;B&gt;, &lt;I&gt; y &lt;U&gt;, respectivamente, para instancias donde se requiere un control exacto del texto - por ejemplo, cuando una parte del texto debe hacer referencia a otras partes (como "Las reglas especificadas en cursiva son opcionales"). Sin embargo, se recomienda a los autores usar las etiquetas más generales para proporcionar una mayor consistencia entre documentos de diferentes fuentes.</p>
+  <p>La etiqueta de formato de dirección, &lt;ADDRESS&gt;, se usa para firmas, elementos de dirección y otra información de autoría que generalmente aparece en la parte superior o inferior de una página. El texto de dirección normalmente se representa en cursiva y puede estar sangrado o justificado a la derecha. A diferencia de las etiquetas anteriores, la etiqueta de dirección implica un salto de párrafo antes y después del texto dentro de la etiqueta. Dentro del texto con formato de dirección, use la etiqueta de salto de línea &lt;BR&gt; en lugar de la etiqueta de párrafo &lt;P&gt; para mayor consistencia entre navegadores.</p>
+  <p>Otra etiqueta de estilo que implica saltos de párrafo antes y después es la etiqueta de cita textual &lt;BLOCKQUOTE&gt;, utilizada para citar segmentos de texto externo dentro de una página. El texto de citas textuales puede renderizarse con sangría tanto a la derecha como a la izquierda, como se muestra en la Figura 2.7 (note la dirección de dos líneas en la parte inferior):</p>
+  <figure>
+    <img src="images/fig2.7.webp" alt="Figura 2.7: Texto que contiene una cita textual seguida de una dirección">
+    <figcaption>Figura 2.7: Texto que contiene una cita textual seguida de una dirección</figcaption>
+  </figure>
+  <p>Una de las etiquetas de estilo más importantes en HTML es la etiqueta de texto preformateado. Cualquier texto entre las etiquetas de inicio y fin &lt;PRE&gt; y &lt;/PRE&gt; se dejará esencialmente como está - bueno, casi de todos modos. El texto preformateado se renderiza en una fuente de espacio fijo, y se conservan todos los saltos de línea y espacios en blanco redundantes. Esto lo hace ideal para textos formateados con columnas, como tablas, o cualquier texto en el que deba conservarse el espaciado. Los tabuladores horizontales se reconocen y expanden como si hubiera tabuladores cada 8 caracteres a lo largo de la página. Sin embargo, no se recomienda el uso de tabuladores; si puede, sustituya primero los tabuladores por espacios de longitud adecuada.</p>
+  <p>El texto preformateado implica un salto de párrafo antes y después de las etiquetas que lo definen. Sin embargo, la etiqueta de párrafo, &lt;P&gt;, nunca debe usarse dentro del texto preformateado, ni ninguna etiqueta que implique estructura, como encabezados y listas o estilos de dirección y citas en bloque. Las etiquetas de estilo cursiva, negrita y subrayado, &lt;I&gt;, &lt;B&gt; y &lt;U&gt;, y las etiquetas de anclaje son las únicas etiquetas realmente apropiadas dentro del texto preformateado. Aquí hay un ejemplo simple de texto preformateado:</p>
+
+  <pre>
+  <code class="language-html">
+  &lt;HEAD&gt;
+    &lt;TITLE&gt;Ejemplo de texto preformateado&lt;/TITLE&gt;
+  &lt;/HEAD&gt;
+  &lt;BODY&gt;
+  &lt;H2&gt;Puzzle&lt;/H2&gt;
+  &lt;PRE&gt;
+                               |\ /
+        He aquí una forma de   * * *
+              conectar los 9   | X
+    puntos utilizando sólo 4   * * *
+              líneas rectas:   |/ \
+                               *-*-*-
+  &lt;/PRE&gt;
+  &lt;/BODY&gt;
+  </code>
+  </pre>
+  
+  <p>Esto creará la pantalla que se muestra en la Figura 2.8.</p>
+  <figure>
+    <img src="images/fig2.8.webp" alt="Figura 2.8: Ejemplo de texto preformateado">
+    <figcaption>Figura 2.8: Ejemplo de texto preformateado</figcaption>
+  </figure>
+  <p>La etiqueta preformateada tiene un atributo opcional, WIDTH. Cuando se especifica, el atributo WIDTH le indica al navegador la longitud máxima de línea que se puede esperar dentro del texto preformateado. Con esta información, el navegador puede ajustar los márgenes o el tamaño de fuente para acomodar el texto. Se deben usar valores de 40, 80 o 132 para obtener los mejores resultados. Ejemplo:</p>
+  <pre>
+  <code class="language-html">
+  &lt;PRE WIDTH=80&gt; este es texto preformateado&lt;/PRE&gt;
+  </code>
+  </pre>
+  <p>Una serie de estilos están definidos por el DTD de HTML nivel 2 para su uso en manuales instructivos, documentación de sistemas informáticos y guías de usuario:</p>
+  <table>
+    <tr>
+      <td><pre>&lt;CODE&gt;&lt;/CODE&gt;</pre></td>
+      <td>Codificación—para muestras de programación informática, usualmente representado en una fuente monoespacio</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;VAR&gt;&lt;/VAR&gt;</pre></td>
+      <td>Variable—en texto instructivo, el nombre de un valor a ser suministrado por el usuario</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;KBD&gt;&lt;/KBD&gt;</pre></td>
+      <td>Teclado—una secuencia de caracteres a ser tecleada exactamente por el usuario</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;SAMP&gt;&lt;/SAMP&gt;</pre></td>
+      <td>Muestra—una secuencia de caracteres literales</td>
+    </tr>
+  </table>
+  <p>Estos dos siguientes estilos fueron propuestos para HTML nivel 2 y dejados como opcionales. Pueden ser soportados por algunos navegadores:</p>
+  <table>
+    <tr>
+      <td><pre>&lt;DFN&gt;&lt;/DFN&gt;</pre></td>
+      <td>Definición—la instancia que define un término, típicamente en negrita o cursiva</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;STRIKE&gt;&lt;/STRIKE&gt;</pre></td>
+      <td>Texto tachado, como podría aparecer en un documento legal</td>
+    </tr>
+  </table>
+  <p>El DTD de HTML plus (nivel 3) incluye estas etiquetas de estilo adicionales:</p>
+  <table>
+    <tr>
+      <td><pre>&lt;SUB&gt;&lt;/SUB&gt;</pre></td>
+      <td>Subíndice—baja el texto ligeramente; puede representarse con un tamaño de fuente menor que el texto plano</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;SUP&gt;&lt;/SUP&gt;</pre></td>
+      <td>Superíndice—eleva el texto ligeramente; puede representarse con un tamaño de fuente menor que el texto plano</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;TR&gt;&lt;/TR&gt;</pre></td>
+      <td>Times Roman—una fuente serif de espaciado proporcional</td>
+    </tr>
+    <tr>
+      <td><pre>&lt;HV&gt;&lt;/HV&gt;</pre></td>
+      <td>Helvetica—una fuente sans-serif de espaciado proporcional</td>
+    </tr>
+  </table>
+
+  <h2>ANCLAS Y ENLACES</h2>
+  <p>Las anclas son cadenas de texto que marcan los extremos de los enlaces de hipertexto. Existen varios atributos que se pueden especificar con una etiqueta de ancla; dos son de primera importancia, el atributo HREF y el atributo NAME. Todos los atributos son opcionales; Sin embargo, un ancla necesita al menos un atributo NAME u HREF para ser de utilidad. El atributo NAME especifica que el ancla es el destino de un enlace. Puede tener un valor arbitrario siempre y cuando sea único dentro del documento. El atributo HREF marca el atributo como el inicio de un enlace de hipertexto. En el formato más simple, donde tanto el inicio como el destino del enlace están dentro del mismo documento, el valor del atributo HREF es un nombre precedido por un signo numeral (#). Por ejemplo:</p>
+  <pre>
+    Las direcciones de &lt;A HREF="#fuentes"&gt;fuentes adicionales&lt;/A&gt; se pueden encontrar al final de este capítulo.
+    .
+    .
+    Finalmente, algunas &lt;A NAME="fuentes"&gt;fuentes más&lt;/A&gt; de información.
+  </pre>
+  <p>En el ejemplo anterior, la frase <em>fuentes adicionales</em> estará resaltada especialmente para indicar que la frase está activa. En Mosaic, estaría subrayada y coloreada de azul. Hacer clic en la frase hará que el navegador salte a la sección nombrada en otra parte del documento. A menudo, el destino de un enlace de hipertexto es texto que ya está marcado. En estos casos, la etiqueta ancla debe ser la más anidada. Por ejemplo, si el destino es un encabezado, use</p>
+  <pre>
+    &lt;H3&gt;&lt;A NAME="fuentes"&gt;Fuentes&lt;/A&gt;&lt;/H3&gt;
+  </pre>
+  <p>en lugar de</p>
+  <pre>
+    &lt;A NAME="fuentes"&gt;&lt;H3&gt;Fuentes&lt;/H3&gt;&lt;/A&gt;
+  </pre>
+  <p>Para enlazar a otro documento, se proporciona un Localizador Uniforme de Recursos, o URL, como el valor del atributo HREF. El formato URL permite la especificación de casi cualquier recurso en Internet, ya sea que ese recurso sea un archivo HTML en un servidor web o algún otro recurso de Internet, como un gopher o un grupo de noticias Usenet. La URL tiene varias partes, no todas las cuales son requeridas para que la URL sea válida. En orden de aparición, especifican:</p>
+  <ul>
+    <li>Método a utilizar para acceder al recurso</li>
+    <li>Nombre del servidor que proporciona el recurso</li>
+    <li>Número de puerto a utilizar en el servidor</li>
+    <li>Nombre del archivo del recurso</li>
+    <li>Ancla nombrada en el documento HTML</li>
+  </ul>
+  <p>Las partes anteriores están separadas por varios delimitadores y el conjunto está encerrado entre comillas, de la siguiente manera:</p>
+  <pre>
+    "método://servidor:puerto/archivo#ancla"
+  </pre>
+  <p>Para enlazar a otro documento HTML en el mismo directorio que el actual, sólo se necesita el nombre de archivo. Se asume que el método es http, que significa Protocolo de Transferencia de Hipertexto, la propia creación de la Web. El siguiente ejemplo proporciona un enlace a un archivo spot_info.html:</p>
+  <pre>
+    El gato se llama &lt;A HREF="spot_info.html"&gt;Spot&lt;/A&gt;.
+  </pre>
+  <p>Esta forma de enlace, donde el origen y el destino están en el mismo directorio en el mismo servidor web, se denomina enlace relativo. No importa cómo te hayas enlazado originalmente al servidor. Una vez que estés ahí, todo lo demás es relativo. Las direcciones relativas dan portabilidad a tu trabajo de hipertexto, ya que siempre que los archivos permanezcan juntos en el mismo directorio lógico, ninguno de los enlaces relativos necesita ser reespecificado cuando la colección se mueve de un servidor a otro.</p>
+  <p>Para designar una dirección específica para la resolución de la dirección relativa en caso de que un archivo se separe físicamente de los otros archivos en un conjunto de páginas de hipertexto, utiliza la etiqueta &lt;BASE&gt; en el encabezado del documento para apuntar a un servidor y directorio, por ejemplo:</p>
+  <pre>
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;PROYECTO 2 - Tabla de Contenidos&lt;/TITLE&gt;
+    &lt;BASE HREF=&quot;http://www.myserver.com/user1/project2/&quot;&gt;
+    &lt;/HEAD&gt;
+  </pre>
+  <p>Para enlazar a un ancla específica en el destino, sigue el nombre de archivo con un signo numeral y el nombre del ancla, así:</p>
+  <pre>
+    &lt;A HREF=&quot;spot_info.html#habits&quot;&gt;Spot&lt;/A&gt;
+  </pre>
+  <p>
+    Supongamos que el archivo está en un subdirectorio del directorio del archivo actual; digamos, uno llamado <em>mascotas</em>. Un enlace al archivo anterior se escribiría:
+  </p>
+  <pre>
+    &lt;A HREF=&quot;mascotas/spot_info.html&quot;&gt;Spot&lt;/A&gt;
+  </pre>
+  <p>No importa cómo se construyan las rutas de directorios y los nombres de archivos en el sistema operativo bajo el cual se ejecuta el servidor, ya sea que las diagonales inversas separen los directorios, como en Windows, o se usen corchetes cuadrados, como en VMS. La sintaxis URL utiliza diagonales para todas estas formas. El servidor será responsable de convertir la solicitud al formato real utilizado para hacer referencia al archivo.</p>
+  <p>
+    Si el archivo está en un servidor diferente al del archivo actual, entonces se deben especificar el método de acceso y el nombre de dominio del servidor, separados por dobles diagonales. Aquí hay un ejemplo:
+  </p>
+  <pre>
+    &lt;A HREF=&quot;http://ufp.enprise.mi1/crew/pets/spot_info.html&quot;&gt;Spot&lt;/A&gt;
+  </pre>
+  <p>
+    Este ejemplo asume que el servidor web, ufp.enprise.mil, está ejecutándose en el puerto 80, que es el puerto predeterminado para servidores de World Wide Web. Si este no es el caso, digamos que ufp.enprise.mil está en el puerto 1080, entonces el puerto debe especificarse de la siguiente manera:
+  </p>
+  <pre>
+    &lt;A HREF=&quot;http://ufp.enprise.mil:1080/crew/pets/spot_info.html&quot;&gt;Spot&lt;/A&gt;
+  </pre>
+  <p>
+    Como puedes ver, las Anclas pueden ser bastante largas.
+  </p>
+  <p>
+    Otros recursos en Internet además de documentos HTML pueden estar enlazados desde un documento HTML. La filosofía general es que si está ahí fuera, puedes construir una URL para apuntar a ello. Existen métodos específicos para servidores ftp, gopher, noticias y WAIS, y para acceder a sesiones Telnet. Mosaic y otros navegadores tomarán diferentes acciones dependiendo del tipo de recurso accedido. Un gopher se presenta como una estructura de menú; un archivo en un servidor gopher o ftp se descarga a un directorio especificado. Aquí hay algunos ejemplos de URLs de Internet:
+  </p>
+  <ul>
+    <li>ftp://ftp.uu.net/doc/literary/obi/World.Factbook</li>
+    <li>gopher://gopher.micro.umn.edu/</li>
+    <li>Telnet://compuserve.com/</li>
+    <li>news:alt.cows.moo</li>
+  </ul>
+  <p>
+    Se asume que un gopher está en el puerto gopher predeterminado, el puerto 70. Si el gopher usa otro puerto, debe especificarse siguiendo el nombre del servidor con dos puntos y el número. Para que el enlace Telnet funcione, debes tener acceso a un cliente Telnet.
+  </p>
+  <p>
+    El formato para acceder a grupos de noticias Usenet, como puedes ver, es diferente del formato para acceder a otros recursos de Internet en que no especifica un servidor de noticias (NNTP). El nombre del servidor está configurado en otro lugar. En Mosaic, el cuadro de diálogo Preferencias tiene una entrada para tu servidor de noticias predeterminado. Otros navegadores pueden requerir que el nombre del servidor se especifique en una variable ambiental. En el futuro, el nombre del servidor NNTP puede especificarse como parte de la URL de una manera más estándar.
+  </p>
+
+  <h2>IMÁGENES</h2>
+  <p>
+    Una o dos imágenes harán mucho para que tu página web sea más atractiva. La imagen en tu página de inicio le dará información al lector que no puede obtenerse del texto; un simple gráfico de líneas es más informativo que una tabla de números. Las imágenes y dibujos también se pueden usar como elementos decorativos en una página, y son especialmente útiles en elementos de anclaje.
+  </p>
+  <p>
+    Para incluir una imagen en línea en tu página, usa la etiqueta <IMG>. Es una etiqueta vacía, es decir, no tiene texto encerrado y no se usa una etiqueta de finalización de imagen. La etiqueta de imagen tiene cuatro atributos:
+  </p>
+  <table>
+    <tr>
+      <td><pre>SRC</pre></td>
+      <td>El atributo source es obligatorio. Su valor es la URL del archivo que contiene la imagen a incrustar. La sintaxis del atributo source es la misma que la del atributo HREF utilizado en la etiqueta de anclaje.</td>
+    </tr>
+    <tr>
+      <td><pre>ALIGN</pre></td>
+      <td>El atributo align usa uno de tres valores: TOP, MIDDLE o BOTTOM, para definir cómo se deben alinear el texto y los gráficos.</td>
+    </tr>
+    <tr>
+      <td><pre>ALT</pre></td>
+      <td>El atributo ALT se puede usar para especificar una cadena de texto que un navegador no gráfico puede mostrar como alternativa a la imagen en línea.</td>
+    </tr>
+    <tr>
+      <td><pre>ISMAP</pre></td>
+      <td>La imagen es un mapa interactivo. Al hacer clic en la imagen, se envían las coordenadas actuales del cursor a un servidor. La etiqueta de imagen debe estar encerrada por etiquetas de anclaje con un atributo HREF que apunta a un script o programa en el servidor que puede mapear las coordenadas proporcionadas a la página web deseada.</td>
+    </tr>
+  </table>
+  <p>
+    Aquí hay un ejemplo de una página con dos imágenes pequeñas en línea; la segunda imagen es el anclaje de un enlace:
+  </p>
+  <pre>
+    <code class="language-html">
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Ejemplo de imagen&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+
+    &lt;BODY&gt;
+    &lt;H1&gt;Imágenes alineadas&lt;/H1&gt;
+    &lt;IMG SRC=&quot;Mosaic.GIF&quot;&gt; Mosaic es un navegador gráfico capaz de mostrar imágenes alineadas.
+    &lt;P&gt;
+    Necesita &lt;A HREF=&quot;http://www.ncsa.uiuc.edu/Mosaic/QuickStart.html&quot;&gt;
+    &lt;IMG SRC=&quot;More.GIF&quot; ALT=&quot; more &quot; ALIGN=MIDDLE&gt; información&lt;/A&gt;?
+    &lt;/BODY&gt;
+    </code>
+  </pre>
+  <p>La Figura 2.9 muestra lo que el lector vería en Mosaic.</p>
+  <p>
+    En el ejemplo anterior, ambas imágenes son decorativas en el sentido de que la página funcionaría igual sin ellas. Un navegador de modo línea que no pudiera mostrar la imagen sustituiría la palabra <em>more</em>, especificada como el valor del atributo <code>ALT</code>, como anclaje de línea. Sin embargo, algunos navegadores de modo línea son capaces de mostrar imágenes externas a través del uso de una aplicación auxiliar. Así que si una imagen es esencial para una página, probablemente deberías agregar un vínculo externo a ella.
+  </p>
+  <figure>
+    <img src="images/fig2.9.webp" alt="Figura 2.9: Imágenes en línea en Mosaic">
+    <figcaption>Figura 2.9: Imágenes en línea en Mosaic</figcaption>
+  </figure>
+  <p>La forma común de hacer esto es hacer que la imagen alineada (con un atributo ALT para modo de línea) sea un vínculo a la imagen externa.</p>
+  <p>
+    Para incluir un vínculo a una imagen externa en una página HTML, use un ancla con un atributo <code>HREF</code> de la misma manera que lo haría para un vínculo HTML a otra página de hipertexto. Mosaic y otros navegadores reconocen extensiones de nombre de archivo especiales en un valor HREF de la siguiente manera (tenga en cuenta que las mayúsculas no son significativas):
+  </p>
+  <table>
+    <tr>
+      <td>HTML, HTM</td>
+      <td>Página de hipertexto</td>
+    </tr>
+    <tr>
+      <td>GIF</td>
+      <td>Imagen en formato Graphics Interchange</td>
+    </tr>
+    <tr>
+      <td>XIBM</td>
+      <td>Formato de imagen IBM</td>
+    </tr>
+    <tr>
+      <td>PICT</td>
+      <td>Formato de imagen Macintosh</td>
+    </tr>
+    <tr>
+      <td>JPG, JPEG</td>
+      <td>Imagen comprimida en formato jpeg</td>
+    </tr>
+    <tr>
+      <td>MPG, MPEG</td>
+      <td>Video comprimido en formato mpeg</td>
+    </tr>
+    <tr>
+      <td>MOV</td>
+      <td>Video en formato QuickTime de Macintosh</td>
+    </tr>
+    <tr>
+      <td>AU</td>
+      <td>Formato de audio básico</td>
+    </tr>
+    <tr>
+      <td>AIFF</td>
+      <td>Otro formato de audio</td>
+    </tr>
+  </table>
+  <p>La asociación entre una extensión de nombre de archivo y una aplicación auxiliar para mostrar externamente el archivo de imagen, video o sonido se establece en un cuadro de diálogo Preferencias en Mosaic y algunos otros navegadores. Consulte el manual del usuario para el navegador específico que esté utilizando.</p>
+
+  <h2>Formularios</h2>
+  <p>Los formularios son una característica avanzada de HTML Nivel 2. Solo se describirán aquí las formularios más simples. Como esta área de HTML sigue evolucionando, consulte la documentación en línea de NCSA y CERN para obtener una lista completa de funciones y su uso. Para aprovechar al máximo las formas, deberá conocer las características particulares del software del servidor WEB que maneja sus páginas HTML.</p>
+  <p>
+    Un formulario es un área designada de una página HTML que se pone a disposición para la entrada del usuario. Puede haber muchos formularios en una página; sin embargo, los formularios no pueden anidarse. Cada formulario se define mediante etiquetas de inicio y fin con atributos para especificar cómo se debe procesar la entrada del formulario. A continuación se muestra un formulario simple con un campo de entrada. Cuando el lector escribe un retorno de carro en el campo, el contenido del campo se envía a un script.
+  </p>
+  <pre>
+    <code class="language-html">
+    &lt;FORM METHOD=GET ACTION=&quot;cgi-bin/search&quot;&gt;
+    Ingrese una palabra clave para buscar:
+    &lt;INPUT TYPE=&quot;text&quot; NAME=&quot;key&quot; SIZE=40&gt;
+    &lt;/FORM&gt;
+    </code>
+  </pre>
+  <p>
+    La idea básica de un formulario es presentar campos de entrada al lector para que escriba información de texto, botones de radio, casillas de verificación y menús emergentes para seleccionar elementos de listas de opciones. En algún lugar del formulario hay un conjunto de botones de acción, típicamente un botón Restablecer y un botón Enviar. El botón Restablecer, cuando se hace clic, borra la entrada del lector de los campos de texto del formulario y restablece todos los objetos de entrada a sus valores predeterminados. El botón Enviar, cuando se hace clic, instruye al navegador a tomar la acción especificada en el atributo <code>ACTION</code> del formulario (que toma un valor de URL) de acuerdo con el método especificado en el atributo <code>METHOD</code>. Hay dos métodos de acción, <code>METHOD=GET</code> y <code>METHOD=POST</code>, que determinan cómo se procesará la información del formulario.
+  </p>
+  <p>
+    Si se especifica el método <code>GET</code> en la etiqueta de formulario, el navegador construye una URL de consulta que consta de la URL de la página actual que contiene el formulario, seguida de un signo de interrogación, seguida por los valores de los campos y objetos de entrada del formulario. El navegador envía esto a un script o programa ejecutable en un servidor identificado por la URL en el atributo <code>ACTION</code>. El script o programa puede usar esta información para hacer cualquier número de cosas, como buscar y actualizar bases de datos. El proceso termina con el servidor devolviendo una nueva página al lector, posiblemente una creada dinámicamente por el script del servidor. Si se especifica el método <code>POST</code>, el contenido del formulario se envía al script del servidor como un bloque de datos a la entrada estándar. Este es el método preferido. Con ambos métodos, cualquier cosa que el script escriba en la salida estándar se devuelve al lector como una nueva página HTML.
+  </p>
+  <p>
+    Esta colección de interacciones entre el navegador y el servidor se conoce como la Interfaz Común de Puerta de Enlace (CGI). Cada servidor tiene su propio conjunto de scripts y programas necesarios para procesar información de las páginas web en ese servidor. Para servidores que se ejecutan en máquinas Unix, estos scripts generalmente están escritos en los lenguajes Perl o TCL y se almacenan en un directorio con el nombre cgi-bin. Para obtener más información sobre la Interfaz Común de Puerta de Enlace, apunte su navegador a la documentación de NCSA en:
+  </p>
+  <p>http://hoohoo.ncsa.uiuc.edu/cgi/overview.html</p>
+  <p>
+    Es posible (y a veces conveniente) omitir el requisito de tener un script en el servidor y procesar el contenido del formulario en otro lugar. Esto se puede hacer utilizando una URL mailto como el valor del atributo <code>ACTION</code>, como se hace en el ejemplo a continuación que genera un formulario simple para solicitar comentarios de los lectores. Cuando el lector hace clic en el botón Enviar en la página ilustrada en la Figura 2.10, los valores de los objetos de entrada se envían a la dirección de correo electrónico, mybox@myplace.com, como un mensaje de correo de la forma:
+  </p>
+  <pre>
+    nombre1=valor1&nombre2=valor2&...
+  </pre>
+  <p>
+    donde cada nombre es el nombre asignado a un objeto de entrada con el atributo <code>NAME</code> y cada valor es el valor predeterminado de ese objeto o lo que el lector ingresó o eligió para anular el valor predeterminado. La desventaja de usar una URL mailto es que la interacción es unidireccional: no se puede enviar una nueva página HTML de vuelta al lector.
+  </p>
+  <pre>
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Form Example&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+
+    &lt;BODY&gt;
+    &lt;H1&gt;Comments Please&lt;/H1&gt;
+    We would like to hear from you. Please use the following form to submit
+    any comments on our service.
+    &lt;FORM METHOD=POST ACTION=&quot;mailto:mybox@myplace.com&quot;&gt;
+    Please enter your name:
+    &lt;INPUT TYPE=&quot;text&quot; NAME=&quot;name&quot; SIZE=&quot;30&quot;&gt;
+    &lt;P&gt;
+    and your email address:
+    &lt;INPUT TYPE=&quot;text&quot; NAME=&quot;addr&quot; SIZE=&quot;30&quot;&gt;
+    &lt;P&gt;
+    Please select one of the following choices regarding our product:
+    &lt;P&gt;
+
+    &lt;INPUT TYPE=&quot;radio&quot; NAME=&quot;choice&quot; VALUE=&quot;GREAT&quot;&gt; &iexcl;Es realmente genial!
+    &lt;INPUT TYPE=&quot;radio&quot; NAME=&quot;choice&quot; VALUE=&quot;GOOD&quot;&gt; Es bastante bueno
+    &lt;INPUT TYPE=&quot;radio&quot; NAME=&quot;choice&quot; VALUE=&quot;BAD&quot;&gt;&iexcl;Es lo peor!
+    &lt;P&gt;
+    Algo m&aacute;s que quieras agregar?
+    usa el &aacute;rea de entrada a continuaci&oacute;n:
+    &lt;TEXTAREA NAME=&quot;comment&quot; ROWS=6 COLS=40&gt;&lt;/TEXTAREA&gt;
+    &lt;P&gt;
+    Gracias por tu entrada.
+    &lt;INPUT TYPE=&quot;submit&quot;&gt; &lt;INPUT TYPE=&quot;reset&quot;&gt;
+    &lt;/FORM&gt;
+    &lt;/BODY&gt;
+  </pre>
+  <p>
+    El lector debería ver una visualización similar a la de la Figura 2.10.
+  </p>
+  <figure>
+    <img src="images/fig2.10.webp" alt="Figura 2.10: Un ejemplo simple de formularios">
+    <figcaption>Figura 2.10: Un ejemplo simple de formularios</figcaption>
+  </figure>
+  <p>
+    Los dos primeros campos en el ejemplo solicitan el nombre y la dirección de correo electrónico del lector con etiquetas <code>INPUT</code>. El tipo de estas etiquetas de entrada es <code>text</code>, indicando un campo de una sola línea cuya longitud viene dada por el atributo <code>SIZE</code>.
+  </p>
+  <p>
+    A continuación hay un conjunto de botones de radio. Los botones de radio funcionan de tal manera que cuando uno está marcado, todos los demás botones de radio con el mismo valor <code>NAME</code> se desmarcan automáticamente. Las casillas de verificación también se admiten como un tipo de entrada. Las casillas de verificación pueden tener más de una, o ninguna, de las opciones marcadas.
+  </p>
+  <p>
+    El atributo <code>VALUE</code> que acompaña a una etiqueta de tipo radio o casilla de verificación especifica el valor que se enviará cuando se envíe el formulario. En el ejemplo anterior, si el botón de radio a la izquierda de la frase "¡Es realmente genial!" es el seleccionado, y los dos primeros campos contienen Tom Swift y tswift@mars.gov, entonces el mensaje de correo contendrá la cadena
+  </p>
+  <pre>
+    name=Tom+Swift&addr=tswift@mars.gov&choice=GREAT&comment=
+  </pre>
+  <p>
+    Como puede ver, los campos se presentan como <code>nombre=valor</code> separados por ampersands (&) y con los espacios en blanco reemplazados por signos más (+). Si un campo está vacío, como ocurre con el campo de comentario, el nombre aparece seguido del signo igual (=) y nada más.
+  </p>
+  <p>
+    La etiqueta <code>TEXTAREA</code> señala el comienzo de un área de entrada de formulario de un número especificado de filas y columnas donde el lector puede ingresar múltiples líneas de texto. A diferencia de la etiqueta <code>INPUT</code>, la etiqueta <code>TEXTAREA</code> no está vacía; cualquier texto entre esta y la etiqueta de cierre, <code>&lt;/TEXTAREA&gt;</code>, se utiliza para inicializar el área de texto. En este ejemplo, el área de texto se deja en blanco. Puedes usar el estilo de texto preformateado o las etiquetas de salto de línea para dar formato al texto de un <code>TEXTAREA</code>.
+  </p>
+  <p>
+    Finalmente, al final del formulario hay dos botones creados por las etiquetas <code>&lt;INPUT TYPE=&quot;submit&quot;&gt;</code> y <code>&lt;INPUT TYPE=&quot;reset&quot;&gt;</code>. El botón de envío indica al navegador que tome la acción especificada en la etiqueta <code>FORM</code>. El botón de <code>reset</code>, cuando se hace clic, borrará todos los campos de entrada dentro de las etiquetas <code>FORM</code> que lo encierran.
+  </p>
+  <p>
+    Consulta el Capítulo 4, "Ejemplos HTML", para ver ejemplos adicionales de uso de formularios.
+  </p>
+
+  <hr>
+  <a href="cap1.html">Cápitulo 1</a> &#9664; | &#9679 <a href="index.html">Indice</a> | &#9654; <a href="cap3.html">Cápitulo 3</a>
+  
+  <script src="script.js"></script>
+  <script src="prism.js"></script>
+</body>
+</html>

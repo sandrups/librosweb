@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Enséñate a ti mismo JAVASCRIPT 1.1 en una semana</title>
+</head>
+<body>
+<a href="introduccion.html">Introducción</a> &#9664; | &#9679 <a href="index.html">Indice</a> | &#9654; <a href="cap2.html">Cápitulo 2</a>
+
+<h1>Capítulo 1<br>
+    ¿Dónde encaja JavaScript?</h1>
+  <p>
+      Navigator 3.0 es la versión más potente del navegador web de Netscape.
+      Además de reunir una colección de herramientas útiles de acceso a Internet, como un cliente de correo, un lector de noticias y un mejor soporte para el estándar HTML 3 en desarrollo, Navigator 3.0 agrega varias características que mejoran la capacidad de los autores web para desarrollar aplicaciones completas, independientes de la plataforma, desplegadas y ejecutadas en el navegador Netscape. Yendo más allá del navegador web, Navigator Gold agrega herramientas de edición y desarrollo al paquete.
+  </p>
+  <p>
+      Estas capacidades incluyen una interfaz de programación de aplicaciones (API) para complementos.
+  </p> 
+  <blockquote>
+        <strong>Nuevo término</strong><br>
+        Los <em>plug-ins</em> son módulos de programa que extienden dinámicamente la capacidad de Navigator para manejar nuevos tipos de datos e información, junto con JavaScript y Java, los cuales permiten la adición de programabilidad flexible a las páginas web.
+  </blockquote>
+  <p>
+      JavaScript también está incorporado en los servidores de Netscape, como LiveWire, lo que le permite ser utilizado para desarrollar programas en el servidor en lugar de la interfaz CGI-BIN tradicional utilizada en los servidores web de hoy en día. Además, Microsoft Internet Explorer 3.0, el último navegador web para Windows 95 y Windows NT de Microsoft, incorpora numerosas características encontradas en Navigator 3, incluido JavaScript.
+  </p>
+  <p>
+      En este capítulo echamos un vistazo detallado a las principales características y aspectos de JavaScript, así como revisamos las principales fortalezas y debilidades del lenguaje JavaScript y su idoneidad para tareas específicas.
+  </p>
+  <p>
+      Luego profundizamos en los objetos y cómo funcionan, y echamos un vistazo a las propiedades y métodos, los componentes básicos de los objetos. También examinamos los objetos integrados en JavaScript y lo que ofrecen al programador.
+  </p>
+  <p>
+      En este capítulo echamos un vistazo amplio a Navigator y consideramos cómo se integra JavaScript en el rompecabezas. Aprenderás sobre los siguientes temas:
+  </p>
+  <ul>
+      <li>Marcos: La capacidad de dividir una ventana en múltiples secciones independientes.</li>
+      <li>Complementos: Extensiones de terceros para Navigator que amplían la capacidad del navegador para manejar nuevos datos e información.</li>
+      <li>Java: Un lenguaje de programación orientado a objetos para aplicaciones distribuidas.</li>
+      <li>JavaScript: Un lenguaje de programación simple y basado en objetos incorporado en Navigator 3.0 (y el tema de este libro).</li>
+      <li>Las similitudes y diferencias entre Java y JavaScript.</li>
+      <li>JavaScript como un lenguaje de secuencias de comandos.</li>
+      <li>Objetos, propiedades y métodos.</li>
+      <li>La Jerarquía de Objetos de Navigator y otros objetos integrados.</li>
+      <li>Fortalezas y debilidades de JavaScript.</li>
+  </ul>
+
+<h2>Navigator es más que un navegador web</h2>
+<p>
+  Aunque Netscape Navigator comenzó su vida como un navegador web básico, a medida que se ha vuelto cada vez más popular, se ha convertido en mucho más.
+</p>
+<p>
+  A diferencia de los navegadores anteriores y las aplicaciones web básicas de hoy, Navigator ahora proporciona a los autores numerosas herramientas para ir más allá de las limitaciones tradicionales de HTML. En lugar de simplemente combinar texto, imágenes, sonido y video, los autores ahora tienen un control más fino sobre el diseño del documento, las fuentes y el color; pueden extender la funcionalidad del navegador utilizando complementos y Java; y pueden producir aplicaciones interactivas utilizando JavaScript.
+</p>
+<p>
+  Un vistazo rápido al sitio web de Netscape muestra que el Navigator de hoy puede hacer mucho más que las versiones anteriores, incluso sin programación especial por parte de los desarrolladores web. Con complementos gratuitos disponibles de principales empresas de software, los autores web pueden incluir gráficos nativos de CorelDRAW! o archivos de Microsoft Word en sus documentos, así como ver mundos VRML (Lenguaje de Modelado de Realidad Virtual) y ver documentos formateados en el formato Acrobat de Adobe independiente del dispositivo.
+</p>
+<p>
+  Además de todo esto, Navigator proporciona varias herramientas que los desarrolladores de páginas web y los autores pueden aprovechar para mejorar sus documentos y agregar interacción dinámica con la información que proporcionan en Internet.
+</p>
+
+<h3>Frames (marcos)</h3>
+<p>
+  Los marcos son la extensión más notable visualmente de HTML en Navigator 2.0 y 3.0. Usando marcos, los autores pueden dividir la pantalla en múltiples secciones rectangulares. Cada sección es independiente de las demás, y se carga una URL diferente en cada marco. Además, los enlaces en un marco pueden ser utilizados para actualizar otro marco sin afectar a los demás.
+</p>
+<p>
+  Hoy en día, se utilizan marcos para producir encabezados fijos tipo banner para páginas web, para menús que siempre permanecen en la pantalla y no necesitan ser recargados o redibujados, y para búsquedas basadas en formularios donde el formulario está siempre disponible.
+</p>
+<p>
+  Además del obvio atractivo visual de la tecnología de marcos, esta extensión a HTML puede tener un beneficio adicional en reducir la cantidad de datos que pueden necesitar ser solicitados desde el servidor y enviados a los clientes. En el cada vez más congestionado World Wide Web, esto podría hacer que la navegación web sea ligeramente más eficiente y reducir parte de la carga en los servidores web sobrecargados.
+</p>
+<p>
+  La Figura 1.1 muestra un ejemplo de cómo los marcos pueden dividir una pantalla y proporcionar tanto un encabezado fijo como un menú permanente junto a varios marcos de información dinámica. La Figura 1.2 muestra cómo una selección de menú actualiza una sección de la pantalla.
+</p>
+
+<h3>Tecnología</h3>
+<p>
+  Al proporcionar una interfaz de programación de aplicaciones abierta para complementos, Netscape ha hecho posible que los proveedores de software de terceros proporcionen la capacidad de ver una amplia gama de datos y documentos en la ventana del navegador Navigator. Netscape se refiere a los objetos mostrados por los complementos como Objetos Vivos.
+</p>
+<figure>
+  <img src="images/fig1.1.webp" alt="Figura 1.1: El uso de marcos proporciona elementos fijos y dinámicos.">
+  <figcaption>Figura 1.1: El uso de frames proporciona elementos fijos y dinámicos.</figcaption>
+</figure>
+<figure>
+  <img src="images/fig1.2.webp" alt="Figura 1.2: Utilizando un menú para actualizar un frame.">
+  <figcaption>Figura 1.2: Utilizando un menú para actualizar un frame.</figcaption>
+</figure>
+<p>
+  Netscape integra complementos, así como applets de Java, en el entorno del navegador utilizando LiveConnect. LiveConnect proporciona mecanismos para que los complementos, los applets de Java y los scripts de JavaScript se comuniquen entre sí y compartan información entre ellos.
+</p>
+<p>
+  Hasta la fecha, un número significativo de proveedores, incluyendo Corel, Paper Software y Adobe, han creado complementos para sus propios formatos. (La Figura 1.3 muestra una de estas compañías). Es probable que muchos de estos se extiendan para admitir JavaScript, permitiendo que los programas JavaScript interactúen directamente con los complementos y mejoren aún más el poder de JavaScript en futuras versiones de Netscape Navigator. En este momento, no existen herramientas para hacer esto.
+</p>
+<figure>
+  <img src="images/fig1.3.webp" alt="Figura 1.3: El complemento WebFX de Paper Software permite a Navigator 2.0 explorar mundos VRML.">
+  <figcaption>Figura 1.3: El complemento WebFX de Paper Software permite a Navigator 2.0 explorar mundos VRML.</figcaption>
+</figure>
+<blockquote>
+  <strong>Consejo</strong><br>
+  El número de complementos disponibles está cambiando constantemente. Netscape proporciona una lista actualizada de los complementos disponibles en este sitio:
+  <br>
+  http://home.netscape.com/comprod/products/navigator/version_2.0/plugins/index.html
+</blockquote>
+
+<h3>Interactividad con Java y JavaScript</h3>
+<p>
+  Usando JavaScript y Java, los desarrolladores web han creado mejoras adicionales para las páginas web más allá de la capacidad de cargar múltiples documentos en marcos separados y ver nuevos formatos de archivo.
+</p>
+<p>
+  Algunos de los applets de Java más comunes disponibles hoy en día incluyen los siguientes:
+</p>
+<ul>
+  <li>Applets de texto desplazable: Java se está utilizando para añadir marquesinas a las páginas web.</li>
+  <li>Fuentes de datos en vivo: Ejemplos actuales incluyen un teletipo bursátil en vivo, como la demostración de cartera financiera realizada por Jim Graham de Sun Microsystems, mostrada en la Figura 1.4.</li>
+</ul>
+<figure>
+  <img src="images/fig1.4.webp" alt="Figura 1.4: Esta demostración de página web por Jim Graham de Sun Microsystems utiliza Java para incluir fuentes de datos en vivo.">
+  <figcaption>Figura 1.4: Esta demostración de página web por Jim Graham de Sun Microsystems utiliza Java para incluir fuentes de datos en vivo.</figcaption>
+</figure>
+<blockquote>
+  <strong>Nota</strong>
+  <br>
+  El término <em>applet</em> ha entrado en uso común desde que Sun Microsystems introdujo Java a la comunidad web en 1995. Los applets son pequeñas aplicaciones que se incluyen en las páginas web y se descargan bajo demanda para ser ejecutadas por el navegador del cliente. Aunque el término técnicamente solo se refiere al tipo de programas Java descritos aquí, con la introducción de JavaScript, el término ahora está siendo utilizado por algunas personas en la web para describir el tipo de scripts integrados desarrollados con JavaScript.
+</blockquote>
+<ul>
+  <li>Motores de búsqueda: Los applets de Java pueden ser utilizados para construir consultas de bases de datos, las cuales luego se envían a bases de datos remotas.</li>
+  <li>Añadir protocolos a los navegadores web: Una de las posibilidades potenciales ofrecidas por Java es que, a medida que se desarrollen protocolos en Internet, Java puede ser utilizado para añadir funcionalidad a los navegadores web bajo demanda.</li>
+  <li>Nuevos formatos de archivo: Java permite a los navegadores web mostrar nuevos formatos de archivo descargando applets para mostrar los archivos según sea necesario.</li>
+</ul>
+<p>
+  La popularidad generalizada de Java significa que la gama de usos aumentará en el futuro, pero hoy en día Java se está utilizando principalmente para mejoras estéticas en las páginas web.
+</p>
+<p>
+  En comparación, JavaScript se usa para producir scripts diseñados para reaccionar a eventos de usuario y del entorno, así como para ser el pegamento que conectará de manera más fluida los applets de Java en las páginas web en el futuro. A continuación, se presentan algunos ejemplos:
+</p>
+<ul>
+  <li>Un selector de colores interactivo para que los desarrolladores web prueben diferentes colores de fondo y texto en sus documentos.
+  </li>
+  <li>Calculadoras: Ejemplos en la web incluyen una calculadora de conversión de unidades y calculadoras de interés de préstamos.</li>
+  <li>Salida dinámica basada en el entorno actual y el historial de navegación previo del usuario.</li>
+  <li>Verificación de formularios: JavaScript puede usarse para asegurar que los datos del formulario se ingresen correctamente antes de enviarlos al servidor, en lugar de depender del servidor para verificar el contenido del formulario después de que se haya enviado. La Figura 1.5 ilustra la verificación del formulario.
+  </li>
+</ul>
+<figure>
+  <img src="images/fig1.5.webp" alt="Figura 1.5: JavaScript solicita al usuario información correcta antes de enviar un formulario a un servidor.">
+  <figcaption>Figura 1.5: JavaScript solicita al usuario información correcta antes de enviar un formulario a un servidor.</figcaption>
+</figure>
+<ul>
+  <li>Construcción de URLs: JavaScript se usa para construir URLs personalizados basados en las elecciones del usuario en los formularios.</li>
+  <li>JavaScript puede usarse para reemplazar muchos scripts CGI para el procesamiento del lado del cliente, aliviando las demandas de ancho de banda y disminuyendo la carga del servidor para servidores web ocupados.</li>
+  <li>Los grupos de discusión similares a los grupos de noticias pueden incorporar características sofisticadas como el enhebrado.</li>
+</ul>
+
+<h2>El lugar de JavaScript en Navigator</h2>
+<p>
+  JavaScript es uno de los componentes menos utilizados de la suite de herramientas de interactividad de Netscape (aunque esto está cambiando rápidamente), pero podría ser el más significativo. No solo acerca la programación interactiva al alcance del autor web promedio sin experiencia formal en programación, sino que también se puede utilizar para trasladar gran parte del procesamiento desde los servidores sobrecargados a las estaciones de trabajo cliente cada vez más potentes.
+</p>
+
+<h3>Los programas JavaScript están integrados en las páginas web</h3>
+<p>
+  A diferencia de los archivos de aplicación independientes que se usan para entregar applets de Java a los navegadores web, el código fuente real de los scripts de JavaScript se puede incluir directamente en las páginas web. Esto es distinto de los applets de Java, que existen independientemente de las páginas web en HTML.
+</p>
+
+<h3>JavaScript da a los programadores acceso a las propiedades del navegador</h3>
+<p>
+  JavaScript está integrado estrechamente en HTML y en el navegador Navigator. Los desarrolladores tienen a su disposición una amplia gama de herramientas e información para interactuar con el documento HTML cargado en ese momento, así como con la sesión actual del navegador.
+</p>
+<p>
+  JavaScript expone a los programadores propiedades relacionadas con las ventanas del documento, la lista de historial, los documentos cargados, los marcos, los formularios y los enlaces. Además, JavaScript se puede utilizar para capturar eventos de usuario, como cambiar valores de formularios o señalar enlaces, para que se puedan desarrollar programas apropiados para cada evento.
+</p>
+
+<h2>Java y JavaScript: Comparación y contraste</h2>
+<p>
+  Dada la tremenda popularidad de Java desde su introducción en 1995, es importante echar un vistazo a las diferencias entre Java y JavaScript. Aunque están relacionados—JavaScript toma prestada gran parte de la sintaxis de Java, por ejemplo—son fundamentalmente diferentes y tienen propósitos distintos. Son complementarios en lugar de competir entre sí.
+</p>
+
+<h3>Uso de Java—Un lenguaje de programación orientado a objetos complejo y completo</h3>
+<p>
+  Java es mucho más que un lenguaje para desarrollar aplicaciones basadas en la web. Está diseñado para competir en un mercado de lenguajes de programación de propósito general y totalmente desarrollados como C, C++, Pascal y FORTRAN. A diferencia de sus predecesores, las reivindicaciones de Java incluyen el hecho de que es independiente de la plataforma y que puede utilizarse tanto para el desarrollo de aplicaciones como para el desarrollo de applets integrados, o pequeñas aplicaciones, para páginas web.
+</p>
+<p>
+  Al igual que C++ y Smalltalk, Java es orientado a objetos y se basa en gran medida en la sintaxis y el estilo de C++. Con esto viene la pronunciada curva de aprendizaje de un lenguaje de programación orientado a objetos de alto nivel.
+</p>
+<h4>Un lenguaje compilado</h4>
+<p>
+  A diferencia de la mayoría de los otros lenguajes de programación de propósito general, Java no se compila en el sentido tradicional. En lugar de compilarse en código máquina nativo, el compilador de Java convierte el código fuente en códigos de bytes de Java (conocidos como códigos de bytes neutrales en cuanto a la arquitectura), una representación independiente de la plataforma del código del programa Java, que luego se ejecuta en un intérprete en tiempo de ejecución dependiente de la máquina. De esta manera, los desarrolladores solo necesitan desarrollar y mantener un conjunto de código fuente y compilarlo una vez, y el código puede ejecutarse utilizando los intérpretes en tiempo de ejecución para cualquier máquina.
+</p>
+<p>
+  Sin embargo, como todos los lenguajes compilados, esto añade la complejidad de un ciclo de compilación al desarrollo y especialmente a la depuración. Sin embargo, hasta cierto punto, como otros lenguajes compilados, un motor de tiempo de ejecución eficiente significa que Java debería ofrecer un mejor rendimiento que los lenguajes de scripting interpretados de propósito general.
+</p>
+<h4>Totalmente extensible</h4>
+  <p>
+    Una característica fundamental de los lenguajes verdaderamente orientados a objetos es que son extensibles. Es decir, los programadores pueden crear sus propias clases, o agrupaciones de objetos y estructuras de datos, para extender las clases básicas que forman parte de los lenguajes de programación.
+  </p>
+<blockquote>
+    <strong>Nuevo término</strong>
+    <br>
+    Una <em>clase</em> es un término utilizado en la programación orientada a objetos para referirse a un conjunto de objetos relacionados que comparten características comunes. Las clases, y la capacidad de crear nuevas clases, son lo que hacen de la programación orientada a objetos un modelo de programación poderoso y flexible.
+    <p>
+      Java no es una excepción a esta regla. Los programadores de Java crean rutinariamente sus propias extensiones al conjunto básico de herramientas o clases.
+    </p>
+</blockquote>
+<h4>Curva de Aprendizaje Pronunciada</h4>
+  <p>
+    Como se mencionó anteriormente, los lenguajes de programación orientados a objetos tienden a tener curvas de aprendizaje pronunciadas, especialmente para los no programadores. Java no está exento de esta dificultad.
+  </p>
+  <p>
+    El consenso general entre los programadores principiantes es que aprender Java es una tarea formidable, especialmente considerando la complejidad de la documentación en línea disponible en Internet.
+  </p>
+<h4>Permite la Interacción Cliente-Servidor</h4>
+  <p>
+    El conjunto base de clases que viene con la distribución de Java lo hace ideal para las interacciones cliente-servidor. La capacidad de trabajar con URLs y comunicarse con servidores HTTP ya está presente. El soporte para applets añade la capacidad de interactuar con eventos de usuario en el navegador web del cliente.
+  </p>
+  <p>
+    Además, HotJava, el navegador de demostración de Sun Microsystems, demuestra cómo Java puede convertirse en el medio por el cual los navegadores aprenden dinámicamente a manejar nuevos protocolos según sea necesario.
+  </p>
+<blockquote>
+    <strong>Nota:</strong><br>
+    Sun desarrolló HotJava cuando Java aún estaba en desarrollo alfa para demostrar el potencial de Java para aplicaciones distribuidas en la World Wide Web y para mostrar cómo los navegadores podrían aprender dinámicamente a manejar nuevos protocolos y tipos de archivos. HotJava está disponible para Solaris y Windows de 32 bits (Windows NT y Windows 95) en la página principal de Java en http://www.javasoft.com
+</blockquote>
+<h4>Desarrollo de Aplicaciones Independientes y Applets</h4>
+<p>
+    Java es famoso porque puede usarse para desarrollar applets que se entregan en la World Wide Web y se ejecutan en los navegadores web de los clientes. Sin embargo, Java también puede usarse para desarrollar aplicaciones GUI completas e independientes de la plataforma utilizando el intérprete de tiempo de ejecución de Java.
+</p>
+<h4>Ofrece Seguridad Sofisticada</h4>
+<p>
+    Debido a la naturaleza extremadamente abierta y pública de la World Wide Web, la seguridad es un tema importante para Java y los applets de Java. Después de todo, permitir que el código de aplicación de máquinas remotas desconocidas se descargue y se ejecute en su sistema informático es potencialmente peligroso. No solo existe la posibilidad de que los applets contengan virus, sino que también podrían ser simplemente aplicaciones maliciosas con la intención de destruir sus datos y dejar inoperativo su ordenador.
+</p>
+<p>
+    Para abordar esto, Sun implementó funciones de seguridad estrictas desde las primeras etapas del desarrollo de Java. Estas características incluyen la verificación de bytecodes (para asegurar que no violen restricciones de acceso y más), así como una seguridad de red configurable que varía desde deshabilitar el acceso a la red hasta limitar el acceso de un applet solo al host donde se originó el código, hasta permitir acceso completamente libre a la red.
+</p>
+<p>
+    Ha habido informes de vulnerabilidades en el entorno Java, pero tanto Sun como Netscape han respondido a estos informes y preocupaciones. Con cada versión de Java, la seguridad debería mejorar.
+</p>
+<h4>Distinto del HTML</h4>
+<p>
+    Aunque los applets son una característica de la World Wide Web y se incluyen como applets en línea en archivos HTML, son distintos y separados del HTML y de los archivos HTML. Nuevas etiquetas HTML obligan a un navegador web a iniciar una nueva conexión con el servidor y le indican al navegador dónde mostrar la salida del applet en la página web, pero más allá de eso, los applets son separados y distintos del HTML.
+</p>
+
+<h3>Uso de JavaScript: Un lenguaje de scripting simple basado en objetos</h3>
+
+
+<h2>El estado actual de JavaScript</h2>
+
+  <script src="script.js"></script>
+</body>
+</html>

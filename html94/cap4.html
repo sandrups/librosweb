@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="prism.css">
+  <title>HTML, Manual de Estilo | Capítulo 3: Escribiendo Documentos HTML</title>
+</head>
+<body> 
+
+  <a href="cap3.html">Cápitulo 3</a> &#9664; | &#9679 <a href="index.html">Índice</a> | &#9654; <a href="apendicea.html">Apéndice A</a>
+  <hr>
+
+  <h1>Capítulo 4<br>
+    Ejemplos de Html</h1>
+  <p>
+    En este capítulo he recopilado varios ejemplos de páginas web del World Wide Web. Cada ejemplo incluye una presentación y discusión del código fuente HTML de la página web seguida de su reproducción. Los ejemplos fueron escogidos con variedad en mente para que sepas lo que puedes hacer con HTML y tu información. No todas las páginas representan el mejor uso de HTML. Eso está perfectamente bien. Este es el trabajo de personas ocupadas, motivadas por el deseo de hacer pública su información con herramientas que aún están evolucionando. Señalaré instancias de un uso deficiente (en mi opinión) de HTML aquí y allá, y espero que los autores no piensen que estoy siendo crítico. He escrito un montón de líneas de código a lo largo de los años y odiaría que alguien juzgara mi trabajo basándose en una muestra tan pequeña.
+  </p>
+  <p>
+    Estos ejemplos de páginas aún están evolucionando. Lo que se presenta aquí son instantáneas de las páginas en el momento particular en que las encontré. Estoy proporcionando las URL de las páginas de ejemplo sin garantía de que seguirán siendo válidas, y ciertamente sin garantía de que las páginas vistas en la web en esas direcciones serán las mismas que las presentadas aquí. Si lo son, con suerte verás mejoras.
+  </p>
+  <blockquote>
+    <strong>Nota: </strong>Para cada uno de los ejemplos presentados en este capítulo, he mostrado la salida impresa de la página web en lugar de la visualización en pantalla. Esto permite una mejor resolución y ahorra mucho trabajo ya que, para la mayoría de los ejemplos, habría tenido que juntar varias pantallas. Las impresiones, guardadas como archivos PostScript, tienen el mismo aspecto que las pantallas sin el trabajo de desplazamiento.
+  </blockquote>
+
+  <h2>Ejemplo 1—Una página personal</h2>
+  <p>
+    Este primer ejemplo es la página de inicio de Gary Welz en http://found.cs.nyu.edu/found.a/CAT/misc/welz/. Como puedes ver por la información en la página, Gary está muy activo en asuntos relacionados con la World Wide Web. Me gusta esta página porque tiene una de las mejores colecciones de enlaces web que he encontrado. Es una buena página de inicio; nota cómo los enlaces forman parte del flujo natural de la prosa en los párrafos. No se usa ni un solo "haz clic aquí". Mi única crítica es que la lista de enlaces a sus sitios favoritos de la WWW es tan fuerte que tiende a eclipsar los párrafos que contienen las credenciales de Gary y la información sobre sus proyectos actuales.
+  </p>
+  <p>
+    La p&aacute;gina de inicio de Gary es tambi&eacute;n una buena ilustraci&oacute;n de lo indulgentes que pueden ser los navegadores. No hay etiquetas &lt;HEAD&gt;&lt;/HEAD&gt; y &lt;BODY&gt;&lt;/BODY&gt;, y la p&aacute;gina simplemente comienza con el t&iacute;tulo. Observa tambi&eacute;n que ninguno de los HREFs est&aacute; entre comillas y que se usan espacios libremente alrededor de los signos de igual. Aunque la mayor&iacute;a de los navegadores ignorar&aacute;n errores como estos, deber&iacute;an corregirse. Los navegadores deben ser indulgentes; los autores de HTML (humanos y de otro tipo) no deber&iacute;an serlo. Adherirse al HTML &quot;can&oacute;nico&quot; asegura que tus p&aacute;ginas y enlaces funcionen para todos los navegadores y otros programas que lean tus p&aacute;ginas.
+  </p>
+  <p>
+    La página comienza con una imagen en blanco y negro de Gary, que se carga rápidamente en un enlace lento (buena idea). La imagen está incrustada en el encabezado de nivel 1 y está alineada con el resto del texto del encabezado a nivel del medio de la imagen.
+  </p>
+  <pre>
+  <code>
+    &lt;TITLE&gt;Gary Welz&apos;s Home Page&lt;/TITLE&gt;
+    &lt;H1&gt;&lt;IMG ALIGN =&quot;middle&quot; SRC=&quot;gary2.gif&quot;&gt; Gary Welz&apos;s Home Page&lt;/Hl&gt;
+    &lt;P&gt;
+    This is a home page for the collection of WWW documents being created and
+    collected by Gary Welz, who will be teaching a seminar at the NYU Center for
+    Digital Multimedia on Mosaic, the World Wide Web and authoring in HTML.
+    &lt;P&gt;
+    &lt;A HREF=&quot;HTMLDemol.html&quot;&gt;A Mosaic/HTML Demo Document&lt;/A&gt;
+    that I use in HTML classes.
+    &lt;P&gt;
+    &lt;A HREF=&quot;http://www.cuny.edu/~gary/arshtml/lanlarstitle.html&quot;&gt;
+    The Art of Renaissance Science&lt;/A&gt;, an HTML article authored by CUNY Historian of
+    Science, Joseph W. Dauben. It is a prototype of a hypermedia journal article.
+    &lt;P&gt;
+    A talk I gave last summer at the 7th Conference and General Assembly of the
+    International Federation of Science Editors entitled:
+    &lt;A HREF=&quot;internettv.html&quot;&gt;
+    Television on the Internet - Scientific Publishing in a New Medium&lt;/A&gt;. It also
+    contains abbreviated presentations by hardware and software vendors for Sun, Apple
+    and Macromedia products.
+    &lt;P&gt;
+
+    A hypermedia version of an article of mine entitled
+    &lt;A HREF=&quot;interact.html&quot;&gt;
+    Hypermedia, Multimedia and Television on the Internet: Some of the best tools in
+    life are free&lt;/A&gt;. that appeared in the July 1994 issue of &lt;I&gt;Interactions&lt;/I&gt; . a
+    publication of the Association for Computing Machinery.
+    &lt;P&gt;
+    The abstract of a talk I gave at the 2nd International WWW conference in Chicago
+    on October 18. 1994:
+    &lt;A HREF=&quot;mediabusiness.html&quot;&gt;
+    Abstract of: The Media Business on the WWW&lt;/A&gt; and a draft of the paper itself: &lt;A
+    HREF=&quot;WelzWWWconf2.html&quot;&gt;The Media Business on the WWW&lt;/A&gt;
+    &lt;P&gt;
+    A link to the &quot;Call for Participation&quot; and &quot;Viewer Interest Survey&quot; of the &lt;A
+    HREF=&quot;http://www.service.com/stv/setncal 1.html&quot;&gt;
+    Science and Engineering Television Network, Inc. &lt;/A&gt; a not-for-profit corporation
+    that I founded with the support of the Alfred P. Sloan Foundation, the Association
+    for Computing Machinery, the American Physical Society, the IEEE, the American
+    Mathematical Society and other organizations.
+    &lt;P&gt;
+    My &lt;A HREF=&quot;welzresume.html&quot;&gt;hypertext resume&lt;/A&gt;.
+    &lt;P&gt;
+  </code>
+  </pre>
+
+  <p>
+    El resto de la p&aacute;gina principal de Gary consiste en enlaces a sus sitios web favoritos. Estos enlaces est&aacute;n organizados como listas desordenadas bajo varios encabezados de nivel 3 y nivel 4. Gary coloca marcas de p&aacute;rrafo, &lt;P&gt;, despu&eacute;s de algunas de las listas y antes del siguiente encabezado. Esto deber&iacute;a evitarse ya que ya hay saltos de p&aacute;rrafo impl&iacute;citos all&iacute;. Todos los enlaces son a p&aacute;ginas HTML en otros sitios web, excepto por la referencia al sitio ftp de Sumex-Aim en la Universidad de Stanford.
+  </p>
+
+  <pre>
+  <code>
+    &lt;H2&gt;A few of my favorite WWW sites:&lt;/H2&gt;
+    &lt;H3&gt;Internet Organizations and Resources&lt;/H3&gt;
+    &lt;UL&gt;
+    &lt;LI&gt;
+    &lt;A HREF=&quot;http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/Metalndex.html&quot;&gt;
+    Internet Resources Meta- Index&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.ncsa .uiuc.edu/SDG/Software/Mosaic/StartingPoints/NetworkStar
+    tingPoints.html&quot;&gt;Network Starting Points&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://info.cern.ch/hypertext/DataSources /WWW/Servers.html&quot;&gt;
+    The Web Servers Di rectory&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://white.nosc.mil/info.html&quot;&gt;
+    The Planet Earth home page&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://info.isoc.org/home.html&quot;&gt;The Internet Society&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;ftp://sumex-aim.-stanford.edu/&quot;&gt;The sumex-aim ftp site&lt;/A&gt;
+    &lt;/UL&gt;
+    &lt;P&gt;
+
+    &lt;H3&gt;Scientific Organizations. Institutions and Resources&lt;/H3&gt;
+    &lt;UL&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://aps.org&quot;&gt;The American Phyical Society&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://aip.org&quot;&gt;The American Institute of Phyics&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www. acrn.org/&quot;&gt;
+    The Association for Computing Machinery&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.geom.umn.edu&quot;&gt;
+    The Geometry Center at the University of Mi nnesota&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://stsci.edu/top.html&quot;&gt;The Space Telescope Insti tute&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://bang.lanl.gov/video&quot;&gt;
+    Los Alamos National Laboratory Video Server&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.lcs.mit.edu/&quot;&gt;MIT Lab for Computer Science&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.cshl.org/&quot;&gt;Cold Spring Harbor Lab&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://cbl.leeds.ac.uk/nikos/tex2html/doc/latex2html/latex2html.html&quot;&gt;A source for a Latex to HTML Translator&lt;/A&gt;
+    &lt;/UL&gt;
+    &lt;P&gt;
+
+    &lt;H3&gt;Electronic Media:&lt;/H3&gt;
+    &lt;H4&gt;&quot;Magazines&quot;&lt;/H4&gt;
+    &lt;UL&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://nearnet.gnn.com/gnn/gnn.html&quot;&gt;
+    Global Network Navi gator&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://figment.fastman.com/vweb/html/vidmain.html&quot;&gt;
+    VideoWebalog&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.wired.com&gt;Wired Magazine&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://Jefferson.village.virginia.edu/pmc/&gt;
+    Postmodern Culture&lt;/A&gt;
+    &lt;/UL&gt;
+
+    &lt;H4&gt;Audio/Video/Multimedia&lt;/H4&gt;
+    &lt;UL&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.eeb.ele.tue.nl/mpeg/index.html&quot;&gt;
+    The MPEG Movie Archive&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.acm.uiuc.edu/rml/&quot;&gt;Rob&apos;s New Multimedia Lab&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.cs.ucl.ac.uk/mice/mice.html&quot;&gt;
+    MICE or Multimedia Integrated Conferencing for Europe&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.town.hal1.org/&quot;&gt;Internet Multicasting Service&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://juggler.lanl.gov/itr.html&quot;&gt;Internet Talk Radio&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.mt.com&quot;&gt;The MTV.com server run by Adam Curry&lt;/A&gt;
+    &lt;/UL&gt;
+    &lt;P&gt;
+  </code>
+  </pre>
+
+  <p>
+    Solo una nota sobre el último ítem mencionado. El servidor de MTV.com administrado por Adam Curry ya no está en www.mtv.com. Acceder a este sitio te llevará a un aviso legal. Adam, quien una vez fue un VJ de MTV, registró el nombre de dominio mtv.com y configuró un servidor para el sitio de MTV por su propia iniciativa y con sus propios fondos, aparentemente con la aprobación (o al menos la negligencia benigna) de MTV. Después de la aparición de artículos en el New York Times y el Wall Street Journal sobre la importancia de la propiedad de los nombres de dominio en Internet, MTV amenazó con demandar a Adam por el derecho al nombre. El nuevo sitio web de Adam Curry es http://metaverse.com/. Échale un vistazo: hay muchos enlaces a sitios de la industria musical y gráficos geniales.
+  </p>
+
+  <pre>
+  <code>
+    &lt;H3&gt;Internet Business Info&lt;/H3&gt;
+    &lt;UL&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.tig.com/1BC/NetStats/Names.html&quot;&gt;
+    IBC: Venture Capital Firms on the Net&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://ibd.ar.com/&quot;&gt;Internet Business Directory&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://ginko.cecer.army.mil:8000/hypernews/www-leasing.html&quot;&gt;
+    WWW Space Leasing Info&lt;/A&gt;
+    &lt;/UL&gt;
+    &lt;P&gt;
+
+    &lt;H3&gt;Electronic Marketi ng : &lt;/H3&gt;
+    &lt;UL&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.mecklerweb.com&quot;&gt;MecklerWeb&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.branch.com/&quot;&gt;Branch&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://cybersight.com/cgi-bin/imi/s?main.gmml&quot;&gt;
+    Internet Marketing, Inc.&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://apollo.co.uk&quot;&gt;Apollo Advertising&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.service.com&quot;&gt;Internet Distribution Service&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://marketplace.com/&quot;&gt;Marketplace.Com&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.ip.net/&quot;&gt;Internet Presence and Publishing&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.nets.com/&quot;&gt;Studio X&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.commerce.net/&quot;&gt;Commerce Net&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://shop.internet.net/&quot;&gt;Internet Shopping Network&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.img.om.com/img/default.html&quot;&gt;Ogilvy and Mather&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://netmarket.com/&quot;&gt;Net Market Company&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://awa.com&quot;&gt;Downtown Anywhere&lt;/A&gt;
+    &lt;/UL&gt;
+    &lt;P&gt;
+
+    &lt;H3&gt;Just Cool Sites:&lt;/H3&gt;
+    &lt;UL&gt;
+    &lt;LI&gt;&lt;A HREF=http://sailfish.peregrine.com/WebWorld/welcome.html&quot;&gt;
+    WebWorld&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://cybersight.com/cgi-bin/imi/s?main.gmml&quot;&gt;Cybersight&lt;/A&gt;
+    &lt;LI&gt;&lt;A HREF=&quot;http://www.service.com/stv/&quot;&gt;Science Television&lt;/A&gt;
+    &lt;/UL&gt;
+    &lt;P&gt;
+    &lt;I&gt;Gary Welz.&lt;/I&gt; gary@setn.org&lt;P&gt;
+  </code>
+  </pre>
+
+  <p>
+    La Figura 4.1 muestra cómo se verá la página Web generada por este código HTML cuando se visualice e imprima utilizando NCSA Mosaic.
+  </p>
+
+  <figure>
+    <img src="images/fig4.1-1.webp" alt="Figura 4.1: Página de inicio de Gary Welz"><br>
+    <img src="images/fig4.1-2.webp" alt="Figura 4.1: Página de inicio de Gary Welz (Continuación)"><br>
+    <img src="images/fig4.1-3.webp" alt="Figura 4.1: Página de inicio de Gary Welz (Continuación)"><br>
+    <figcaption>Figura 4.1: Página de inicio de Gary Welz</figcaption>
+  </figure>
+
+  <h2>Ejemplo 2—Una encuesta de interés del espectador</h2>
+  <p>
+    Uno de los proyectos de Gary Welz es la Red de Televisión de Ciencia e Ingeniería (SETN, por sus siglas en inglés). Él ha creado la encuesta de interés del espectador utilizada para este ejemplo. Se puede encontrar en http://www.service.com/stv/survey.html. Puedes llegar allí desde su página de inicio enlazando primero a la página de inicio de SETN en http://www.service.com/stv/setncall.html. Este es un buen ejemplo de un formulario. Comienza con una introducción que describe el propósito del formulario y lo que se hará con la información de entrada. Luego, el formulario en sí se divide en dos partes mediante reglas horizontales. Se utilizan casi exclusivamente botones de radio y casillas de verificación para la entrada de los lectores.
+  </p>
+  <p>
+    El código HTML comienza con un encabezado que contiene el título de la página y una etiqueta base para resolver direcciones relativas, como la URL /cgi-bin/survey.pl, que se especifica como el valor del atributo ACTION en la etiqueta FORM inicial. Esto permite que el formulario se copie a diferentes servidores mientras se asegura que la entrada será procesada por el script del servidor original, http://www.service.com/stv/cgi-bin/survey.pl.
+  </p>
+  <p>
+    Las etiquetas &#x3C;FORM&#x3E;&#x3C;/FORM&#x3E; aparecen inmediatamente dentro de las etiquetas &#x3C;BODY&#x3E;&#x3C;/BODY&#x3E;. En realidad, la etiqueta FORM de inicio podr&#xED;a haberse colocado m&#xE1;s tarde en el archivo, siempre y cuando apareciera antes de cualquier objeto de entrada. Los atributos ACTION y METHOD especifican que la entrada del lector debe enviarse a un script, survey.pl, en el directorio cgi-bin.
+  </p>
+
+  <pre>
+  <code class="language-html">
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Science and Engineering Television Network Survey&lt;/TITLE&gt;
+    &lt;BASE HREF=&quot;http://www.service.com/stv/survey.html&quot;&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY&gt;
+    &lt;FORM ACTION=&quot;/cgi-bin/survey.pi&quot; METHOD=POST&gt;
+    &lt;H2&gt;Science and Engineering Television Network&lt;/H2&gt;
+    &lt;Hl&gt;Viewing Interest Survey&lt;/Hl&gt;
+    (Note -- the purpose of this survey is to assess the level of interest in a
+    proposed video service; your response will not be used as or be considered a
+    commitment to purchase any equipment or services described in this survey.)
+    &lt;P&gt;
+    The Science and Engineering Television Network. Inc. (SETN), a non-profit
+    consortium of scientific and engineering societies is planning to launch a regular
+    international video service of 2 - 4 hours per week beginning early in 1995. This
+    service would be delivered to viewers at home or office locations in North America
+    via a direct broadcast satellite service. Viewers in other regions will also be
+    offered the service via satellite if interest is sufficient.
+    &lt;P&gt;
+    Proposed programming will consist of:
+    &lt;UL&gt;
+    &lt;LI&gt;News capsules and announcements with leading science journalists
+    &lt;LI&gt;Presentations of current research developments
+    &lt;LI&gt;Live discussions/interviews -- focusing on authors in &quot;hot&quot; research areas
+    &lt;LI&gt;New techniques, equipment, hardware, software for laboratories
+    &lt;LI&gt;Where research grants are and how to get them
+    &lt;LI&gt;Computer applications in specific disciplines
+    &lt;LI&gt;Timely features -- pending legislation, newmakers, industry reports
+    &lt;LI&gt;Events at the NSF. Institute of Medicine and National Academies of Science and
+    Engineering
+    &lt;LI&gt;Reports from Government Labs about their current activities
+    &lt;LI&gt;Television analogs of print publications, e.g. Communications of the ACM,
+    Physics Today
+    &lt;/UL&gt;
+    &lt;P&gt;
+    SETN will create supplements to programming that will be made available on the
+    Internet and regularly solicit the opinions and suggestions of viewers via the
+    Internet.
+    &lt;P&gt;
+    Click here if you would like more &lt;A HREF=http://www.service. com/stv/setncal1.html&gt;
+    information about SETN&lt;/A&gt;. its participating organizations and its proposed
+    programming. We also invite other organizations to provide SETN programming,
+    assist in distribution and sponsor programs.
+    &lt;PRE&gt;
+
+    &lt;/PRE&gt;
+    &lt;BR&gt;
+  </code>
+  </pre>
+
+  <p>
+    La secci&oacute;n de c&oacute;digo HTML anterior termina con etiquetas de preformateo &lt;PRE&gt;&lt;/PRE&gt;, que contienen un par de retornos de carro adicionales para a&ntilde;adir algo de espacio despu&eacute;s del texto introductorio y antes del formulario propiamente dicho. Esta es la forma correcta de a&ntilde;adir espacio en blanco.<br>
+    Usar m&uacute;ltiples etiquetas &lt;P&gt; no funcionar&aacute; con la mayor&iacute;a de los navegadores; las etiquetas &lt;P&gt; adicionales son ignoradas. Al final de la secci&oacute;n hay una etiqueta de salto de l&iacute;nea, &lt;BR&gt;. Mi suposici&oacute;n es que esto es un error: probablemente Gary quer&iacute;a usar una regla horizontal aqu&iacute;.
+  </p>
+  <p>
+    Las 14 preguntas del formulario de encuesta est&aacute;n formateadas usando una lista de definici&oacute;n; cada pregunta est&aacute; formateada con una etiqueta de t&eacute;rmino de definici&oacute;n, &lt;DT&gt;. Como no hay etiquetas de descripci&oacute;n de definici&oacute;n (&lt;DD&gt;) correspondientes, esto no es estrictamente un buen HTML. Es un truco com&uacute;n y tiene el efecto &uacute;til de indentar y separar m&uacute;ltiples conjuntos de p&aacute;rrafos. Otras estructuras de lista como OL, UL y MENU pueden ser usadas para indentar un conjunto de p&aacute;rrafos; sin embargo, estas estructuras no est&aacute;n destinadas a manejar m&uacute;ltiples p&aacute;rrafos por elemento de lista y tienen el efecto indeseable de decorar tu texto con n&uacute;meros o vi&ntilde;etas. &lt;BLOCKQUOTE&gt;&lt;/BLOCKQUOTE&gt; tambi&eacute;n indentar&aacute; conjuntos de p&aacute;rrafos, pero tambi&eacute;n pondr&aacute; el texto en cursiva con algunos navegadores. Del mismo modo, &lt;PRE&gt;&lt;/PRE&gt; renderizar&aacute; el texto con una fuente de m&aacute;quina de escribir. Hay varias propuestas para etiquetas HTML adicionales como &lt;INDENT&gt;&lt;/INDENT&gt; y &lt;CENTER&gt;&lt;/CENTER&gt; para controlar la posici&oacute;n relativa de p&aacute;rrafos y otras estructuras en una p&aacute;gina. Hasta que tales etiquetas sean adoptadas, trucos como este uso de etiquetas de definici&oacute;n seguir&aacute;n siendo utilizados.
+  </p>
+
+  <h3>Ejemplo 3—La PÁGINA PRINCIPAL de una pequeña organización</h3>
+  <h3>Ejemplo 4—Un folleto</h3>
+  <h3>Ejemplo 5—La PÁGINA PRINCIPAL de una gran organización</h3>
+  <h3>Ejemplo 6—Una página de RECURSOS de Internet</h3>
+  <h3>Ejemplo 7—Una página que cubre un campo temático</h3>
+  <h3>Ejemplo 8—Otra página principal</h3>
+
+  <hr>
+  <a href="cap3.html">Cápitulo 3</a> &#9664; | &#9679 <a href="index.html">Índice</a> | &#9654; <a href="apendicea.html">Apéndice A</a>
+  
+  <script src="script.js"></script>
+  <script src="prism.js"></script>
+</body>
+</html>

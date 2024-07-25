@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>CASCADING STYLE SHEETS, Designing for the Web</title>
+</head>
+<body>
+  <h1 class="merriweather-bold">CASCADING STYLE SHEETS, Designing for the Web</h1>
+  <p>Hakon Wium Lie, Bert Bos | Copyright &copy; 1997 by Addison Wesley Longman. All rights reserved.</p>
+ 
+  <h2>Tabla de contenidos</h2>
+  <ul>
+    <li><a href="prefacio.html">Prefacio</a></li>
+    <li><a href="cap1.html">Capítulo 1: La Web y HTML</a></li>
+    
+  </ul>
+
+
+  <hr>
+  <h1>Prólogo</h1>
+  <p>
+    Cuando la Web estaba en su infancia, hace unos cinco años, me sentí muy aliviado por la eliminación final de todos los problemas totalmente insolubles de la presentación en formato fijo. En la joven Web, ya no había más errores de paginación, ni más notas al pie, ni cortes de palabras tontos, ni ajustes del texto para ganar esa línea extra que tanto necesitabas para que todo cupiera en una página. En la ventana de una página web en el sistema NeXTStep, el texto siempre estaba limpio. Mejor aún: yo decidía en qué fuente aparecía, qué tan grandes quería las letras, qué estilos elegía para las listas de definiciones y dónde iban las tabulaciones.
+  </p>
+  <p>
+    Luego descendimos a la Edad Oscura durante varios años, porque la Web explotó en una comunidad que no tenía idea de que tal libertad era posible, pero se preocupaba por poner en la pantalla remota exactamente lo que pensaban que su información debería parecer. He leído recomendaciones en contra del uso de marcado estructurado porque no tienes control sobre lo que sale del otro lado. Triste.
+  </p>
+  <p>
+    A estas alturas habrás entendido que estoy firmemente en el campo de aquellos que piensan que la calidad del contenido viene primero, y la presentación viene después. Pero por supuesto, no estoy completamente en lo correcto aquí: la presentación es importante. Las fórmulas matemáticas siempre se presentan en un diseño bidimensional.
+  </p>
+  <p>
+    Afortunadamente, la filosofía de SGML nos permite separar la estructura de la presentación, y el DTD de la Web, HTML, no es una excepción. Incluso en la versión NeXTStep de 1990, Tim previó las hojas de estilo, aunque a un nivel rudimentario (¡teníamos otras cosas que hacer entonces!).
+  </p>
+  <p>
+    Hoy, las hojas de estilo están volviendo a ser una realidad, esta vez mucho más elaboradas. Este es un hito importante para la Web, y deberíamos detenernos un minuto para reflexionar sobre los beneficios potenciales y las trampas de esta tecnología.
+  </p>
+  <p>
+    Seguí el esfuerzo de CSS desde sus inicios - mayormente sobre tazas de café con Hakon en el CERN - y siempre tuve una preocupación: ¿es posible crear un "lenguaje" de hojas de estilo lo suficientemente poderoso sin terminar con un lenguaje de programación?
+  </p>
+  <p>
+    El CSS descrito en este libro muestra que puedes crear presentaciones bastante impresionantes sin programar. Aunque el programador en mí puede estar un poco decepcionado, el minimalista en mí está reconfortado. De hecho, nunca necesitaré tanta libertad y efectos especiales, pero entonces no soy un artista gráfico. Cualquier cosa que necesite más complicación se convierte efectivamente en una imagen, y debe ser tratada como tal. Siento, por lo tanto, que la parte media del espectro entre el texto ASCII puro y las imágenes completas está efectivamente cubierta por el poder de CSS, sin introducir la complejidad de la programación.
+  </p>
+  <p>
+    Tienes aquí un libro sobre presentación. Pero es presentación de información que también debería permanecer estructurada, para que tu contenido pueda ser utilizado efectivamente por otros, mientras retiene los aspectos visuales específicos que quieres darle. Usa CSS con cuidado. Es la sal largamente esperada en la comida Web: un poco es necesario, demasiado no es buena cocina.
+  </p>
+  <p>
+    Los esfuerzos de los autores finalmente nos han traído lo que tanto necesitábamos: la capacidad del autor para dar forma al contenido sin afectar la estructura. ¡Estas son buenas noticias para la Web!
+  </p>
+  <p>
+    Robert Cailliau<br>
+    CERN, Ginebra<br>
+    Febrero 1997
+  </p>
+
+<hr>
+
+  <h1>Prefacio</h1>
+  <p>
+    Este libro trata sobre una nueva forma de diseñar páginas web. Se llama Hojas de Estilo en Cascada (CSS) y revolucionará la manera en que los autores diseñan páginas web y cómo los usuarios las ven. CSS permite a los autores especificar cómo quieren que sus documentos aparezcan en pantallas o en papel, por ejemplo, qué fuentes y colores usar.
+  </p>
+  <p>
+    Desde que se escribió el primer documento web, los autores web han anhelado tener más control sobre sus documentos. Ese deseo ha sido tan fuerte que todos los medios posibles para influir en las pantallas de otras personas - hacer el texto en negrita, hacerlo parpadear, desplazarlo cinco píxeles a la derecha o desplazarse por la pantalla - han ganado seguidores. No importa cuán tonto sea el efecto, mientras los navegadores más populares lo soporten, se agrega a la lista cada vez mayor de extensiones HTML aceptadas. Al desarrollar CSS, nos aseguramos de ofrecer a la gente algunas nuevas herramientas interesantes - para satisfacer los deseos inmediatos. Además, pudimos introducir algunas características que creemos que realmente ayudarán a que la Web siga siendo un escenario de publicación para documentos más allá de los folletos de ventas.
+  </p>
+  <p>
+    Este libro está escrito para personas que diseñan páginas web. Aprenderás cómo CSS puede hacer tu trabajo más fácil y tus páginas lucir mejor. CSS ha sido creado para dar a los diseñadores web la influencia que desean mientras se mantiene la interoperabilidad y accesibilidad de la Web - y algunas otras "habilidades":
+  </p>
+  <ul>
+    <li>CSS ha sido desarrollado en un consorcio neutral de proveedores (el World Wide Web Consortium, dirigido por el mismo Tim Berners-Lee que inventó la Web y HTML).
+    </li>
+    <li>CSS pronto llegará a un navegador cerca de ti.</li>
+    <li>CSS no rompe los documentos actuales, los aumenta.</li>
+    <li>CSS permite a los lectores, así como a los autores, definir hojas de estilo.</li>
+    <li>CSS utiliza terminología común de publicación de escritorio que probablemente ya conoces.</li>
+    <li>CSS permite hojas de estilo para toda la organización: solo necesitas cambiar un archivo cuando cambia el estilo de tu sitio.</li>
+  </ul>
+
+  <p>Este libro te dirá todo lo que necesitas saber para comenzar a usar CSS.</p>
+
+    <h2>Sitio web que acompaña este libro</h2>
+    <p>En la Web, las cosas cambian rápidamente y CSS no es una excepción. Sin duda habrá nuevos desarrollos que informar en solo unos meses: más navegadores que soporten CSS, más características para usar en tus páginas web, más software para ayudarte a escribir CSS. Por esa razón, hemos creado un sitio web especial para mantenerte al día con los últimos desarrollos. Su dirección es http://www.awl.com/css/</p>
+    <p>El sitio web contiene actualizaciones del texto del libro, así como muchos hipervínculos adicionales relacionados con CSS. También puedes encontrar allí todos los ejemplos del libro, listos para ser cortados y pegados en tus propias páginas. Y si hubiera alguna errata en el libro, también se publicará allí.</p>
+
+    <h2>Agradecimientos</h2>
+    <p>
+      Crear una especificación duradera para la Web no es tarea para una sola persona. Por eso los dos autores unieron fuerzas. Luego descubrimos que dos no eran suficientes - la ayuda que hemos recibido de la comunidad Web ha sido tremenda. Especialmente, nos gustaría agradecer a las siguientes personas: Terry Allen, Murray Altheim, Glenn Adams, Walter Bender, Tim Berners-Lee, Scott Bigham, Steve Byrne, Robert Cailliau, James Clark, Daniel Connolly, Donna Converse, Adam Costello, Todd Fahrner, Todd Freter, Roy Fielding, Neil Galarneau, Wayne Gramlich, Phill Hallam-Baker, Kevin Hughes, Scott Isaacs, Tony Jebson, William Johnston, Phil Karlton, Evan Kirshenbaum, Murray Maloney, Lou Montulli, Henrik Frystyk Nielsen, David Perrell, William Perry, Scott Preece, Paul Prescod, Liam Quin, Vincent Quint, Jenny Raggett, Thomas Reardon, Cecile Roisin, Michael Seaton, David Seibert, David Siegel, David Singer, Benjamin Sittler, Jon Smirl, Charles Peyton Taylor, Irene Vatton, Daniel Veillard, Mandira Virmani, Greg Watkins, Mike Wexler, Lydja Williams, Brian Wilson, Chris Wilson, Lauren Wood y Stephen Zilles. Cada una de estas personas cambió la especificación CSS1 de una manera u otra.
+    </p>
+    <p>
+      INRIA (El Instituto Nacional Francés de Investigación en Informática y Control) ha sido un entorno productivo para W3C y el desarrollo de CSS. Entre las personas que han sido vitales en establecer y mantener este entorno están: Jean-François Abramatic, Anselm Baird-Smith, Yves Bertot, Daniel Dardailler, Philipp Hoschka, Gilles Kahn, Philippe Kaplan, Yves Lafon, Jean-Michel Leon y Colas Nahaboo. Durante todo el tiempo, Stephane Boyera mantuvo los discos girando y el software funcionando.
+    </p>
+    <p>
+      Sally Khudairi y Rohit Khare, los procesadores de E/S de W3C, merecen agradecimientos por compartir su información actualizada.
+    </p>
+    <p>
+      Publicar un libro es mucho más que escribirlo: la gente de Addison Wesley Longman ha aceptado pacientemente nuestros cambios de horario mientras se adhería al suyo propio. Nuestro agradecimiento va para Nicky McGirr, Dylan Reisenberger y Karen Mosman.
+    </p>
+    <p>
+      Tres personas merecen una mención especial: Dave Raggett (por su aliento y trabajo en HTML3), Chris Lilley (por sus continuas contribuciones, especialmente en el área de colores y fuentes) y Steven Pemberton (por sus habilidades organizativas y creativas).
+    </p>
+    <p>
+      Y una palabra final de agradecimiento a los miembros de la familia Siri, Julie y Anniken, cuya estructura y estilo siempre inspiraron y apoyaron el proyecto.
+    </p>
+    <p>
+      Håkon Wium Lie<br>
+      Bert Bos<br>
+      Niza, marzo de 1997
+    </p>
+
+<hr>
+
+  <h1>Agradecimientos del editor</h1>
+  <p>
+    Los editores desean agradecer a los siguientes por el permiso para reproducir el material listado.
+  </p>
+  <p>
+    Figura 3.2, recorte de la revista TIME, © 1997 TIME Inc. Reimpreso con autorización.
+  </p>
+  <p>
+    Gracias a Netscape Communications Corp. cuyo navegador Navigator aparece, con permiso, en la portada. Esta imagen de portada no puede ser reimpresa o copiada sin el permiso expreso por escrito de Netscape. Netscape Communications Corporation no ha autorizado, patrocinado, respaldado o aprobado esta publicación y no es responsable de su contenido. Netscape y los logotipos de Netscape son marcas comerciales y nombres comerciales de Netscape Communications Corporation.
+  </p>
+  <p>
+    Estamos agradecidos a Microsoft Corporation, cuyo navegador Internet Explorer se utiliza para mostrar varias de las capturas de pantalla en este libro, y aparece en la portada.
+  </p>
+  <p>
+    Gracias también a los numerosos colaboradores mencionados en los Capítulos 9 y 10 por sus ejemplos de diseño de páginas web; y al World Wide Web Consortium (W3C), cuyo navegador Arena y editor Amaya aparecen en el Apéndice B.
+  </p>
+
+  <h1>Capítulo 1: La Web y HTML</h1>
+    <h2>La Web </h2>
+    <h2>Lenguajes de marcado</h2>
+    <h2>Eludiendo las limitaciones de HTML</h2>
+    <h2>Conceptos básicos de HTML</h2>
+    <h2>Árboles de documentos</h2>
+  
+  <h1>Capítulo 2: Introducción a CSS</h1>
+    <h2>Reglas y hojas de estilo</h2>
+    <h2>Pegando hojas de estilo a documentos</h2>
+    <h2>Navegadores y CSS</h2>
+    <h2>Estructuras de árbol y herencia</h2>
+    <h2>Anulación de la herencia</h2>
+    <h2>Propiedades que no se heredan</h2>
+    <h2>Introducción al cascading</h2>
+
+  <h1>Capítulo 3: Selectores</h1>
+    <h2>Esquemas de selectores</h2>
+    <h2>Selectores de tipo</h2>
+    <h2>Selectores de atributo</h2>
+    <h2>Combinando tipos de selectores</h2>
+    <h2>Selectores contextuales</h2>
+    <h2>Información externa: Pseudo-clases y pseudo-elementos</h2>
+    <h2>DIV y SPAN</h2>
+
+  <h1>Capítulo 4: Fuentes</h1>
+    <h2>Introducción a la tipografía</h2>
+    <h2>Disponibilidad de fuentes y sustitución de fuentes</h2>
+    <h2>Cómo leer definiciones de propiedades</h2>
+    <h2>Unidades de medida utilizadas para valores</h2>
+    <h2>Haciendo tu documento escalable</h2>
+    <h2>Propiedades de fuente CSS</h2>
+    <h2>La propiedad font-family</h2>
+    <h2>La propiedad font-style</h2>
+    <h2>La propiedad font-variant</h2>
+    <h2>La propiedad font-weight</h2>
+    <h2>La propiedad font-size</h2>
+    <h2>La propiedad font</h2>
+    <h2>La propiedad text-decoration</h2>
+    <h2>La propiedad text-transform</h2>
+    <h2>Más información sobre fuentes</h2>
+
+  <h1>Capítulo 5: Estructuras básicas</h1>
+    <h2>El modelo de caja</h2>
+    <h2>La propiedad display</h2>
+    <h2>Logrando diferentes efectos</h2>
+    <h2>Más sobre listas - las propiedades list-style</h2>
+    <h2>La propiedad list-style-type</h2>
+    <h2>La propiedad list-style-image</h2>
+    <h2>La propiedad list-style-position</h2>
+    <h2>La propiedad list-style</h2>
+    <h2>La propiedad white-space</h2>
+  
+  <h1>Capítulo 6: Espacio</h1>
+    <h2>Espacio alrededor de elementos a nivel de bloque</h2>
+    <h2>Márgenes y las propiedades de margen</h2>
+    <h2>Las propiedades de padding</h2>
+    <h2>El grupo de propiedades de borde</h2>
+    <h2>Trabajando con las propiedades de borde</h2>
+    <h2>Colapso de márgenes</h2>
+    <h2>La propiedad width</h2>
+    <h2>La propiedad height</h2>
+    <h2>La propiedad float</h2>
+    <h2>La propiedad clear</h2>
+    <h2>La historia completa sobre el cálculo del ancho</h2>
+    <h2>Espacio dentro de elementos a nivel de bloque</h2>
+    <h2>La propiedad text-align</h2>
+    <h2>La propiedad text-indent</h2>
+    <h2>La propiedad line-height</h2>
+    <h2>La propiedad word-spacing</h2>
+    <h2>La propiedad letter-spacing</h2>
+    <h2>La propiedad vertical-align</h2>
+  
+  <h1>Capítulo 7: Imágenes</h1>
+    <h2>Elementos reemplazados</h2>
+    <h2>Trabajando con imágenes transparentes</h2>
+    <h2>Imágenes flotantes y texto envolvente</h2>
+    <h2>Posicionando imágenes desde los márgenes</h2>
+    <h2>Escalando una imagen</h2>
+    <h2>Diferencias entre elementos reemplazados y de bloque</h2>
+
+  <h1>Capítulo 8: Colores</h1>
+    <h2>Modelo de color RGB</h2>
+    <h2>Especificando colores</h2>
+    <h2>La propiedad color</h2>
+    <h2>Estableciendo el color de un borde</h2>
+    <h2>Estableciendo el color de hipervínculos</h2>
+    <h2>Las propiedades de fondo</h2>
+    <h2>La propiedad background-color</h2>
+    <h2>La propiedad background-image</h2>
+    <h2>La propiedad background-repeat</h2>
+    <h2>La propiedad background-attachment</h2>
+    <h2>La propiedad background-position</h2>
+    <h2>La propiedad background</h2>
+    <h2>Estableciendo el fondo del lienzo</h2>
+  
+  <h1>Capítulo 9: Artes y oficios CSS</h1>
+    <h2>El Momento del Exterior</h2>
+
+  <h1>Capítulo 10: Transformaciones CSS</h1>
+    <h2>Caso 1: Magnet </h2>
+    <h2>Caso 2: Cyberspazio</h2>
+    <h2>Caso 3: TSDesign</h2>
+
+  <h1>Capítulo 11:Cascading y herencia</h1>
+    <h2>Ejemplo 1: Los fundamentos</h2>
+    <h2>Ejemplo 2: Aparecen conflictos</h2>
+    <h2>Ejemplo 3: Acomodando estilos de usuario</h2>
+    <h2>Ejemplo 4: Un ejemplo más complejo</h2>
+
+  <h1>Capítulo 12: Hojas de estilo en organizaciones</h1>
+    <h2>Vinculando documentos usando LINK</h2>
+    <h2>Añadiendo estilos especiales con el elemento STYLE y @import</h2>
+    <h2>Personalizando documentos usando el atributo CLASS</h2>
+    <h2>Creando un formulario de memo personalizado</h2>
+    <h2>Otras formas de vincular hojas de estilo a documentos</h2>
+
+  <h1>Capítulo 13: Hojas de estilo con estilo</h1>
+  
+  <h1>Capítulo 14: Otros enfoques</h1>
+    <h2>Uso de otros lenguajes de hojas de estilo</h2>
+    <h2>Creación de un documento sin usar una hoja de estilo </h2>
+    <h2>Uso de un formato distinto a HTML</h2>
+
+  <h1>Capítulo 15: Mirando hacia adelante</h1>
+    <h2>Compatibilidad futura</h2>
+    <h2>Hojas de Estilo en Cascada Aurales</h2>
+    <h2>Capacidades de diseño</h2>
+    <h2>Capacidades de hipervínculos</h2>
+    <h2>Impresión de alta calidad</h2>
+    <h2>Fuentes y caracteres especiales</h2>
+    <h2>Letras swash y otros glifos alternativos</h2>
+    <h2>Selectores</h2>
+    <h2>Gradientes, operaciones de color e imagen</h2>
+    <h2>Pestañas y guías</h2>
+    <h2>Tablas</h2>
+    <h2>Ganchos a métodos de diseño externos</h2>
+    <h2>Valores calculados</h2>
+    <h2>Texto generado</h2>
+    <h2>Efectos especiales</h2>
+    <h2>Otras formas de vincular hojas de estilo</h2>
+    <h2>Cómo surgen las extensiones</h2>
+
+  <script src="script.js"></script>
+</body>
+<!-- 
+https://mothereff.in/html-entities
+-->
+</html>

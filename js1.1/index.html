@@ -1,0 +1,2792 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Enséñate a ti mismo JAVASCRIPT 1.1 en una semana</title>
+</head>
+<body>
+  <h1 class="merriweather-bold">Enséñate a ti mismo JAVASCRIPT 1.1 en una semana</h1>
+  <p>Arman Danesh | Copyright &copy; 1996 by SAMs net. All rights reserved.</p>
+ 
+  <h2>Tabla de contenidos</h2>
+  <ul>
+    <li><a href="introduccion.html">Introducción</a></li>
+    <li><a href="cap1.html">Capítulo 1: ¿Dónde encaja JavaScript?</a></li>
+    <li><a href="cap2.html">Capítulo 2: Tu primer script</a></li>
+    <li><a href="cap3.html">Capítulo 3: Trabajando con datos e información</a></li>
+    <li><a href="cap4.html">Capítulo 4: Funciones y objetos: los bloques de construcción de los programas</a>
+      <ul>
+        <li><a href="dlw4-1.html">De la web: el calendario de Dave Eisenberg</a></li>
+      </ul>
+    </li>
+    <li><a href="cap5.html">Capítulo 5: Eventos en JavaScript</a></li>
+    <li><a href="cap6.html">Capítulo 6: Creando formularios interactivos</a>
+      <ul>
+        <li><a href="dlw6-1.html">De la web: la calculadora de peso ideal de Ashley Cheng</a></li>
+      </ul>
+    </li>
+    <li><a href="cap7.html">Capítulo 7: Bucles</a></li>
+    <li><a href="cap8.html">Capítulo 8: Frames(marcos), documentos y ventanas</a>
+      <ul>
+        <li><a href="dlw8-1.html">De la web: el visor de autos Civic de Michael Yu</a></li>
+      </ul>
+    </li>
+    <li><a href="cap9.html">Capítulo 9: Recuerda dónde has estado con cookies</a>
+      <ul>
+        <li><a href="dlw9-1.html">De la web: el calendario de recordatorios de James Thiele</a></li>
+      </ul>
+    </li>
+    <li><a href="cap10.html">Capítulo 10: Strings(cadenas), matemáticas y la Lista de Historial</a></li>
+    <li><a href="cap11.html">Capítulo 11: Divirtiéndose con JavaScript</a>
+      <ul>
+        <li><a href="dlw11-1.html">De la web: el juego de coincidencias de Michal Sramka</a></li>
+      </ul>
+    </li>
+    <li><a href="cap12.html">Capítulo 12: Creando una hoja de cálculo en JavaScript</a></li>
+    <li><a href="cap13.html">Capítulo 13: Navigator Gold: una herramienta de desarrollo de JavaScript</a></li>
+    <li><a href="cap13.html">Capítulo 14: De JavaScript a Java: mirando hacia el futuro</a></li>
+  </ul>
+
+
+  <h3>Agradecimientos</h3>
+  <p>
+    Escribir este libro ha sido un proceso que ha involucrado a muchas personas. Me gustaría agradecer en particular al personal de Sams.net que trabajó conmigo en el desarrollo del manuscrito: Kelly Murdock, Marla Reece y Mark Taber, y muchos otros que estoy seguro también estuvieron involucrados.
+  </p>
+  <p>
+    También me gustaría agradecer a Gautam Das del Centro Mundial Baha’i en Haifa, Israel, por leer secciones del libro mientras lo estaba escribiendo.
+  </p>
+
+  <h3>Sobre el autor</h3>
+  <p>
+  <strong>Arman Danesh</strong>
+  Arman Danesh trabaja como Especialista en Desarrollo Web en el Centro Mundial Bahá'í en Haifa. También es Director Editorial de Juxta Publishing Limited, con sede en Hong Kong. Obtuvo su Maestría en Ciencias en Comunicación Masiva de la Universidad de Boston en 1990. También ha trabajado como periodista de tecnología y es colaborador regular y columnista de Internet para el South China Morning Post y The Dataphile. Arman vive con su esposa, Tahirth, en Haifa, Israel.
+  </p>
+  <p>
+    Se puede contactar a Arman por correo electrónico en armand@juxta.com.
+  </p>
+  
+  <h3>¡Dinos qué piensas!</h3>
+  <p>
+    Como lector, eres el crítico y comentarista más importante de nuestros libros. Valoramos tu opinión y queremos saber qué estamos haciendo bien, en qué podríamos mejorar, en qué áreas te gustaría que publicáramos, y cualquier otra palabra de sabiduría que estés dispuesto a compartir con nosotros. Nos puedes ayudar a crear libros sólidos que satisfagan tus necesidades y te brinden la orientación informática que requieres.
+  </p>
+  <p>
+    ¿Tienes acceso a CompuServe o a la World Wide Web? Entonces visita nuestro foro en CompuServe escribiendo GO SAMS en cualquier solicitud. Si prefieres la World Wide Web, visita nuestro sitio en http://www.mcp.com.
+  </p>
+
+  
+
+  <hr>
+  
+
+  <h4>Uso de JavaScript: Un Lenguaje de Scripting Simple y Basado en Objetos</h4>
+  <p>
+    A diferencia de Java, JavaScript se une a las filas de los lenguajes de scripting simples y fáciles de usar. JavaScript promete una curva de aprendizaje más fácil que Java junto con herramientas poderosas para agregar interactividad a las páginas web con poco esfuerzo.
+  </p>
+
+  <h5>Derivado de Java</h5>
+  <p>
+    JavaScript debe mucho a Java. Su sintaxis y estructura básica son similares a las de Java, incluso si el rango de funciones y el estilo de programación pueden diferir enormemente. JavaScript comenzó su vida como el propio lenguaje de scripting de Netscape con el nombre LiveScript, pero a finales de 1995, Sun respaldó el lenguaje, y se convirtió en JavaScript.
+  </p>
+  <p>
+    JavaScript conserva más que solo la sintaxis y estructura básica de Java: también toma prestadas la mayoría de las construcciones de flujo de Java e implementa algunas de las mismas precauciones de seguridad, como prevenir que los applets escriban en el disco local.
+  </p>
+
+  <h5>Un Lenguaje Interpretado</h5>
+  <p>
+    A diferencia de Java, JavaScript es un lenguaje interpretado. Mientras que en Java, el código fuente se compila antes de la ejecución, en un lenguaje interpretado, los archivos de código fuente se ejecutan directamente en tiempo de ejecución en JavaScript.
+  </p>
+  <p>
+    Los lenguajes interpretados ofrecen varias ventajas, así como varios inconvenientes. Los lenguajes interpretados, como JavaScript, generalmente son más simples que los lenguajes compilados y son fáciles de aprender. A menudo es más fácil desarrollar, cambiar y depurar programas porque se elimina la necesidad de recompilar con cada cambio.
+  </p>
+  <p>
+    En el lado negativo, la necesidad de interpretar comandos mientras se ejecuta el programa puede generar una disminución en el rendimiento con algunos lenguajes interpretados. En el caso de JavaScript, esto no parece ser un problema.
+  </p>
+  <p>
+    Los scripts de JavaScript se compilan en códigos de bytes (similar a Java) a medida que se descargan y evalúan, y para la mayoría de los scripts, el rendimiento es bastante rápido.
+  </p>
+
+  <h5>No totalmente extensible</h5>
+  <p>
+    A diferencia de Java, JavaScript no es totalmente extensible. El modelo de JavaScript es un conjunto limitado de objetos base, propiedades, métodos y tipos de datos, que proporcionan suficientes capacidades para crear aplicaciones del lado del cliente o del lado del servidor.
+  </p>
+  <p>
+    Aunque los usuarios pueden crear sus propios objetos y escribir funciones, esto no es lo mismo que las clases y la herencia que ofrecen Java y otros lenguajes de programación orientados a objetos.
+  </p>
+  <p>
+    Dado que JavaScript es un lenguaje de scripting basado en objetos, este libro estará dedicado a aprender sobre los objetos, propiedades, métodos y tipos de datos disponibles en JavaScript.
+  </p>
+
+  <h5>Interacción limitada cliente-servidor</h5>
+  <p>
+    JavaScript en su forma actual no está diseñado para una interacción completa cliente-servidor. Más allá de analizar, construir e invocar URL, JavaScript no puede comunicarse directamente con los servidores ni utilizar diferentes protocolos. Esencialmente, JavaScript es adecuado para manejar la actividad del lado del cliente.
+  </p>
+  <p>
+    Aun así, hay indicios de que las futuras versiones de JavaScript soportarán protocolos como HTTP y FTP, pero varios problemas de seguridad relacionados con la interacción cliente-servidor a través de JavaScript deben ser abordados por Netscape antes de implementar estas características.
+  </p>
+  <p>
+    Además, JavaScript es parte del servidor web LiveWire ofrecido por Netscape. LiveWire está dirigido a grupos y organizaciones que desarrollan aplicaciones web interactivas. En este rol, JavaScript proporciona una alternativa al scripting CGI tradicional para la programación del lado del servidor. En este sentido, JavaScript puede usarse para la interacción cliente-servidor.
+  </p>
+
+  <h5>Integrado en HTML</h5>
+  <p>
+    Mientras que Java solo está ligeramente vinculado a HTML, JavaScript está estrechamente integrado en los archivos HTML. Por lo general, los scripts completos se encuentran en los mismos archivos que el HTML que define una página, y estos scripts se descargan al mismo tiempo que los archivos HTML.
+  </p>
+
+  <h3>El estado actual de JavaScript</h3>
+  <p>
+    Al emprender la tarea de aprender JavaScript, es importante tener en cuenta el estado actual del lenguaje y hacia dónde parece dirigirse su desarrollo.
+  </p>
+
+  <h4>En desarrollo</h4>
+  <p>Tanto Navigator 3.0 como JavaScript están en un desarrollo intenso y están evolucionando constantemente. Entonces, JavaScript es, por definición, un lenguaje en desarrollo (como lo son la mayoría de los lenguajes de programación). En términos prácticos, esto significa que la especificación completa del lenguaje aún no se ha implementado.</p>
+  <p>De una manera muy real, JavaScript es un objetivo en movimiento. De Navigator 2.0 a Navigator 3.0, el conjunto de características se ha ampliado enormemente y ha cambiado notablemente. Además, algunos métodos y propiedades existentes han sido modificados. No hay razón para creer que este desarrollo y cambio no se extenderá a futuras versiones de Navigator.</p>
+  <p>Además de esto, la implementación de JavaScript por parte de Microsoft difiere sutilmente de la de Netscape, y no hay garantía de que estas diferencias no persistan o cambien con el tiempo.</p>
+
+  <h4>Apoyado por Sun</h4>
+  <p>A finales de noviembre de 1995, LiveScript se convirtió en JavaScript en un anuncio conjunto de Netscape y Sun, en el que Sun anunció que apoyaría JavaScript como el estándar de scripting abierto basado en Java para Internet.</p>
+  <p>Dado este apoyo, hay pocas dudas de que JavaScript continuará pareciéndose a Java y que se convertirá en la herramienta elegida para integrar applets de Java en las páginas web, al menos en el entorno de Netscape.</p>
+  <p>Esencialmente, este respaldo de Sun le dio vida a un lenguaje de scripting al que muy pocas personas prestaban atención, pero que ahora es el tema candente en la World Wide Web.</p>
+
+  <h4>Respaldado por muchas empresas</h4>
+  <p>Sun Microsystems no es la única empresa que apoya JavaScript. Al mismo tiempo que Netscape y Sun hicieron su anuncio, más de 28 empresas, incluidas America Online, Apple Computers, Oracle, Silicon Graphics, Architext y SCO, anunciaron que también respaldarían JavaScript como el estándar de scripting abierto para Internet, y muchas indicaron que estaban considerando licenciar la tecnología para incluirla en sus propios productos.</p>
+
+  <h4>Uso Potencial en Diferentes Productos</h4>
+  <p>Además de incluir JavaScript en su navegador web Navigator, Netscape está incluyendo JavaScript en su entorno de desarrollo de aplicaciones del lado del servidor llamado LiveWire.</p>
+  <p>Esto hace posible que el impulso para la programación CGI utilizando Perl y Bourne o C shell pueda trasladarse hacia JavaScript, lo que proporcionaría un entorno de desarrollo consistente tanto en el cliente como en el servidor.</p>
+  <p>Además, los respaldos de numerosas empresas significan que JavaScript comenzará a aparecer en productos de compañías distintas a Netscape y en productos diferentes a navegadores y servidores web. Como se mencionó anteriormente, JavaScript ya es compatible con el Internet Explorer de Microsoft.</p>
+  <p>Además, Netscape ha propuesto JavaScript como un estándar de scripting para la World Wide Web.</p>
+
+  <h4>JavaScript Hoy: Scripting para el Navegador Web de Netscape</h4>
+  <p>En este libro, nos estamos enfocando en el uso de JavaScript en el navegador web Navigator porque es donde se está llevando a cabo la mayor parte del desarrollo de JavaScript y porque es el entorno más fácil en el que aprender y practicar JavaScript. JavaScript también está disponible en la nueva versión 3 de Internet Explorer de Microsoft. Internet Explorer también incluye otro lenguaje de scripting, VBScript, basado en el lenguaje de programación Visual Basic de la compañía. VBScript no se cubre en este libro.</p>
+
+  <h3>¿Qué es JavaScript?</h3>
+  <p>A estas alturas, probablemente tengas una idea de lo que es JavaScript y lo que no es, pero veamos más de cerca las características que aprenderás y usarás a lo largo de este libro.</p>
+
+  <h4>JavaScript es un Lenguaje de Scripting</h4>
+  <p>Los lenguajes de scripting se han utilizado mucho antes de la llegada de la Web. En el entorno UNIX, los scripts se han utilizado para realizar tareas repetitivas de administración del sistema y para automatizar muchas tareas para usuarios menos expertos en informática. Además, los lenguajes de scripting son la base de gran parte de la programación CGI-BIN que se utiliza actualmente para agregar una forma limitada de interactividad a las páginas web.</p>
+  <p>Ejemplos de lenguajes de scripting incluyen Perl, bien conocido en la programación CGI, Awk y SED (diseñados para procesamiento intensivo de texto), e incluso HyperTalk que, al igual que JavaScript, es un lenguaje de scripting orientado a objetos.</p>
+  <p>Por supuesto, esto aún no te dice cuáles son las principales ventajas de los lenguajes de scripting. Como todos los lenguajes de scripting, JavaScript es interpretado, lo que proporciona un proceso de desarrollo fácil; contiene un conjunto de comandos y una sintaxis limitados y fáciles de aprender; y está diseñado para realizar un conjunto bien definido de tareas.</p>
+
+  <h4>Diseñado para Programas Simples y Pequeños</h4>
+  <p>Debido a que JavaScript es un lenguaje de scripting, está bien adaptado para implementar programas simples y pequeños. Por ejemplo, JavaScript sería ideal para desarrollar una calculadora de conversión de unidades entre millas y kilómetros o libras y kilogramos. Estas tareas se pueden escribir y realizar fácilmente a velocidades aceptables con JavaScript y se integrarían fácilmente en una página web. Un lenguaje más robusto como Java sería mucho menos adecuado para el desarrollo rápido y el fácil mantenimiento de este tipo de aplicaciones.</p>
+  <p>Por el contrario, JavaScript no sería adecuado para implementar un entorno distribuido de visualización y manipulación de documentos CAD. Aunque eventualmente JavaScript será una herramienta para integrar este tipo de applet o complemento de Java en una página web, intentar desarrollar el applet real en JavaScript sería, en el mejor de los casos, difícil e ineficiente y, más probablemente, imposible.</p>
+  <p>Por supuesto, esto no significa que no se puedan desarrollar aplicaciones sofisticadas con JavaScript, y de hecho, se están desarrollando. No obstante, los lenguajes de scripting generalmente se usan para tareas más pequeñas en lugar de para programas completos compilados.</p>
+
+  <h4>Realiza Tareas Repetitivas</h4>
+  <p>Así como JavaScript es adecuado para producir programas pequeños, está especialmente bien diseñado para tareas repetitivas invocadas por eventos. Por ejemplo, JavaScript es ideal para calcular el contenido de un campo en un formulario basado en cambios en los datos de otro campo. Cada vez que los datos cambian, se invoca el programa de JavaScript para manejar el evento, y los nuevos datos para el otro campo se calculan y se muestran.</p>
+
+  <h4>Diseñado para Programar Eventos de Usuario</h4>
+  <p>Debido a la forma en que JavaScript está integrado en el navegador y puede interactuar directamente con las páginas HTML, JavaScript hace posible programar respuestas a eventos de usuario como clics de ratón y la entrada de datos en formularios.</p>
+  <p>Por ejemplo, se podría usar un script de JavaScript para implementar un sistema de ayuda simple. Cada vez que el usuario señale un botón o un enlace en la página, se puede mostrar un mensaje útil e informativo en la barra de estado en la parte inferior de la ventana del navegador.</p>
+  <p>Esto añade interactividad a las páginas web, hace que los formularios sean dinámicos y puede reducir los requisitos de ancho de banda y la carga del servidor que conlleva el uso de formularios y la programación CGI.</p>
+
+  <h4>Fácil Depuración y Pruebas</h4>
+  <p>Al igual que otros lenguajes de scripting, JavaScript facilita el desarrollo y la resolución de problemas porque no está compilado. Es fácil probar el código del programa, ver los resultados, hacer cambios y probarlo nuevamente sin la sobrecarga y el retraso de la compilación.</p>
+
+  <h4>El Pegamento de Java</h4>
+  <p>Cuando Netscape anunció JavaScript, se refirió al lenguaje como la herramienta para "pegar applets de Java en páginas web". Con Navigator 3.0 esto se ha vuelto posible. JavaScript puede desencadenar eventos en applets de Java, y los applets de Java pueden llamar a métodos y funciones de JavaScript.</p>
+
+  <h3>JavaScript es Basado en Objetos</h3>
+  <p>Orientado a objetos es un término que ha sido sobreutilizado por los medios y el brazo de marketing de las industrias de computación y software. No obstante, el hecho de que JavaScript tenga un modelo orientado a objetos limitado es una distinción importante.</p>
+
+  <h4>El Modelo de Objetos de JavaScript</h4>
+  <p>Para entender qué significa que JavaScript sea basado en objetos, necesitamos observar los objetos y cómo funcionan.</p>
+  <p>Fundamentalmente, los objetos son una forma de organizar información, junto con los métodos para manipular y usar esa información.</p>
+  <p>Los objetos proporcionan una manera de definir piezas específicas de datos relacionadas con el ítem en cuestión; estas piezas se conocen como propiedades. Además, estas se complementan con tareas que se pueden realizar con o sobre esa información, conocidas como métodos. Juntos, las propiedades y los métodos conforman los objetos.</p>
+  <p>Debido a la naturaleza general de los objetos, se pueden crear instancias específicas para cada caso donde se necesiten. Por ejemplo, un objeto coche podría tener varias instancias para Toyotas, Fords y Volkswagens.</p>
+
+  <h4>Una Comparación con los Lenguajes Procedurales</h4>
+  <p>Definir objetos de esta manera difiere mucho de la forma en que se maneja la información en los lenguajes de programación procedurales tradicionales como FORTRAN y C.</p>
+  <p>En estos lenguajes, la información y los procedimientos (similares a los métodos) se mantienen separados y distintos y no están vinculados de la manera en que lo están los objetos. Además, el concepto de crear instancias no está tan desarrollado en los lenguajes procedurales.</p>
+
+  <h3>Trabajando con Objetos en JavaScript</h3>
+  <p>JavaScript incluye objetos incorporados para trabajar con elementos del documento HTML actualmente cargado, así como para realizar otras tareas útiles, como cálculos matemáticos. También ofrece al programador la oportunidad de crear sus propios objetos.</p>
+
+  <h4>Objetos Incorporados</h4>
+  <p>JavaScript ofrece un conjunto de objetos incorporados que proporcionan información sobre la página web actualmente cargada y su contenido, así como sobre la sesión actual del Navegador. Además, estos objetos proporcionan métodos para trabajar con sus propiedades.</p>
+  <h5>La Jerarquía de Objetos del Navegador</h5>
+  <p>La mayoría de los objetos incorporados en JavaScript forman parte de la Jerarquía de Objetos del Navegador. La Jerarquía de Objetos del Navegador se construye a partir de un único objeto base llamado el objeto window, como se ilustra en el siguiente esquema.</p>
+  <pre>
+    Navigator
+    Window
+      Location
+      History
+      Document
+        Forms
+        Anchors
+  </pre>
+
+  <p>Tabla 1.1 destaca los principales objetos de JavaScript.</p>
+
+  <table border="1">
+    <caption>Tabla 1.1. Descripción general de la jerarquía del objeto Navigator.</caption>
+    <thead>
+        <tr>
+            <th>Objeto</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><pre>navigator</pre></td>
+            <td>El objeto navigator proporciona propiedades que exponen información sobre el navegador actual a los scripts de JavaScript.</td>
+        </tr>
+        <tr>
+            <td><pre>window</pre></td>
+            <td>El objeto window proporciona métodos y propiedades para tratar con la ventana Navigator real, incluyendo objetos para cada marco.</td>
+        </tr>
+        <tr>
+          <td><pre>location</pre></td>
+          <td>El objeto location proporciona propiedades y métodos para trabajar con la URL actualmente abierta.</td>
+        </tr>
+        <tr>
+          <td><pre>history</pre></td>
+          <td>El objeto history proporciona información sobre la lista de historial y permite una interacción limitada con la lista.</td>
+        </tr>
+        <tr>
+          <td><pre>document</pre></td>
+          <td>El objeto document es uno de los objetos más utilizados en la jerarquía. Contiene objetos, propiedades y métodos para trabajar con elementos del documento, incluyendo formularios, enlaces, anclas y con applets.</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <h4>Otros objetos integrados</h4>
+  <p>Además de los objetos en la Jerarquía del objeto Navigator, JavaScript proporciona varios objetos que no están relacionados con las ventanas actuales o los documentos cargados. La Tabla 1.2 describe las características principales de estos objetos.</p>
+
+  <table border="1">
+    <caption>Tabla 1.2. Otros objetos integrados.</caption>
+    <thead>
+        <tr>
+            <th>Objeto</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><pre>string</pre></td>
+            <td>El objeto string permite a los programas trabajar con y manipular cadenas de texto, incluyendo la extracción de subcadenas y la conversión de texto a caracteres en mayúsculas o minúsculas.</td>
+        </tr>
+        <tr>
+            <td><pre>Math</pre></td>
+            <td>El objeto Math proporciona métodos para realizar funciones trigonométricas, como el seno y la tangente, así como funciones matemáticas generales, como las raíces cuadradas.</td>
+        </tr>
+        <tr>
+          <td><pre>Date</pre></td>
+          <td>Con el objeto Date, los programas pueden trabajar con la fecha actual o crear instancias para fechas específicas. El objeto incluye métodos para calcular la diferencia entre dos fechas y trabajar con horas.</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <h4>Extendiendo JavaScript: Creando tus propios objetos</h4>
+  <p>Además de una amplia gama de objetos integrados, como programador de JavaScript, puedes crear tus propios objetos para usar en tus scripts.</p>
+
+  <h5>Propiedades</h5>
+  <p>Por ejemplo, si necesitas construir un objeto en JavaScript para representar los diferentes tipos de aviones vendidos por un fabricante de aeronaves, tendrías varios datos relacionados con el avión que querrías incluir en el objeto, incluyendo los siguientes:</p>
+  <ul>
+    <li>Modelo</li>
+    <li>Precio</li>
+    <li>Capacidad de asientos normal</li>
+    <li>Capacidad de carga normal</li>
+    <li>Velocidad máxima</li>
+    <li>Capacidad de combustible</li>
+  </ul>
+
+  <p>Las propiedades son como variables en lenguajes tradicionales, como C y Pascal. Las variables son contenedores nombrados que se utilizan para almacenar datos, como números o texto. Las variables se discuten con más detalle en el Capítulo 3, "Trabajando con Datos e Información".</p>
+  <p>Entonces, en JavaScript, si llamas a tu objeto avión, estas propiedades podrían referirse como:</p>
+
+  <pre>
+    avión.modelo
+    avión.precio
+    avión.asientos
+    avión.carga
+    avión.velocidadmax
+    avión.combustible
+  </pre>
+
+  <blockquote>
+    <strong>Nota</strong><br>
+    Como aprenderás más adelante, en JavaScript, las propiedades de los objetos se refieren mediante la estructura nombre-del-objeto.nombre-de-la-propiedad.
+  </blockquote>
+
+  <h5>Métodos</h5>
+  <p>Por supuesto, tener esta información no vale mucho sin formas de usarla. Por ejemplo, en este ejemplo, quieres poder imprimir una descripción bien formateada de la aeronave o ser capaz de calcular la distancia máxima que el avión puede recorrer según la capacidad de combustible.</p>
+  <p>En la terminología orientada a objetos, estas tareas se conocen como métodos. Al igual que las propiedades, tus métodos podrían ser referidos como:</p>
+  <pre>
+    avion.descripcion()
+    avion.distancia()
+  </pre>
+
+  <h5>Objetos dentro de Objetos</h5>
+  <p>Los objetos también pueden incluir otros objetos de manera similar a las propiedades y métodos. Por ejemplo, el fabricante de aviones puede querer incluir un objeto dentro de su definición de objeto para manejar información sobre el número de aviones en uso en todo el mundo, quién los está usando y sus registros de seguridad. Esta información, junto con métodos para trabajar con la información, podría combinarse en un objeto llamado avion.registro. Este objeto luego podría incluir propiedades y métodos como:</p>
+  <pre>
+    avion.registro.numero_en_uso
+    avion.registro.accidentes
+    avion.registro.nuevotamaño()
+  </pre>
+
+  <h5>Instancias</h5>
+  <p>Lo que has creado es una descripción general de un objeto que define la información con la que quieres trabajar y las formas en que deseas trabajar con ella. Estas descripciones generales de objetos se conocen como clases. En la programación orientada a objetos, entonces, puedes crear instancias específicas de la clase según sea necesario.</p>
+  <blockquote>
+    <strong>Nota:</strong><br>
+    En la programación orientada a objetos, crear copias específicas de clases se conoce como crear instancias. JavaScript en sí mismo es sin clases, pero proporciona mecanismos para crear instancias de objetos (proporcionando así la misma funcionalidad básica). Cubrimos los detalles de la creación de objetos e instancias en el Capítulo 4, "Funciones y Objetos: Los componentes básicos de los programas".
+  </blockquote>
+  <p>Por ejemplo, en este ejemplo, el fabricante de aviones podría querer crear una instancia del objeto avión para su nueva aeronave, el SuperAvión. Si se creara esta instancia, entonces un programa podría asignar valores específicos a las propiedades de la nueva instancia refiriéndose a superavion.precio, superavion.modelo, y así sucesivamente. Del mismo modo, una descripción del nuevo avión podría imprimirse utilizando superavion.descripcion().</p>
+
+  <h3>Fortalezas de JavaScript</h3>
+  <p>JavaScript ofrece varias fortalezas al programador, incluyendo un ciclo de desarrollo corto, facilidad de aprendizaje y scripts de tamaño reducido. Estas fortalezas significan que JavaScript puede ser utilizado fácil y rápidamente para extender páginas HTML ya existentes en la Web.</p>
+
+  <h4>Desarrollo Rápido</h4>
+  <p>Dado que JavaScript no requiere una compilación que consume mucho tiempo, los scripts pueden ser desarrollados en un período relativamente corto. Esto se ve favorecido por el hecho de que la mayoría de las características de la interfaz, como cuadros de diálogo, formularios y otros elementos de GUI, son manejados por el navegador y el código HTML. Los programadores de JavaScript no tienen que preocuparse por crear o manejar estos elementos de sus aplicaciones.</p>
+
+  <h4>Fácil de Aprender</h4>
+  <p>Aunque JavaScript puede compartir muchas similitudes con Java, no incluye la sintaxis compleja ni las reglas de Java. Al aprender solo unos pocos comandos y reglas simples de sintaxis, junto con entender la manera en que se utilizan los objetos en JavaScript, es posible comenzar a crear programas bastante sofisticados.</p>
+
+  <h4>Independencia de Plataforma</h4>
+  <p>Debido a que la World Wide Web, por su propia naturaleza, es independiente de la plataforma, los programas de JavaScript creados para Netscape Navigator no están ligados a ninguna plataforma de hardware específica o sistema operativo. El mismo código de programa puede ser utilizado en cualquier plataforma para la cual esté disponible Navigator 2.0.</p>
+
+  <h4>Bajo Sobrecosto</h4>
+  <p>Los programas de JavaScript tienden a ser bastante compactos y son bastante pequeños, en comparación con los applets binarios producidos por Java. Esto minimiza los requisitos de almacenamiento en el servidor y los tiempos de descarga para el usuario. Además, debido a que los programas de JavaScript generalmente se incluyen en el mismo archivo que el código HTML de una página, requieren menos accesos a la red por separado.</p>
+
+  <h3>Debilidades de JavaScript</h3>
+  <p>Como era de esperarse, JavaScript también tiene sus propias debilidades únicas. Estas incluyen un conjunto limitado de métodos incorporados, la incapacidad de proteger el código fuente de miradas curiosas, y el hecho de que JavaScript aún no tiene un entorno maduro de desarrollo y depuración.</p>
+
+  <h4>Rango Limitado de Métodos Incorporados</h4>
+  <p>Las primeras versiones beta de Navigator 2.0 incluían una versión de JavaScript que era bastante limitada. En la versión final de Navigator 2, el número de métodos incorporados había aumentado significativamente, pero aún no incluía un conjunto completo de métodos para trabajar con documentos y las ventanas del cliente. Con el lanzamiento de Navigator 3, las cosas han avanzado un paso más con la adición de numerosos métodos, propiedades y manejadores de eventos.</p>
+
+  <h4>Falta de Ocultación de Código</h4>
+  <p>Debido a que el código fuente de los scripts de JavaScript actualmente debe incluirse como parte del código fuente HTML de un documento, no hay forma de proteger el código de ser copiado y reutilizado por las personas que ven tus páginas web.</p>
+  <p>Esto plantea preocupaciones en la industria del software sobre la protección de la propiedad intelectual. El consenso es que los scripts de JavaScript son básicamente freeware en este momento.</p>
+
+  <h4>Falta de Herramientas de Depuración y Desarrollo</h4>
+  <p>La mayoría de los entornos de programación bien desarrollados incluyen una suite de herramientas que facilitan el desarrollo y simplifican y aceleran el proceso de depuración.</p>
+  <p>Actualmente, existen algunos editores HTML y editores de programación que brindan soporte para JavaScript. Además, hay algunas herramientas en línea para depurar y probar scripts de JavaScript. Sin embargo, realmente no existen entornos de desarrollo integrados como los disponibles para Java, C o C++. LiveWire de Netscape proporciona algunas características de desarrollo, pero no es un entorno de desarrollo completo para JavaScript del lado del cliente.</p>
+
+  <h3>Resumen</h3>
+  <p>JavaScript es uno de varios componentes clave en Netscape Navigator diseñados para ayudar a los desarrolladores web a producir aplicaciones interactivas en Internet. Otras características incluyen soporte para plug-ins, frames y, por supuesto, Java.</p>
+  <p>Donde Java es compilado, orientado a objetos, complejo y distinto de HTML, JavaScript es interpretado, basado en objetos, sencillo de usar y aprender, e íntimamente integrado con HTML.</p>
+  <p>JavaScript expone propiedades de la sesión actual del navegador al programador, incluyendo elementos de las páginas HTML cargadas actualmente, tales como formularios, marcos y enlaces.</p>
+  <p>En este capítulo también examinamos las implicaciones del hecho de que JavaScript es un lenguaje de scripting, observamos de cerca qué son los objetos y cómo se usan en JavaScript, y dimos un vistazo amplio a los objetos integrados en JavaScript.</p>
+  <p>Aprendiste que, aunque JavaScript ofrece muchos beneficios, incluyendo un ciclo de desarrollo rápido e independencia de plataforma, aún tiene desventajas.</p>
+  <p>En el próximo capítulo, comenzarás a observar los detalles específicos del desarrollo de scripts en JavaScript y trabajarás en tu primer script.</p>
+
+  <h3>Preguntas y Respuestas</h3>
+  <p><strong>P: He usado solo herramientas de programación visual para crear páginas web. ¿Puedo aprender JavaScript? ¿Cómo hará JavaScript que mi página principal sea mejor?</strong></p>
+  <p>R: Aunque es cierto que programar en JavaScript es más similar a programar en C que usar una herramienta de programación visual, la mayoría de la programación en JavaScript es lo suficientemente simple como para que sea fácil para un principiante completo.</p>
+  <p>Además, el desarrollo de interfaces para programas en JavaScript involucra casi enteramente el uso de HTML y formularios HTML, los cuales pueden desarrollarse en un entorno visual usando varias herramientas de desarrollo HTML, incluyendo Navigator Gold de Netscape.</p>
+  <p>Si aprendes JavaScript, podrás agregar interactividad a las páginas web. Por ejemplo, si un usuario ingresa datos en un formulario, se puede calcular y mostrar un resultado para el usuario. De manera similar, si el usuario mueve el mouse sobre un enlace o botón, se puede mostrar información de ayuda en la barra de estado de la ventana de Navigator.</p>
+
+  <p><strong>P: Quiero agregar interactividad a mis páginas web. ¿Debería aprender Java o JavaScript?</strong></p>
+  <p>R: Java y JavaScript no son competidores. Son lenguajes de programación complementarios que ambos extienden la funcionalidad de los navegadores web—en este caso, Netscape Navigator.</p>
+  <p>Encontrarás que Java es adecuado para un conjunto de tareas diferente al de JavaScript. Por ejemplo, una herramienta de visualización para documentos CAD necesitaría desarrollarse usando applets de Java, mientras que un formulario HTML interactivo solo podría desarrollarse usando JavaScript.</p>
+
+  <hr>
+  <h1>Capítulo 2</h1>
+  <h2>Tu Primer Script</h2>
+  <p>En este capítulo, finalmente te adentrarás en los detalles de la creación de un script de JavaScript.</p>
+  <p>Aprenderás sobre los siguientes temas, que te llevarán a tu primer script completo en JavaScript:</p>
+  <ul>
+    <li>Cómo incorporar JavaScript en HTML</li>
+    <li>Estructura de comandos y bloques de comandos en JavaScript</li>
+    <li>Funciones de salida</li>
+  </ul>
+
+  <p>Luego aprendes a usar scripts de JavaScript para crear salida de texto que se dirige a la ventana del cliente, en secuencia con un archivo HTML, y luego se interpreta como HTML normal.</p>
+  <p>Por supuesto, esto realmente no te permite hacer nada con JavaScript que no puedas hacer ya con HTML. Así que, a medida que el capítulo avanza, darás el siguiente paso: generar salida en cuadros de diálogo, en lugar de ponerla en la propia página web, y generar salida dinámica que puede cambiar cada vez que se carga la página.</p>
+  <p>Cubrimos los siguientes temas:</p>
+  <ul>
+    <li>Crear salida en un cuadro de diálogo usando el método alert()</li>
+    <li>Pedir a los usuarios que ingresen datos en un cuadro de diálogo usando el método prompt()</li>
+    <li>Mostrar salida dinámica combinando el método prompt con document.write() y document.writeln()</li>
+  </ul>
+
+  <h3>Incorporando JavaScript en HTML</h3>
+  <p>En la actualidad, todos los scripts de JavaScript deben ser incluidos como parte integral de un documento HTML. Para hacer esto, Netscape ha implementado una extensión al HTML estándar: la etiqueta SCRIPT.</p>
+
+  <h4>La etiqueta script</h4>
+  <p>Incluir scripts en HTML es simple. Cada script debe estar contenido dentro de una etiqueta contenedora SCRIPT. En otras palabras, una etiqueta de apertura &lt;SCRIPT&gt; inicia el script y una etiqueta de cierre &lt;/SCRIPT&gt; lo termina:</p>
+  <pre>
+    <code>
+      &lt;SCRIPT&gt;
+      Programa en JavaScript
+      &lt;/SCRIPT&gt;
+    </code>
+  </pre>
+
+  <p>La etiqueta script tiene dos atributos opcionales que determinan cómo se incorpora el script de JavaScript en cuestión al archivo HTML. Estos atributos se describen en la Tabla 2.1.</p>
+
+  <table border="1">
+    <caption>Tabla 2.1. Atributos para la etiqueta script.</caption>
+    <thead>
+        <tr>
+            <th>Atributo</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><pre>SRC</pre></td>
+            <td>URL de un archivo que contiene el código fuente de JavaScript. El archivo debe tener la extensión .js. Consulta el sitio web de Navigator para más detalles sobre la etiqueta SRC.</td>
+        </tr>
+        <tr>
+          <td><pre>LANGUAGE</pre></td>
+          <td>Indica el idioma utilizado en el script. En la versión actual de Navigator, este atributo puede tomar solo dos valores: JavaScript y LiveScript. LiveScript se proporciona para la compatibilidad con versiones anteriores de scripts desarrollados cuando el idioma se llamaba LiveScript. Debes usar JavaScript en tus scripts.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <strong>Nota:</strong><br>
+    Usar la etiqueta SCRIPT y sus atributos te permite usar dos técnicas para integrar un programa JavaScript en un archivo HTML. Sin embargo, en Navigator, los programadores solo tienen una opción: incluir sus programas JavaScript en sus archivos HTML.
+  </blockquote>
+
+  <blockquote>
+    <strong>Consejo:</strong><br>
+    Aunque Navigator admite el uso de LANGUAGE="LiveScript" para la compatibilidad con versiones anteriores, esto se eliminará en futuras versiones del navegador. Es mejor usar LANGUAGE="JavaScript". Además, LANGUAGE="LiveScript" no es compatible con Internet Explorer 3.0 de Microsoft.
+  </blockquote>
+
+  <h4>Incluir JavaScript en un archivo HTML</h4>
+  <p>La primera, y más fácil, manera es incluir el código fuente real en el archivo HTML, usando la siguiente sintaxis:</p>
+  <pre>
+    <code>
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      programa JavaScript
+      &lt;/SCRIPT&gt;        
+    </code>
+  </pre>
+
+  <h4>Ocultar scripts de otros navegadores</h4>
+  <p>Por supuesto, surge un problema inmediato con este tipo de contenedor SCRIPT: Los navegadores que no admiten JavaScript intentarán mostrar o analizar el contenido del script. Para evitar esto, Netscape recomienda el siguiente enfoque utilizando comentarios HTML:</p>
+  <pre>
+    <code>
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      &lt;!-- OCULTAR EL SCRIPT DE OTROS NAVEGADORES
+      Programa en JavaScript
+      // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+      &lt;/SCRIPT&gt;
+    </code>
+  </pre>
+
+  <p>Estos comentarios (&lt;!-- OCULTAR EL SCRIPT DE OTROS NAVEGADORES y // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;) aseguran que otros navegadores web ignorar&aacute;n todo el script y no lo mostrar&aacute;n, ya que todo lo que est&aacute; entre &lt;!-- y --&gt; deber&iacute;a ser ignorado por un navegador web est&aacute;ndar. Por supuesto, si los usuarios vieran el c&oacute;digo fuente del documento, a&uacute;n ver&iacute;an el script.</p>
+
+  <h4>Problemas con la etiqueta script</h4>
+  <p>Esta técnica de combinar la etiqueta SCRIPT con comentarios no es infalible, sin embargo. En este momento, la etiqueta SCRIPT no es una parte aceptada del estándar HTML 2.0 y la especificación HTML 3.0 está incompleta. Por el momento, los fabricantes de navegadores competidores podrían usar la etiqueta SCRIPT para otro propósito.</p>
+
+  <blockquote>
+    <strong>Nota:</strong><br>
+    En el momento de la publicación, parecía que la etiqueta SCRIPT, y posiblemente JavaScript en sí mismo, se convertiría en parte de la especificación HTML 3.0 porque cuenta con el respaldo de Netscape y Sun, entre otros.
+  </blockquote>
+
+  <p>De hecho, con Netscape Navigator 2.0, este último problema ya ha ocurrido con la implementación de marcos. Entre varias etiquetas usadas para producir marcos, Netscape usa una etiqueta FRAME que es utilizada por el Web Explorer de IBM para otro propósito.
+  </p>
+  <p>Además, al ocultar el script de otros navegadores, los usuarios de estos otros navegadores no serán conscientes de la existencia del script. Una solución a este problema podría ser usar el siguiente enfoque:
+  </p>
+
+  <pre>
+    <code>
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      // El Script de JavaScript Aparece Aqu&iacute;&lt;BR&gt;
+      // Descargue Netscape Navigator para usarlo.
+      &lt;!-- OCULTANDO DE OTROS NAVEGADORES
+      Programa en JavaScript
+      // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+      &lt;/SCRIPT&gt;
+    </code>
+  </pre>
+
+  <blockquote>
+   <strong>Nota:</strong>
+   A diferencia del HTML, que crea comentarios con la estructura &lt;!-- Comentarios Aquí --&gt;, los comentarios en JavaScript comienzan con una doble barra (//) en cualquier parte de la línea y continúan hasta el final de la línea. Si no están contenidos dentro de una estructura de comentario HTML, un comentario de JavaScript será mostrado por navegadores que no sean Netscape. Como aprenderás más adelante en este capítulo, JavaScript también incluye comentarios de múltiples líneas.
+  </blockquote>
+
+  <p>A partir de Navigator 3, Netscape ha introducido el elemento NOSCRIPT, que proporciona una forma de especificar texto alternativo para navegadores que no soportan JavaScript. Cualquier texto entre las etiquetas NOSCRIPT será mostrado por otros navegadores, pero Navigator 3 lo ignorará. El ejemplo anterior podría implementarse usando la etiqueta NOSCRIPT:</p>
+
+  <pre>
+    <code>
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      &lt;!-- ESCONDI&Eacute;NDOLO DE OTROS NAVEGADORES
+      Programa en JavaScript
+      // DEJAR DE ESCONDERLO DE OTROS NAVEGADORES - -&gt;
+      &lt;/SCRIPT&gt;
+      &lt;NOSCRIPT&gt;
+      El script de JavaScript aparece aqu&iacute;&lt;BR&gt;
+      Descarga Netscape Navigator 2.0 para usarlo.
+      &lt;/NOSCRIPT&gt;
+    </code>
+  </pre>
+
+  <h4>Dónde Poner Tu Código JavaScript</h4>
+  <p>Los scripts y programas JavaScript se pueden incluir en cualquier lugar del encabezado o cuerpo de un archivo HTML. Muchos de los ejemplos en el sitio web de Netscape, así como en otros lugares, tienden a incluir el contenedor SCRIPT en el encabezado del archivo HTML, y este es el formato preferido.</p>
+  <p>Aún así, otros desarrolladores prefieren incluir el programa JavaScript junto al elemento o sección del HTML al que se refiere, como un formulario. Dado que un archivo HTML puede contener más de una etiqueta SCRIPT, es posible colocar funciones JavaScript en lugares lógicos dentro del archivo para facilitar la codificación y depuración.</p>
+  <p>Como verás en el Capítulo 4, "Funciones y Objetos—Los Bloques de Construcción de los Programas", hay razones convincentes para poner ciertos segmentos de tu código JavaScript en el encabezado del archivo HTML para asegurarse de que se evalúen antes de que los usuarios puedan iniciar eventos.</p>
+
+  <h4>Uso de archivos externos para programas de JavaScript</h4>
+  <p>Aunque incluir programas de JavaScript directamente en archivos HTML puede ser conveniente para scripts pequeños y páginas HTML básicas, puede volverse complicado cuando las páginas requieren scripts largos y complejos.</p>
+  <p>Para facilitar el desarrollo y mantenimiento de archivos HTML y scripts de JavaScript, la especificación de JavaScript incluye la opción de mantener tus scripts de JavaScript en archivos separados y utilizar el atributo src de la etiqueta SCRIPT para incluir el programa de JavaScript en un archivo HTML.</p>
+  <p>En su forma más simple, la construcción SRC se puede usar de la siguiente manera:</p>
+
+  <pre>
+    <code>
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot; SRC=&quot;http://www.you.com/JavaScript.js&quot;&gt;
+      &lt;/SCRIPT&gt;
+    </code>
+  </pre>
+
+  <blockquote>
+    <strong>Nota:</strong>
+    Para que el atributo src funcione, el nombre de los archivos fuente de JavaScript debe incluir la extensión .js. Además, tu servidor web necesita estar configurado con el tipo de archivo correcto para archivos JavaScript. La información sobre esto está disponible en el sitio web de Netscape.
+  </blockquote>
+
+  <p>Uno de los beneficios de este enfoque es que tus scripts están automáticamente ocultos de otros navegadores que no soportan JavaScript. Al mismo tiempo, esta técnica requiere una solicitud adicional al servidor y acceso al servidor, lo cual puede ser problemático en un servidor lento o a través de una conexión lenta a Internet.</p>
+  <p>Además, ambas técnicas (código JavaScript en un archivo HTML y código JavaScript en un archivo externo) se pueden usar al mismo tiempo. Puedes hacer esto con un solo contenedor SCRIPT o más de uno:</p>
+  <pre>
+    <code>
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot; SRC=&quot;http://www.you.com/JavaScript.js&quot;&gt;
+      &lt;!-- OCULTAR DE OTROS NAVEGADORES
+      M&aacute;s c&oacute;digo JavaScript
+      // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+      &lt;/SCRIPT&gt;
+    </code>
+  </pre>
+
+  <p>o</p>
+
+  <pre>
+    <code>
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot; SRC=&quot;http://www.you.com/JavaScript.js&quot;&gt;
+      &lt;/SCRIPT&gt;
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      &lt;!-- OCULTAR DE OTROS NAVEGADORES
+      M&aacute;s c&oacute;digo JavaScript
+      // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+      &lt;/SCRIPT&gt;
+    </code>
+  </pre>
+
+  <p>Listado 2.1 demuestra un sencillo script de JavaScript dentro de un archivo HTML.</p>
+  <blockquote><strong>Entrada:</strong>
+    Listado 2.1. Incluyendo un programa en un archivo HTML.</blockquote>
+  
+  <pre>
+    <code>
+      &lt;HTML&gt;
+      &lt;HEAD&gt;
+      &lt;TITLE&gt;Listado 2.1&lt;/TITLE&gt;
+      &lt;/HEAD&gt;
+      &lt;BODY&gt;
+      Aqu&iacute; est&aacute; el resultado:
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      &lt;!-- OCULTAR DE OTROS NAVEGADORES
+      // Salida &quot;&iexcl;Funciona!&quot;
+      document.writeln(&quot;&iexcl;Funciona!&lt;BR&gt;&quot;) ;
+      // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+      &lt;/SCRIPT&gt;
+      &lt;/BODY&gt;
+      &lt;/HTML&gt;
+    </code>
+  </pre>
+
+  <blockquote><strong>Salida:</strong>
+    Este archivo HTML produce resultados similares a los de la Figura 2.1. En comparación,
+    al usar un navegador que no soporta JavaScript (como NCSA Mosaic), los resultados
+    se ven como en la Figura 2.2.
+  </blockquote>
+
+  <figure>
+    <img src="images/fig2.1.webp" alt="Figura 2.1: En Navigator, la salida se muestra en el orden del código fuente.">
+    <figcaption>Figura 2.1: En Navigator, la salida se muestra en el orden del código fuente.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/fig2.2.webp" alt="Figura 2.2: Parte del script está oculta cuando JavaScript no es compatible.">
+    <figcaption>Figura 2.2: Parte del script está oculta cuando JavaScript no es compatible.</figcaption>
+  </figure>
+
+  <p><strong>Análisis:</strong>
+    El script en el Listado 2.1 demuestra varios puntos importantes que se aclararán en capítulos posteriores.
+  </p>
+  <p>Primero, es posible generar salida HTML dinámica en el momento de cargar el documento usando scripts de JavaScript. Segundo, nada en el script se muestra en otros navegadores aunque el resto del archivo HTML se carga y muestra sin ninguna dificultad. Para comparar, elimina las líneas de comentarios HTML y la salida se verá como en la Figura 2.3. Puedes ver que todo el comando de JavaScript document.writeln("¡Funciona! <BR>"); se ha mostrado, y la etiqueta <BR> ha sido interpretada por el navegador sin JavaScript.</p>
+  
+  <figure>
+    <img src="images/fig2.3.webp" alt="Figura 2.3: Sin los comentarios HTML, el código JavaScript se muestra.">
+    <figcaption>Figura 2.3: Sin los comentarios HTML, el código JavaScript se muestra.</figcaption>
+  </figure>
+
+  <p>En este ejemplo, también se ve cómo funcionan los comentarios en JavaScript. La línea que comienza con dos barras,</p>
+
+  <pre>
+    <code>
+      // Salida "¡Funciona!"
+    </code>
+  </pre>
+
+  <p>es un comentario de una sola línea en JavaScript similar a los utilizados en C++. Todo lo que sigue después de las // hasta el final de la línea es un comentario. JavaScript también admite comentarios de múltiples líneas al estilo de C, que comienzan con /* y terminan con */:</p>
+
+  <pre>
+    <code>
+      /* Esto
+         es
+         un
+         comentario */
+    </code>
+  </pre>
+
+  <p>Los comentarios son útiles para ayudar a otras personas a leer tus programas y entender qué están haciendo diferentes comandos y funciones. Además, cuando escribes programas largos o complejos, el uso liberal de comentarios significativos te ayudará a entender tu propio programa si vuelves a modificarlo después de un período prolongado de tiempo.</p>
+  
+  <h3>Sintaxis Básica de Comandos</h3>
+  <p>La sintaxis básica y estructura de JavaScript se ve familiar para cualquiera que haya utilizado C, C++, o Java. Un programa en JavaScript se construye con funciones (abordadas en el Capítulo 4) y declaraciones, operadores y expresiones. La unidad básica de comando es un comando o expresión de una línea seguido opcionalmente por un punto y coma; por ejemplo:</p>
+
+  <pre>
+    <code>
+      document.writeln(&quot;&iexcl;Funciona!&lt;BR&gt;&quot;);
+    </code>
+  </pre>
+
+  <p>Este comando invoca el método writeln(), que es parte del objeto document. El punto y coma indica el final del comando.</p>
+
+  <blockquote>
+    <strong>Nota:</strong>
+    Los comandos de JavaScript pueden abarcar varias líneas. Múltiples comandos también pueden aparecer en una sola línea, siempre y cuando haya un punto y coma para marcar el final de cada comando. De hecho, excepto donde sea esencial distinguir entre comandos, el punto y coma es opcional. Lo uso a lo largo de este libro para hacer el código fuente más claro y fácil de leer.
+  </blockquote>
+
+  <h3>Bloques de Comandos</h3>
+  <p>Múltiples comandos pueden combinarse en bloques de comandos usando llaves ({ y }). Los bloques de comandos se utilizan para agrupar conjuntos de comandos de JavaScript en una unidad única, que luego puede utilizarse para una variedad de propósitos, incluyendo bucles y definición de funciones. (Estos temas se discutirán en capítulos posteriores.) Un bloque de comandos simple se ve así:</p>
+
+  <pre>
+    <code>
+      document.writeln(&quot;&iquest;Funciona?&quot;);
+      document.writeln(&quot;&iexcl;Funciona!&lt;BR&gt;&quot;);
+    </code>
+  </pre>
+
+  <p>Los bloques de comandos pueden ser incrustados, como ilustran las siguientes líneas.</p>
+
+  <pre>
+    <code>
+      {
+        c&oacute;digo JavaScript
+        {
+            m&aacute;s c&oacute;digo JavaScript
+        }
+      }    
+    </code>
+  </pre>
+
+  <p>Cuando incrustas bloques de comandos de esta manera, es importante recordar que todas las llaves abiertas deben cerrarse y que la primera llave de cierre cierra la última llave abierta. En el siguiente ejemplo, la primera } cierra la segunda { como se muestra con los marcadores |:</p>
+  
+  <pre>
+    <code>
+      {
+       |
+       |  c&oacute;digo JavaScript
+       |
+       |  {
+       |   |   
+       |   |  m&aacute;s c&oacute;digo JavaScript
+       |   |
+       |  }
+       |
+       |
+      } 
+    </code>
+  </pre>
+
+  <blockquote>
+    <strong>Consejo:</strong>
+    Al incrustar bloques de comandos unos dentro de otros, es práctica común indentar cada bloque de comandos sucesivo para que sea fácil identificar dónde comienzan y terminan los bloques al leer el código del programa. Los espacios y tabulaciones adicionales no tienen ningún efecto en los programas JavaScript.
+  </blockquote>
+
+  <p>En JavaScript, los nombres de objetos, propiedades y métodos son sensibles a mayúsculas y minúsculas, al igual que todas las palabras clave, operadores y nombres de variables. Aprenderás sobre operadores y variables en el Capítulo 3, "Trabajando con Datos e Información". De esta manera, todos los siguientes comandos son diferentes (y algunos son ilegales):</p>
+
+  <pre>
+    <code>
+      document.writeln(&quot;Prueba&quot;);
+      Document.writeln(&quot;Prueba&quot;);
+      document.WriteLN(&quot;Prueba&quot;);
+    </code>
+  </pre>
+
+  <h3>Mostrar Texto</h3>
+  <p>En la mayoría de los lenguajes de programación, una de las capacidades básicas es mostrar—o desplegar—texto. En JavaScript, la salida se puede dirigir a varios lugares, incluyendo la ventana del documento actual y las cajas de diálogo emergentes.</p>
+
+  <h4>Salida en la Ventana del Cliente</h4>
+  <p>En JavaScript, los programadores pueden dirigir la salida a la ventana del cliente en secuencia con el archivo HTML. Como se discutió en la sección anterior, el JavaScript que produce salida se evalúa donde ocurre en el archivo HTML, y el texto resultante se interpreta como HTML con el propósito de mostrar la página.</p>
+  <p>Además de esto, JavaScript permite a los programadores generar cuadros de alerta y confirmación que incluyen texto y uno o dos botones. También se pueden mostrar texto y números en campos de texto (TEXT) y áreas de texto (TEXTAREA) en un formulario.</p>
+  <p>En las siguientes secciones, se revisa cómo mostrar texto en la ventana del documento.</p>
+
+  <h5>Los Métodos document.write() y document.writeln()</h5>
+  <p>El objeto document en JavaScript incluye dos métodos diseñados para mostrar texto en la ventana del cliente: write() y writeln(). En JavaScript, los métodos se llaman combinando el nombre del objeto con el nombre del método:</p>
+
+  <pre>
+    <code>
+      nombre-objeto.nombre-método
+    </code>
+  </pre>
+
+  <p>Los datos que el método necesita para realizar su trabajo se proporcionan como un argumento entre paréntesis, por ejemplo:</p>
+
+  <pre>
+    <code>
+      document.write("Prueba");
+      document.writeln('Prueba');
+    </code>
+  </pre>
+
+  <blockquote>
+    <strong>Nuevo Término:</strong>
+    Los <em>argumentos</em> son datos proporcionados a una función o método para su uso en cálculos y procesamiento. Se proporcionan (o pasan) a la función o método listándolos entre paréntesis después del nombre de la función o método. Múltiples argumentos se separan por comas.
+  </blockquote>
+
+  <blockquote>
+    <strong>Nota:</strong>
+    Una mirada rápida a estos ejemplos muestra que las cadenas de texto están rodeadas por comillas dobles (o simples) y que los dos métodos (document.write() y document.writeln()) se invocan de la misma manera. Las comillas de apertura y cierre deben ser del mismo tipo—no se puede abrir con comillas dobles y cerrar con comillas simples o viceversa.
+  </blockquote>
+
+  <p>El método write() genera texto y HTML como una cadena de texto en la ventana actual en secuencia con el archivo HTML actual. Debido a que el contenedor SCRIPT no afecta las estructuras HTML donde ocurre, cualquier etiqueta de formato u otros elementos en el archivo HTML afectarán el texto y el HTML producidos por el método write(). Por ejemplo, el Listado 2.2 produce una salida como la Figura 2.4.</p>
+
+  <blockquote>
+    <strong>Entrada:</strong> Listado 2.2. Generación de etiquetas HTML desde JavaScript.
+  </blockquote>
+
+  <pre>
+    <code>
+      &lt;HTML&gt;
+      &lt;HEAD&gt;
+      &lt;TITLE&gt;Generaci&oacute;n de Texto&lt;/TITLE&gt;
+      &lt;/HEAD&gt;
+      &lt;BODY&gt;
+      Este texto es simple.&lt;BR&gt;
+      &lt;B&gt;
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      &lt;!-- OCULTAR DE OTROS NAVEGADORES
+      document.write(&quot;Este texto es negrita.&lt;/B&gt;&quot;);
+      // DEJAR DE OCULTAR DE OTROS NAVEGADORES - -&gt;
+      &lt;/SCRIPT&gt;
+      &lt;/BODY&gt;
+      &lt;/HTML&gt;
+    </code>
+  </pre>
+
+  <blockquote>
+    <strong>Salida:</strong> La Figura 2.4 muestra el efecto resultante:
+  </blockquote>
+
+  <figure>
+    <img src="images/fig2.4.webp" alt="Figura 2.4: Las etiquetas HTML afectan la salida de los scripts de JavaScript.">
+    <figcaption>Figura 2.4: Las etiquetas HTML afectan la salida de los scripts de JavaScript.</figcaption>
+  </figure>
+
+  <p><strong>Analisis: </strong>
+    El Listado 2.2 también demuestra que las etiquetas HTML, así como el texto regular, pueden ser generados por el método write(). Notarás que las etiquetas &lt;B&gt; y &lt;/B&gt; pueden ser incluidas como parte del método write() o dejadas fuera del script. En cualquier caso, el texto y el HTML se evalúan en el orden en que aparecen en el código fuente completo de HTML y JavaScript.</p>
+
+  <p>El método writeln() es igual que el método write() excepto que agrega un retorno de carro al final de la cadena que se está generando. Esto es realmente relevante solo dentro de los contenedores PRE y XMP donde los retornos de carro son interpretados al mostrar el texto. El Listado 2.3 muestra un ejemplo del método writeln().</p>
+
+  <blockquote>
+    <strong>Entrada: </strong>
+    Listado 2.3. Usando el método writeln() con la etiqueta pre.
+  </blockquote>
+
+  <pre>
+    <code>
+      &lt;PRE&gt;
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      &lt;!-- OCULTAR DE OTROS NAVEGADORES
+      document.writeln(&quot;Uno,&quot;);
+      document.writeln(&quot;Dos,&quot;);
+      document.write(&quot;Tres &quot;);
+      document.write(&quot;...&quot;);
+      // DEJAR DE OCULTAR DE OTROS NAVEGADORES - -&gt;
+      &lt;/SCRIPT&gt;
+      &lt;/PRE&gt;
+    </code>
+  </pre>
+
+  <p>Este ejemplo produce resultados como los de la Figura 2.5.</p>
+
+  <figure>
+    <img src="images/fig2.5.webp" alt="Figura 2.5: Salida usando el método writeln().">
+    <figcaption>Figura 2.5: Salida usando el método writeln().</figcaption>
+  </figure>
+
+  <p>En JavaScript, las cadenas de texto, como las que se usan para producir salida con los métodos write() y writeln(), pueden incluir pulsaciones especiales para representar caracteres que no se pueden escribir, como nuevas líneas, tabulaciones y retornos de carro. Los caracteres especiales se revisan en la Tabla 2.2.</p>
+
+  <table border="1">
+    <caption>Tabla 2.2. Caracteres especiales en cadenas.</caption>
+    <thead>
+        <tr>
+            <th>Carácter</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><pre>\n</pre></td>
+            <td>nueva línea</td>
+        </tr>
+        <tr>
+          <td><pre>\t</pre></td>
+          <td>tabulación</td>
+        </tr>
+        <tr>
+          <td><pre>\r</pre></td>
+          <td>retorno de carro</td>
+        </tr>
+        <tr>
+          <td><pre>\f</pre></td>
+          <td>avance de página</td>
+        </tr>
+        <tr>
+          <td><pre>\b</pre></td>
+          <td>retroceso</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p>Por ejemplo, el siguiente comando muestra el texto "¡Funciona!" seguido de una nueva línea:</p>
+
+  <pre>
+    <code>
+      document.write("¡Funciona! \n");
+    </code>
+  </pre>
+
+  <p>Todos los caracteres especiales comienzan con una barra invertida (\). Esto se llama escapar caracteres. Escapar un carácter se usa en muchos lenguajes de secuencias de comandos y programación para representar un carácter que no se puede escribir o que tiene un significado especial en el lenguaje y se interpretaría incorrectamente si no se escapara.</p>
+
+  <p>Un ejemplo perfecto de esto es la propia barra invertida. Para mostrar una barra invertida en JavaScript, es necesario escapar la barra invertida:</p>
+
+  <pre>
+    <code>
+      document.write("Una barra invertida: \\");
+    </code>
+  </pre>
+
+  <p>En este ejemplo, la primera barra invertida le dice a JavaScript que el siguiente carácter es un carácter especial y que no debe tratarlo de manera normal. En este caso, se muestra una barra invertida en lugar de tratar la segunda barra invertida de la manera normal (como el carácter de escape).</p>
+  <p>La Lista 2.4 es una variación del programa tradicional "Hola Mundo" que la mayoría de los estudiantes aprenden como su primer programa en un nuevo lenguaje de programación. En lugar de simplemente mostrar "¡Hola Mundo!" en la ventana de visualización, vas a producir toda la salida usando JavaScript e incluir una imagen GIF junto con la frase "Bienvenido a Netscape Navigator." El GIF se incluye con el código fuente en el CD-ROM adjunto.</p>
+
+  <blockquote>
+    <strong>Entrada: </strong>Listado 2.4. Bienvenido a Netscape Navigator.
+  </blockquote>
+
+  <pre>
+    <code>
+      &lt;HTML&gt;
+      &lt;HEAD&gt;
+      &lt;TITLE&gt;Ejemplo 2.4&lt;/TITLE&gt;
+      &lt;/HEAD&gt;
+      &lt;BODY&gt;
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      &lt;!-- OCULTAR DE OTROS NAVEGADORES
+      document.write(&apos;&lt;IMG SRC=&quot;welcome.gif&quot;&gt;&apos;);
+      document.write(&quot;&lt;BR&gt;&lt;H1&gt;Bienvenido a Netscape Navigator&lt;/H1&gt;&quot;);
+      // DETENER OCULTAMIENTO DE OTROS NAVEGADORES - -&gt;
+      &lt;/SCRIPT&gt;
+      &lt;/BODY&gt;
+      &lt;/HTML&gt;
+    </code>
+  </pre>
+
+  <blockquote>
+    <strong>Salida: </strong>Este script produce una salida similar a la de la Figura 2.6.
+  </blockquote>
+
+  <figure>
+    <img src="images/fig2.6.webp" alt="Figura 2.6: JavaScript se puede usar para generar una salida HTML completa.">
+    <figcaption>Figura 2.6: JavaScript se puede usar para generar una salida HTML completa.</figcaption>
+  </figure>
+
+  <p><strong>Analisis: </strong>
+    En este ejemplo, se puede ver cómo tanto el texto como las etiquetas HTML se pueden generar en las ventanas HTML actuales utilizando el método write(). Observe el uso de comillas simples y dobles para delimitar el inicio y el fin de las cadenas de texto. En la primera llamada al método write(), se usan las comillas simples para que la cadena de texto pueda contener las comillas dobles requeridas por la etiqueta IMG.</p>
+
+  <h3>Más allá de la ventana del documento</h3>
+  <p>Una de las restricciones del HTML siempre ha sido que los desarrolladores de sitios web están limitados a una única ventana del cliente. Incluso con la aparición de los frames y la etiqueta TARGET en Navigator, los autores siguen limitados a mostrar archivos HTML en ventanas de navegador completas y no pueden dirigir pequeños mensajes al usuario a través de otra ventana sin que el mensaje se convierta en parte de una página HTML.</p>
+
+  <h3>Trabajando con cuadros de diálogo</h3>
+  <p>JavaScript proporciona la capacidad para que los programadores generen salidas en pequeños cuadros de diálogo; el contenido del cuadro de diálogo es independiente de la página HTML que contiene el script de JavaScript y no afecta la apariencia o el contenido de la página.</p>
+  <p>La forma más sencilla de dirigir una salida a un cuadro de diálogo es usar el método alert(). Para usar el método alert(), solo necesitas proporcionar una cadena de texto, como hiciste con document.write() y document.writeln() en la sección anterior:</p>
+
+  <pre>
+    <code>
+      alert("Haz clic en OK para continuar.");
+    </code>
+  </pre>
+
+  <blockquote>
+    <strong>Nota: </strong>Notarás que el método alert() no tiene un nombre de objeto delante de él. Esto se debe a que el método alert() es parte del objeto window. Como el objeto de nivel superior en la jerarquía de objetos de Navigator, se asume el objeto window cuando no se especifica.
+  </blockquote>
+
+  <p>El comando anterior genera una salida similar a la Figura 2.7. El cuadro de diálogo de alerta muestra el mensaje que se le pasa entre paréntesis, así como un botón OK. El script y el HTML que contiene el script no continuarán evaluándose o ejecutándose hasta que el usuario haga clic en el botón OK.</p>
+
+  <figure>
+    <img src="images/fig2.7.webp" alt="Figura 2.7: Los cuadros de diálogo de alerta muestran un mensaje junto con un botón OK para continuar.">
+    <figcaption>Figura 2.7: Los cuadros de diálogo de alerta muestran un mensaje junto con un botón OK para continuar.</figcaption>
+  </figure>
+  
+  <p>Generalmente, el método alert() se utiliza exactamente para eso: advertir al usuario o alertarlo sobre algo. Ejemplos de este tipo de uso incluyen:</p>
+
+  <ul>
+    <li>Información incorrecta en un formulario</li>
+    <li>Un resultado inválido de un cálculo</li>
+    <li>Una advertencia de que un servicio no está disponible en una fecha determinada</li>
+  </ul>
+  
+  <p>Sin embargo, el método alert() aún puede ser utilizado para mensajes más amigables.</p>
+
+  <blockquote>
+    <strong>Nota: </strong>Ten en cuenta que los cuadros de alerta de JavaScript incluyen la frase "JavaScript Alert" al inicio del mensaje. Todos los cuadros de diálogo generados por scripts tienen encabezados similares para distinguirlos de los generados por el sistema operativo o el navegador. Esto se hace por razones de seguridad para que programas maliciosos no puedan engañar a los usuarios para que hagan cosas que no desean hacer. Los diseñadores de Netscape han indicado que pueden hacer que los cuadros de diálogo generados por scripts sean visualmente diferentes en futuras versiones.
+  </blockquote>
+
+  <p>A continuación, toma el ejemplo anterior, el Listado 2.4, "Bienvenido a Netscape Navigator", y haz que el mensaje se muestre en un cuadro de alerta. Para hacer esto, solo necesitas hacer un pequeño cambio en tu script original, como se muestra en el Listado 2.5:</p>
+
+  <blockquote>
+    <strong>Entrada: </strong>Listado 2.5. Mostrando un mensaje en un cuadro de alerta.
+  </blockquote>
+
+  <pre>
+    <code>
+      &lt;HTML&gt;
+      &lt;HEAD&gt;
+      &lt;TITLE&gt;Ejemplo 2.5&lt;/TITLE&gt;
+      &lt;/HEAD&gt;
+      &lt;BODY&gt;
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      &lt;!-- OCULTAR DE OTROS NAVEGADORES
+      alert(&quot;Bienvenido a Netscape Navigator&quot;);
+      document.write(&apos;&lt;IMG SRC=&quot;welcome.gif&quot;&gt;&apos;) ;
+      // DETENER OCULTACI&Oacute;N DE OTROS NAVEGADORES --&gt;
+      &lt;/SCRIPT&gt;
+      &lt;/BODY&gt;
+      &lt;/HTML&gt;
+    </code>
+  </pre>
+
+  <blockquote>
+    <strong>Salida: </strong>Las Figuras 2.8 y 2.9 muestran la progresión de eventos con este script.
+  </blockquote>
+
+  <figure>
+    <img src="images/fig2.8.webp" alt="Figura 2.8: El cuadro de diálogo de alerta se muestra primero.">
+    <figcaption>Figura 2.8: El cuadro de diálogo de alerta se muestra primero.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/fig2.9.webp" alt="Figura 2.9: Después de hacer clic en OK, el resto del script se ejecuta.">
+    <figcaption>Figura 2.9: Después de hacer clic en OK, el resto del script se ejecuta.</figcaption>
+  </figure>
+
+  <p>
+    <strong>Análisis: </strong>Observe en este ejemplo que ha invertido el orden del mensaje y el gráfico.
+    De esta manera, el usuario verá el mensaje en un cuadro de diálogo y el gráfico no se cargará
+    hasta que se haya hecho clic en OK.</p>
+
+  <blockquote>
+    <strong>Nota: </strong> El método alert() produce resultados diferentes en diferentes plataformas. En las versiones de Windows de Netscape Navigator, el procesamiento de scripts y el análisis de archivos HTML esperan hasta que el usuario haga clic en el botón OK. En las versiones de UNIX de Navigator, el cuadro de alerta se mostrará y el script continuará procesándose y el resto del HTML se interpretará independientemente de cuándo el usuario haga clic en OK.
+  </blockquote>
+
+  <p>Al igual que con document.write(), puede usar caracteres especiales, como \n, en el mensaje de alerta para controlar el formato del texto mostrado en el cuadro de diálogo. El siguiente comando generaría un cuadro de alerta similar al de la Figura 2.10:</p>
+
+  <pre>
+    <code>
+      alert("¡Bienvenido!\n\n\tEstá utilizando Netscape Navigator");
+    </code>
+  </pre>
+
+  <figure>
+    <img src="images/fig2.10.webp" alt="Figura 2.10: Mediante el uso de caracteres especiales, puedes formatear el texto en los cuadros de diálogo.">
+    <figcaption>Figura 2.10: Mediante el uso de caracteres especiales, puedes formatear el texto en los cuadros de diálogo.</figcaption>
+  </figure>
+
+  <h3>Interactuando con el Usuario</h3>
+  <p>El método alert() todavía no te permite interactuar con el usuario. La adición del botón OK te proporciona cierto control sobre el tiempo de los eventos, pero aún no se puede usar para generar ninguna salida dinámica ni personalizar la salida basada en la entrada del usuario.</p>
+  <p>La forma más simple de interactuar con el usuario es con el método prompt(). Al igual que alert(), prompt() crea un cuadro de diálogo con el mensaje que especifiques, pero también proporciona un campo de entrada único con una entrada predeterminada. El usuario necesita completar el campo y luego hacer clic en OK. Un ejemplo del método prompt() es la siguiente línea, que genera un cuadro de diálogo como el de la Figura 2.11:</p>
+
+  <figure>
+    <img src="images/fig2.11.webp" alt="Figura 2.11: El cuadro de diálogo prompt incluye un mensaje y un campo de entrada junto con un botón OK y un botón Cancel.">
+    <figcaption>Figura 2.11: El cuadro de diálogo prompt incluye un mensaje y un campo de entrada junto con un botón OK y un botón Cancel.</figcaption>
+  </figure>
+
+  <pre>
+    <code>
+      prompt("Enter Your favourite color:", "Blue");
+    </code>
+  </pre>
+
+  <p>Inmediatamente notarás una diferencia con la forma en que usaste el método alert(): estás proporcionando dos cadenas de texto al método entre paréntesis. El método prompt() requiere dos piezas de información: la primera es el texto que se mostrará, y la segunda es el dato predeterminado en el campo de entrada.</p>
+
+  <blockquote>
+    <strong>Nota: </strong>Las piezas de información proporcionadas entre paréntesis a un método o función se conocen como argumentos. En JavaScript, cuando un método requiere más de un argumento, estos se separan por comas.
+  </blockquote>
+
+  <p>Puede que hayas notado que si se usa por sí solo, el método prompt() acepta la entrada del usuario, pero la información se pierde esencialmente. Esto se soluciona al darse cuenta de que los métodos y funciones pueden devolver resultados, como se mencionó en el capítulo anterior. Eso significa que el método prompt() devolverá la entrada del usuario como su resultado.</p>
+
+  <p>El resultado devuelto por un método puede almacenarse en una variable (lo cual aprenderás en el próximo capítulo) o puede usarse como un argumento para otro método:</p>
+
+  <pre>
+    <code>
+      document.write("Tu color favorito es: ");
+      document.writeln(prompt("Introduce tu color favorito:", "Azul"));
+    </code>
+  </pre>
+  
+  <p>En la segunda línea de este segmento de código, el método document.writeln() muestra los resultados devueltos por el método prompt(), como se ilustra en las Figuras 2.12 y 2.13.</p>
+
+  <figure>
+    <img src="images/fig2.12.webp" alt="Figura 2.12: El método prompt() puede usarse para hacer preguntas al usuario.">
+    <figcaption>Figura 2.12: El método prompt() puede usarse para hacer preguntas al usuario.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/fig2.13.webp" alt="Figura 2.12: El método prompt() puede usarse para hacer preguntas al usuario.">
+    <figcaption>Figura 2.13: Basado en las respuestas, se puede crear contenido dinámico.</figcaption>
+  </figure>
+
+  <p>Usando el método prompt(), ahora estás en posición de generar una versión personalizada del ejemplo "Bienvenido a Netscape Navigator" con el que has estado trabajando. El Listado 2.6 muestra el nuevo programa.</p>
+
+  <blockquote>
+    <strong>Entrada: </strong>Listado 2.6. El programa de bienvenida revisado.
+  </blockquote>
+
+  <pre>
+    <code>
+      &lt;HTML&gt;
+      &lt;HEAD&gt;
+      &lt;TITLE&gt;Ejemplo 2.6&lt;/TITLE&gt;
+      &lt;/HEAD&gt;
+      &lt;BODY&gt;
+      &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+      &lt;!-- OCULTAR DE OTROS NAVEGADORES
+      document.write(&apos;&lt;IMG SRC=&quot;welcome.gif&quot;&gt;&apos;);
+      document.write(&quot;&lt;H1&gt;Saludos, &quot;);
+      document.write(prompt(&quot;Ingrese Su Nombre:&quot;,&quot;Nombre&quot;));
+      document.write(&quot;. Bienvenido a Netscape Navigator&lt;/H1&gt;&quot;);
+      // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+      &lt;/SCRIPT&gt;
+      &lt;/BODY&gt;
+      &lt;/HTML&gt;
+    </code>
+  </pre>
+
+  <blockquote>
+    <strong>Salida: </strong>Este script primero muestra la imagen de bienvenida y la palabra “Saludos” en la ventana del Navegador. Luego, un cuadro de diálogo solicita el nombre del usuario y, una vez ingresado, la oración se completa y se muestra con el nombre del usuario seguido de “Saludos".
+  </blockquote>
+
+  <p>
+    <strong>Análisis: </strong>En este ejemplo, has usado el método prompt() para construir un saludo de bienvenida personalizado. Sin embargo, nota que el proceso fue algo engorroso, requiriendo cuatro comandos document.write() para mostrar lo que fácilmente podrían ser dos líneas cortas en HTML.
+  </p>
+  <p>Esto puede hacerse un poco más fácil combinando múltiples cadenas de texto en una sola cadena usando lo que se conoce como concatenación.</p>
+
+  <blockquote>
+    <strong>Nuevo Término: </strong>La <em>concatenación</em> se discute con más detalle en el Capítulo 3. Usando la concatenación, múltiples cadenas se combinan en una sola cadena y son tratadas como una sola cadena por JavaScript.
+  </blockquote>
+
+  <p>Para hacer esto, puedes combinar las diversas piezas de tu mensaje de bienvenida en un solo comando document.write() utilizando un simple signo más (+):</p>
+
+  <pre>
+     <code>
+      document.write(&apos;&lt;IMG SRC=&quot;welcome.gif&quot;&gt;&apos;);
+      document.write(&quot;&lt;H1&gt;Saludos, &quot; + prompt(&quot;&lt;BR&gt;Ingrese Su Nombre:&quot;,&quot;Nombre&quot;) +
+      &quot;. Bienvenido a Netscape Navigator&lt;/H1&gt;&quot;);
+     </code>
+  </pre>
+
+  <h3>Resumen</h3>
+  <p>En este capítulo aprendiste a combinar scripts de JavaScript en archivos HTML usando la etiqueta SCRIPT. La etiqueta SCRIPT también se puede usar para incluir código JavaScript guardado en archivos externos separados. Se pueden usar múltiples contenedores SCRIPT en un solo archivo HTML. También aprendiste la estructura básica de los comandos de JavaScript y cómo usar llaves para construir bloques de múltiples comandos.</p>
+  <p>También vimos cómo usar los métodos write() y writeln(), que son parte del objeto document, así como revisamos los caracteres especiales que se pueden usar al mostrar texto. Además, aprendiste la sintaxis de los comentarios en JavaScript.</p>
+  <p>En este capítulo también avanzaste más allá de la salida estática limitada a la ventana actual del cliente.</p>
+  <p>Usando el método alert(), es posible dirigir la salida de un script de JavaScript a un cuadro de diálogo. Esto se puede llevar un paso más allá con el método prompt().</p>
+  <p>El método prompt() te permite pedir al usuario que ingrese un solo dato en un campo de entrada en un cuadro de diálogo. Los datos que el usuario ingresa son devueltos por el método prompt() y pueden ser mostrados usando document.write() o document.writeln(). Esta es una forma en la que puedes generar una salida dinámica y personalizada en una página web.</p>
+
+  <h3>Revisión de Comandos y Extensiones</h3>
+  <table border="1">
+    <thead>
+        <tr>
+            <th>Comando/Extensión</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><pre>SCRIPT</pre></td>
+            <td>Etiqueta HTML</td>
+            <td>Contenedor para scripts de JavaScript.</td>
+        </tr>
+        <tr>
+          <td><pre>SRC</pre></td>
+          <td>Atributo de SCRIPT</td>
+          <td>Contiene la URL de un archivo externo de JavaScript. Los archivos externos deben tener la extensión .js. (Aún no implementado; opcional).</td>
+        </tr>
+        <tr>
+          <td><pre>LANGUAGE</pre></td>
+          <td>Atributo de SCRIPT</td>
+          <td>Especifica el lenguaje del script. Actualmente, los únicos valores válidos para este atributo son LiveScript y JavaScript. (opcional).</td>
+        </tr>
+        <tr>
+          <td><pre>//</pre></td>
+          <td>Comentario de JavaScript</td>
+          <td>Inicio de un comentario de una sola línea. El comentario comienza con // y termina al final de la línea.</td>
+        </tr>
+        <tr>
+          <td><pre>/* ... */</pre></td>
+          <td>Comentario de JavaScript</td>
+          <td>Los comentarios de múltiples líneas en JavaScript comienzan con /* y terminan con */.</td>
+        </tr>
+        <tr>
+          <td><pre>document.write()</pre></td>
+          <td>Método de JavaScript</td>
+          <td>Muestra una cadena en la ventana actual en secuencia con el archivo HTML que contiene el script.</td>
+        </tr>
+        <tr>
+          <td><pre>document.writeln()</pre></td>
+          <td>Método de JavaScript</td>
+          <td>Muestra una cadena en el documento actual seguida de un retorno de carro.</td>
+        </tr>
+        <tr>
+          <td><pre>alert()</pre></td>
+          <td>Método de JavaScript</td>
+          <td>Muestra un mensaje en un cuadro de diálogo.</td>
+        </tr>
+        <tr>
+          <td><pre>prompt()</pre></td>
+          <td>Método de JavaScript</td>
+          <td>Muestra un mensaje en un cuadro de diálogo y proporciona un único campo de entrada para que el usuario ingrese una respuesta al mensaje.</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <h3>Ejercicios</h3>
+
+  <ol>
+    <li>Cambia el Listado 2.4 para que produzca salida en texto preformateado (usando la etiqueta PRE de HTML) con “Welcome to” y “Netscape Navigator” en líneas separadas.</li>
+    <li>¿Cómo reescribirías el ejemplo de la pregunta del ejercicio 1 usando solo un comando write() o writeln()?</li>
+    <li>¿Cómo personalizarías la salida en el Listado 2.5 para incluir el nombre del usuario?</li>
+    <li>Intenta ingresar lo siguiente en el cuadro de diálogo prompt generado por el script del Listado 2.6 y observa lo que sucede:
+      <ul>
+        <li>Presiona Cancelar en lugar de Aceptar.</li>
+        <li>Ingresa texto que incluya algunas etiquetas HTML simples, como John&lt;BR&gt;Doe.</li>
+        <li>Ingresa texto que contenga caracteres especiales como John\nDoe.</li>
+      </ul>
+      ¿Qué aprendes de los resultados?
+    </li>
+  </ol>
+  
+  <h3>Respuestas</h3>
+  <ol>
+    <li>El siguiente código usa el método writeln() para producir el resultado deseado:
+      <pre>
+        <code>
+        &lt;HTML&gt;
+        &lt;HEAD&gt;
+        &lt;TITLE&gt;&iexcl;Bienvenido a Netscape Navigator!&lt;/TITLE&gt;
+        &lt;/HEAD&gt;
+        &lt;BODY&gt;
+        &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+        &lt;!-- OCULTAR DE OTROS NAVEGADORES
+        document.write(&apos;&lt;IMG SRC=&quot;welcome.gif&quot;&gt;&apos;);
+        document.writeln(&quot;&lt;BR&gt;&lt;PRE&gt;Bienvenido a&quot;);
+        document.write(&quot;Netscape Navigator&lt;/PRE&gt;&quot;) ;
+        // DEJAR DE OCULTAR DE OTROS NAVEGADORES - -&gt;
+        &lt;/SCRIPT&gt;
+        &lt;/BODY&gt;
+        &lt;/HTML&gt;
+        </code>
+      </pre>
+    </li>
+    <li>Usando el carácter especial \n, es posible producir los mismos resultados que en la
+      pregunta del ejercicio anterior usando solo una llamada al método write():
+      <pre>
+        <code>
+        &lt;HTML&gt;
+        &lt;HEAD&gt;
+        &lt;TITLE&gt;&iexcl;Bienvenido a Netscape Navigator!&lt;/TITLE&gt;
+        &lt;/HEAD&gt;
+        &lt;BODY&gt;
+        &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+        &lt;!-- OCULTAR DE OTROS NAVEGADORES
+        document.write(&apos;&lt;IMG SRC=&quot;welcome.gif&quot;&gt;&lt;BR&gt;&lt;PRE&gt;Bienvenido a\nNetscape
+        = Navigator &lt;/PRE&gt;&apos;);
+        // DEJAR DE OCULTAR DE OTROS NAVEGADORES - -&gt;
+        &lt;/SCRIPT&gt;
+        &lt;/BODY&gt;
+        &lt;/HTML&gt;
+        </code>
+      </pre>
+    </li>
+    <li>El siguiente ejemplo personaliza el script del Listado 2.5 para incluir el nombre del usuario:
+      <pre>
+        <code>
+        &lt;HTML&gt;
+        &lt;HEAD&gt;
+        &lt;TITLE&gt;Ejercicio 2.3&lt;/TITLE&gt;
+        &lt;/HEAD&gt;
+        &lt;BODY&gt;
+        &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+        &lt;!-- OCULTAR DE OTROS NAVEGADORES
+        alert(&quot;Saludos, &quot; + prompt(&quot;Introduce tu nombre:&quot;, &quot;Nombre&quot;) + &quot;.\nBienvenido a
+        = Netscape Navigator&quot;);
+        document.write(&apos;&lt;IMG SRC=&quot;welcome.gif&quot;&gt;&apos;);
+        // DEJAR DE OCULTAR DE OTROS NAVEGADORES - -&gt;
+        &lt;/SCRIPT&gt;
+        &lt;/BODY&gt;
+        &lt;/HTML&gt;
+        </code>
+      </pre>
+    </li>
+    <li>Aprendes varias cosas de las pruebas en este ejercicio:
+      <ul>
+        <li>Hacer clic en Cancelar devuelve un valor de null. Aprenderás sobre el valor null en el Capítulo 3.</li>
+        <li>Las etiquetas HTML introducidas por el usuario son interpretadas por el navegador web antes de mostrar el texto en la página.</li>
+        <li>Los caracteres especiales introducidos en una cadena devuelta por el método prompt() no se evalúan, sino que se muestran como texto simple. De esta manera, si el usuario escribe \n, se mostrará como \n en lugar de evaluarse como una nueva línea.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <hr>
+  <h1>Capítulo 3</h1>
+  <h2>Trabajando con Datos e Información</h2>
+  <p>Para avanzar más allá de mostrar texto e interacciones básicas con el usuario, es necesario trabajar con datos e información, tanto cuando son generados por el usuario como por cálculos en un script.</p>
+  <p>JavaScript proporciona cuatro tipos de datos básicos que pueden usarse para trabajar con números y texto. Las variables ofrecen contenedores para almacenar información y trabajar con ella de maneras útiles y sofisticadas mediante expresiones.</p>
+  <p>Para ayudarte a dominar las variables y expresiones, este capítulo cubre los siguientes temas:</p>
+  <ul>
+    <li>Tipos de datos en JavaScript</li>
+    <li>Uso y declaración de variables</li>
+    <li>Expresiones de asignación</li>
+    <li>Operadores</li>
+    <li>Comparación con if ... else</li>
+    <li>Ampliación de la interacción con el usuario con el método confirm()</li>
+  </ul>
+
+  <h3>Tipos de Datos en JavaScript</h3>
+  <p>JavaScript utiliza cuatro tipos de datos: números, cadenas, valores booleanos y un valor nulo para representar toda la información que el lenguaje puede manejar. En comparación con la mayoría de los lenguajes, este es un número pequeño de tipos de datos, pero es suficiente para manejar inteligentemente la mayoría de los datos utilizados en todo excepto los programas más complejos.</p>
+  <p>Los cuatro tipos de datos en JavaScript se describen en la Tabla 3.1.</p>
+
+  <table border="1">
+    <caption>Tabla 3.1. Tipos de datos en JavaScript.</caption>
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Ejemplo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Números</td>
+            <td>Cualquier número, como 17, 21.5, o 54e7</td>  
+        </tr>
+        <tr>
+          <td>Cadenas</td>
+          <td>"¡Saludos!" o '¡Diversión!'</td>  
+        </tr>
+        <tr>
+          <td>Booleano</td>
+          <td>Verdadero o falso</td>  
+        </tr>
+        <tr>
+          <td>Nulo</td>
+          <td>Una palabra clave especial para exactamente eso: el valor null (es decir, nada)</td>  
+        </tr>
+    </tbody>
+  </table>
+
+  <h3>Literales</h3>
+  <p>El término literales se refiere a la manera en que se representan cada uno de los cuatro tipos de datos. Los literales son valores fijos que proporcionan literalmente un valor en un programa. Por ejemplo, 11 es un número literal, "hola" es una cadena literal, y true es un literal booleano.</p>
+  <p>Ya has visto literales en uso en los capítulos anteriores cuando diste argumentos a diferentes métodos en forma de cadenas de texto como "¡Bienvenido a Netscape Navigator 2.0!" y "Ingrese su nombre:".</p>
+  <p>Para cada tipo de dato, hay diferentes formas de especificar literales.</p>
+
+  <h4>Números</h4>
+  <p>El tipo de número en JavaScript abarca lo que serían varios tipos en lenguajes como Java. Usando los números, es posible expresar tanto enteros como valores de punto flotante.</p>
+
+  <h5>Enteros</h5>
+  <p>Los enteros son números sin ninguna porción que siga al punto decimal; es decir, son números enteros, sin fracciones. Los enteros pueden ser números positivos o negativos. El tamaño máximo de un entero depende de la plataforma que ejecute la aplicación JavaScript.</p>
+  <p>En JavaScript, puedes expresar enteros en tres bases diferentes: base 10 (decimal, lo que normalmente usas en situaciones cotidianas), base 8 (conocida como octal) y base 16 (hexadecimal).</p>
+
+  <blockquote>
+    <strong>Nota: </strong>Los números en base 8 solo pueden tener dígitos hasta el 7, por lo que un valor decimal de 18 sería un valor octal de 22. De manera similar, el sistema hexadecimal permite dígitos hasta la F, donde A equivale a 10 en decimal y F es 15. Entonces, un valor decimal de 18 sería 12 en notación hexadecimal.
+  </blockquote>
+
+  <p>Para distinguir entre estas tres bases, JavaScript usa las notaciones descritas en la Tabla 3.2 para especificar las diferentes bases.</p>
+
+  <table border="1">
+    <caption>Tabla 3.2. Especificación de bases en JavaScript.</caption>
+    <thead>
+        <tr>
+            <th>Sistema Numérico</th>
+            <th>Notación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Decimal (base 10)</td>
+            <td>Un entero normal sin un 0 (cero) al inicio (por ejemplo, 752)</td>  
+        </tr>
+        <tr>
+          <td>Octal (base 8)</td>
+          <td>Un entero con un 0 (cero) al inicio (por ejemplo, 056)</td>  
+        </tr>
+        <tr>
+          <td>Hexadecimal (base 16)</td>
+          <td>Un entero con un Ox o OX al inicio (por ejemplo, Ox5F o OXC72)</td>  
+        </tr>
+    </tbody>
+  </table>
+
+  <h5>Valores de Punto Flotante</h5>
+  <p>Los valores de punto flotante pueden incluir una componente fraccionaria. Un literal de punto flotante incluye un número entero decimal más un punto decimal y una fracción expresada como otro número decimal o un indicador de exponente y un sufijo de tipo, como se muestra en los siguientes ejemplos:</p>
+  <ul>
+    <li>7.2945</li>
+    <li>-34.2</li>
+    <li>2E3</li>
+  </ul>
+
+  <p>Los literales de punto flotante deben, como mínimo, incluir un número entero decimal y ya sea el punto decimal o el indicador de exponente (“e” o “E”). Al igual que los enteros, los valores de punto flotante pueden ser positivos o negativos.</p>
+
+  <blockquote>
+    <strong>Nota: </strong>Debe tenerse en cuenta que el manejo de números de punto flotante por parte de JavaScript puede introducir inexactitudes en algunos cálculos. Debes tener esto en cuenta para tus programas.
+  </blockquote>
+
+  <h4>Cadenas (Strings)</h4>
+  <p>Ya has encontrado literales de cadena en el Capítulo 2, “Tu Primer Script”, donde los utilizaste como argumentos para varios métodos.</p>
+  <p>Técnicamente, un literal de cadena contiene cero o más caracteres encerrados, como sabes, entre comillas simples o dobles:</p>
+  <ul>
+    <li>"Hola!"</li>
+    <li>'245'</li>
+    <li>" "</li>
+  </ul>
+
+  <blockquote>
+    <strong>Nuevo Término: </strong>El último ejemplo se llama la <em>cadena vacía</em>. Es importante notar que la cadena vacía es distinta del valor null en JavaScript.
+  </blockquote>
+
+  <blockquote>
+    <strong>Nota: </strong>Las cadenas son diferentes de otros tipos de datos en JavaScript. Las cadenas son en realidad objetos (los objetos se presentan en el Capítulo 4).
+  </blockquote>
+
+  <h4>Booleano</h4>
+  <p>Un literal booleano puede tomar dos valores: true o false. Este tipo de literal es útil al comparar datos y tomar decisiones, como verás más adelante en este capítulo.</p>
+
+  <blockquote>
+    <strong>Nota: </strong>A diferencia de Java, C y otros lenguajes, en JavaScript los valores booleanos solo pueden representarse con true y false. Los valores de 1 y @ no se consideran valores booleanos en JavaScript.
+  </blockquote>
+
+  <h4>El Valor null</h4>
+  <p>El valor null es un valor especial en JavaScript. El valor null representa justamente eso: nada. Si intentas referenciar una variable que no está definida y, por lo tanto, no tiene valor, el valor devuelto es null. Asimismo, en un cuadro de diálogo de solicitud, si el usuario selecciona el botón Cancelar, se devuelve un valor null.</p>
+  <p>Esto es distinto de un valor de cero o una cadena vacía donde hay un valor real.</p>
+  <p>El valor null se indica en JavaScript con el término null.</p>
+
+  <h5>NaN</h5>
+  <p>Además de estos valores, algunas funciones devuelven un valor especial llamado NaN, que significa que el valor no es un número. parseInt() y parseFloat() en sistemas UNIX son ejemplos de funciones que devuelven NaN cuando el argumento pasado a ellas no puede evaluarse como un número.</p>
+  <p>Los valores pueden ser probados para ver si son NaN usando la función isNaN(), la cual devuelve true o false basado en la naturaleza del argumento pasado a la función.</p>
+
+  <h3>Conversión de tipos (Casting)</h3>
+  <p>JavaScript es lo que se llama un lenguaje de programación de tipado débil. En los lenguajes de tipado débil, el tipo de un literal o variable (que discutimos en la siguiente sección) no se define cuando se crea una variable y puede, a veces, cambiar según el contexto. En comparación, Java y C no son de tipado débil.</p>
+  <p>En sus formas más tempranas, LiveScript y JavaScript permitían a los programadores combinar dos literales de diferentes tipos, resultando en un valor literal del mismo tipo que el primer literal en la expresión. Por ejemplo, combinar la cadena "Contar hasta " con el literal entero 10 resulta en una cadena con el valor "Contar hasta 10".</p>
+  <p>Por el contrario, sumar el literal numérico 3.5 y la cadena "10" resulta en el literal numérico de punto flotante 13.5.</p>
+
+  <blockquote>
+    <strong>Nuevo Término: </strong>Este proceso se conoce como conversión de tipos (casting). El primer ejemplo convierte el número 10 en una cadena, y el segundo convierte la cadena "10" en un número.
+  </blockquote>
+
+  <p>Sin embargo, a medida que JavaScript y Java se han acercado más, esto ha comenzado a cambiar. En la versión de JavaScript actualmente disponible, ya no es posible convertir una cadena en un número usando una forma como 0 + "1". JavaScript ha añadido las funciones parseInt() y parseFloat(), que convierten cadenas en números enteros o de punto flotante. Por ejemplo, parseInt("13") devuelve el entero 13 y parseFloat("45.2") devuelve el número de punto flotante 45.2.</p>
+  <p>Todavía es posible convertir un número en una cadena como en "Contar hasta " + 10 evaluando a una cadena con el valor "Contar hasta 10".</p>
+
+  <h3>Creación de Variables</h3>
+  <p>Para hacer que el trabajo con tipos de datos sea útil, necesitas maneras de almacenar valores para su uso posterior. Aquí es donde entran las variables.</p>
+  <p>En JavaScript puedes crear variables que pueden contener cualquier tipo de dato. Las variables tienen nombres, y después de asignarles valores, puedes referirte al valor por su nombre. Si posteriormente asignas un nuevo valor a la variable, puedes seguir refiriéndote a ese nuevo valor por el nombre de la variable.</p>
+
+  <h4>Declaración de Variables</h4>
+  <p>Para utilizar una variable, es una buena práctica de programación declararla. Declarar una variable le indica a JavaScript que existe una variable con un nombre determinado para que el intérprete de JavaScript pueda entender las referencias a ese nombre de variable en todo el resto del código.</p>
+  <p>Si bien es posible declarar variables simplemente usándolas, declarar variables ayuda a garantizar que los programas estén bien organizados y a realizar un seguimiento del alcance de las variables (se analiza en el Capítulo 4, "Funciones y Objetos: los componentes básicos de los programas").</p>
+  <p>Puedes declarar una variable usando el comando var:</p>
+
+  <pre>
+  <code>
+    var ejemplo;
+  </code>  
+  </pre>
+
+  <p>En esta línea, has definido una variable llamada ejemplo, que actualmente no tiene ningún valor. También es posible asignar un valor a una variable cuando la declaras:</p>
+
+  <pre>
+  <code>
+    var ejemplo = "Un Ejemplo";
+  </code>
+  </pre>
+
+  <p>Aquí has declarado la variable llamada <code>ejemplo</code> y le has asignado un valor de cadena de texto <code>"Un Ejemplo"</code>. Debido a que JavaScript también permite declarar variables en el primer uso, el comando <code>ejemplo = "Un Ejemplo"</code> también lograría el mismo resultado.</p>
+
+  <blockquote>
+    <strong>Nuevo término: </strong>El signo igual (=) que se usa para asignar un valor a una variable se conoce como operador de asignación. Los operadores de asignación se analizan más adelante en este capítulo.
+  </blockquote>
+
+  <p>Para comprender mejor cómo declarar, asignar y usar variables, el siguiente segmento de código produce una salida similar a la Figura 3.1.</p>
+
+  <figure>
+    <img src="images/fig3.1.webp" alt="Figura 3.1: Las variables pueden contener literales de cadena, números o valores booleanos.">
+    <figcaption>Figura 3.1: Las variables pueden contener literales de cadena, números o valores booleanos.</figcaption>
+  </figure>
+
+  <pre>
+  <code>
+    var example="Un Ejemplo";
+    document.write(example) ;
+  </code>
+  </pre>
+
+  <h4>Nombres de Variables Válidos</h4>
+  <p>Al igual que los nombres de propiedades y métodos en JavaScript, los nombres de variables son sensibles a mayúsculas y minúsculas. Además, los nombres de variables deben comenzar con una letra o un guion bajo (_). Después de eso, los caracteres restantes también pueden incluir números.</p>
+
+  <h3>Incorporación de Variables en un Script</h3>
+  <p>Utilizando variables, puedes simplificar el script "Bienvenido a Netscape Navigator" personalizado de los capítulos anteriores. En el Listado 3.1, quieres pedir el nombre del usuario antes de usar document.write() y almacenar el valor en una variable.</p>
+
+  <blockquote>
+    <strong>Entrada: </strong>Lista 3.1. Usando variables en el programa de bienvenida.
+  </blockquote>
+
+  <pre>
+  <code>
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Ejemplo 3.1&lt;/TITLE&gt;
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- OCULTAR DE OTROS NAVEGADORES
+    var nombre = prompt(&quot;Introduce Tu Nombre:&quot;, &quot;Nombre&quot;);
+    // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY&gt;
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- OCULTAR DE OTROS NAVEGADORES
+    document.write(&apos;&lt;IMG SRC=&quot;welcome.gif&quot;&gt;&apos;);
+    document.write(&quot;&lt;H1&gt;Saludos, &quot; + nombre + &quot;. Bienvenido a Netscape Navigator&lt;/H1&gt;&quot;);
+    // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/BODY&gt;
+    &lt;/HTML&gt;
+  </code>
+  </pre>
+
+  <p>
+    <strong>Análisis: </strong>Hay varias cosas a tener en cuenta en este script. Primero, la parte del script que necesita ejecutarse antes de que se muestren las cosas está en el encabezado del script. Esto ayuda a asegurar que nada más se pueda cargar y evaluar hasta después de que el usuario proporcione un nombre.
+  </p>
+  <p>Segundo, has asignado el resultado devuelto por el método prompt() a la variable name de la misma manera que anteriormente asignaste un valor literal a una variable. Esto funciona porque el método prompt() está devolviendo un valor de cadena, que puede asignarse a una variable.</p>
+  <p>Este script también demuestra cómo el uso de variables puede hacer que los scripts sean más fáciles de leer porque los nombres de las variables se pueden seleccionar cuidadosamente para impartir significado a alguien que lea el código fuente de un script.</p>
+  <p>Ahora puedes llevar un paso más allá el uso de variables y ver cómo puedes asignarles valores sucesivamente. En el Listado 3.2, pides dos nombres seguidos.</p>
+
+  <blockquote>
+    <strong>Entrada: </strong>Listado 3.2. Asignando un nuevo valor a la variable.
+  </blockquote>
+
+  <pre>
+  <code>
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Ejemplo 3.2&lt;/TITLE&gt;
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!--HIDE FROM OTHER BROWSERS
+    var name=prompt(&quot;Ingresa Tu Nombre:&quot;,&quot;Nombre&quot;) ;
+    alert(&quot;Saludos &quot;&quot; + name + &quot;.&quot;);
+    name=prompt(&quot;Ingresa el Nombre de Tu Amigo:&quot;,&quot;Nombre del Amigo&quot;);
+    // STOP HIDING FROM OTHER BROWSERS --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY&gt;
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- HIDE FROM OTHER BROWSERS
+    document.write(&apos;&lt;IMG SRC=&quot;welcome.gif&quot;&gt;&apos;);
+    document.write(&quot;&lt;H1&gt;Saludos, &quot; + name + &quot;. Bienvenido a Netscape Navigator&lt;/H1&gt;&quot;);
+    // STOP HIDING FROM OTHER BROWSERS --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/BODY&gt;
+    &lt;/HTML&gt;
+  </code>
+  </pre>
+
+  <blockquote>
+    <strong>Salida: </strong>Este script produce una secuencia de resultados similares a las Figuras 3.2, 3.3 y 3.4.
+  </blockquote>
+
+  <figure>
+    <img src="images/fig3.2.webp" alt="Figura 3.2: Almacena el primer nombre en name.">
+    <figcaption>Figura 3.2: Almacena el primer nombre en name.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/fig3.3.webp" alt="Figura 3.3: El segundo nombre también puede asignarse a name.">
+    <figcaption>Figura 3.3: El segundo nombre también puede asignarse a name.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/fig3.4.webp" alt="Figura 3.4: El valor final de name es el segundo nombre.">
+    <figcaption>Figura 3.4: El valor final de name es el segundo nombre.</figcaption>
+  </figure>
+
+  <p>
+    <strong>Análisis: </strong>En este ejemplo, puedes ver cómo al asignar un nuevo valor a una variable, reemplaza completamente el valor anterior. En lugar de combinar el nombre del usuario con el nombre del amigo, el valor final de name es solo el nombre del amigo.
+  </p>
+  <p>Además, asignar valores subsiguientes a las variables funciona de manera muy similar a asignar valores al declarar una variable, excepto que no se utiliza el comando var.</p>
+  <p>Al utilizar dos variables, puedes proporcionar un saludo final a ambos usuarios.</p>
+  <p>Notarás que el cuadro de diálogo de alerta con el primer nombre parece pequeño. Si utilizas un nombre más largo, el tamaño del cuadro se ajusta para acomodar el nombre más largo.</p>
+
+  <h3>Trabajar con Variables—Expresiones</h3>
+  <p>Para que las variables sean útiles, debes poder manipular variables y evaluarlas en diferentes contextos.</p>
+  <p>Esta capacidad es proporcionada por las expresiones. En su forma más básica, una expresión no es más que una colección de variables, operadores y otras expresiones, todas las cuales se evalúan a un solo valor.</p>
+  <p>En términos prácticos, eso significa que hay dos tipos de expresiones: aquellas que simplemente tienen un valor y aquellas que asignan un valor a una variable. Has visto ejemplos simples de ambos: ejemplo = "Un Ejemplo" es una expresión que asigna un valor a la variable ejemplo, mientras que "El Número es " + "10" es un ejemplo de una expresión que simplemente tiene un valor.</p>
+  <p>Al igual que con los tipos de datos, JavaScript tiene varios tipos de expresiones:</p>
+
+  <ul>
+    <li>Asignación: Asigna un valor a una variable</li>
+    <li>Aritmética: Evalúa a un número</li>
+    <li>Cadena: Evalúa a una cadena</li>
+    <li>Lógica: Evalúa a un valor booleano</li>
+  </ul>
+
+  <h4>Expresiones de Asignación</h4>
+  <p>Las expresiones de asignación utilizan operadores de asignación para asignar un valor a una variable. La estructura típica de una expresión de asignación es:</p>
+  <pre>
+  <code>variable operador expresión</code>
+  </pre>
+  <p>En otras palabras, el operador asigna un valor a la variable mediante la realización de algún tipo de operación sobre la expresión. La Tabla 3.3 describe los operadores de asignación en JavaScript.</p>
+
+  <blockquote>
+    <strong>Nuevo Término :</strong>Técnicamente, el elemento a la izquierda del operador se llama operando izquierdo y el elemento a la derecha se llama operando derecho.
+  </blockquote>
+  
+  <table border="1">
+    <caption>Tabla 3.3. Operadores de asignación en JavaScript.</caption>
+    <thead>
+        <tr>
+          <th>Operador</th>
+          <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>=</code></td>
+          <td>Asigna el valor del operando derecho al operando izquierdo</td>  
+        </tr>
+        <tr>
+          <td><code>+=</code></td>
+          <td>Suma los operandos izquierdo y derecho y asigna el resultado al operando izquierdo</td>  
+        </tr>
+        <tr>
+          <td><code>-=</code></td>
+          <td>Resta el operando derecho del operando izquierdo y asigna el resultado al operando izquierdo.</td>  
+        </tr>
+        <tr>
+          <td><code>*=</code></td>
+          <td>Multiplica los dos operandos y asigna el resultado al operando izquierdo</td>  
+        </tr>
+        <tr>
+          <td><code>/=</code></td>
+          <td>Divide el operando izquierdo por el operando derecho y asigna el valor al operando izquierdo</td>  
+        </tr>
+        <tr>
+          <td><code>%=</code></td>
+          <td>Divide el operando izquierdo por el operando derecho y asigna el resto al operando izquierdo</td>  
+        </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <strong>Nota: </strong>El operando %= asigna el módulo al operando de la izquierda. Es decir, x %= y es lo mismo que x = x % y. El módulo es el residuo cuando dos números se dividen.
+  </blockquote>
+
+  <p>Por ejemplo, si x = 10 e y = 5, entonces x += y establece x en 15, x *= y establece x en 50, x /= y establece x en 2, y x %= y establece x en cero porque el residuo de 10 dividido por 5 es cero.</p>
+
+  <blockquote>
+    <strong>Nota: </strong>Existen otros operadores de asignación conocidos como operadores de asignación bit a bit, como <<=, >>=, y &#x5E;=, pero estos son avanzados y requieren un entendimiento de números binarios (base 2).
+  </blockquote>
+
+  <h4>Otros operadores:</h4>
+  <p>Además de los operadores de asignación que ya hemos discutido, JavaScript también tiene operadores para expresiones que simplemente se evalúan en un valor. Estos son los operadores aritméticos, operadores de cadena y operadores lógicos, así como los operadores bit a bit, que están fuera del alcance de este libro.</p>
+  <p>Como verás en los siguientes ejemplos, estos operadores incluyen tanto operadores que requieren dos operandos como aquellos que requieren un solo operando.</p>
+
+  <blockquote>
+    <strong>Nuevo término: </strong>Un operador que requiere un solo operando se conoce como operador unario, y uno que requiere dos operandos es un operador binario.
+  </blockquote>
+
+  <p>Además, todos los operadores discutidos aquí pueden tomar expresiones como sus operandos. En estos casos, las expresiones que actúan como operandos se evalúan antes de evaluar la expresión final. Por ejemplo, en la siguiente sección, aprenderás sobre expresiones aritméticas simples como 15 + 3. Dado que los operadores pueden tomar otras expresiones como sus operandos, podrías escribir una expresión como x += 15 + 3. Esto suma 15 y 3, luego suma el resultado (18) al valor de x y asigna el resultado final a x.</p>
+
+  <h5>Operadores aritméticos</h5>
+  <p>Los operadores aritméticos binarios estándar son los mismos que los de una calculadora básica: suma (+), resta (-), multiplicación (*) y división (/). Además de estos operadores básicos está el operador de módulo (%), que, como se mencionó antes, calcula el residuo después de dividir sus operandos. Los siguientes son ejemplos de expresiones válidas utilizando estos:</p>
+
+  <pre>
+  <code>
+    8 + 5
+    32.5 - 72.3
+    12 % 5
+  </code>
+  </pre>
+
+  <p>Además de estos operadores binarios, hay tres operadores aritméticos unarios que son bastante útiles: incremento (++), decremento (--) y negación unaria (-).</p>
+
+  <p>Tanto el operador de incremento como el de decremento pueden ser utilizados de dos maneras diferentes: antes del operando o después. Por ejemplo, ++x incrementa x en uno y devuelve el resultado, mientras que x++ devuelve x y luego incrementa el valor de x. De manera similar, --x decrementa el valor de x en uno antes de devolver el resultado, mientras que x-- devuelve el valor de x antes de disminuir su valor en uno.</p>
+
+  <p>Por ejemplo:</p>
+
+  <pre>
+  <code>
+    x = 5;
+    y = ++x;
+    z = x++;
+  </code>
+  </pre>
+
+  <p>En estas líneas de código, primero se asigna a x el valor de 5, luego se incrementa a 6 y se asigna a y. Después, el nuevo valor de 6 se asigna a z y el valor de x se incrementa a 7. Así que, al final, x es 7, y es 6, y z es 6.</p>
+
+  <p>La negación unaria funciona de manera un poco diferente. El operador debe preceder a su único operando, y el resultado es la negación del operando. Típicamente, el uso de este operando se ve así:</p>
+
+  <pre>
+  <code>
+    x = -x;
+  </code>
+  </pre>
+
+  <p>Aquí, si el valor de x es 5, entonces se convierte en -5. Asimismo, si x fuera -4, se convertiría en 4.</p>
+
+  <h5>Operadores Lógicos</h5>
+  <p>Los operadores lógicos incluyen tanto operadores binarios como unarios. Toman valores booleanos como operandos y devuelven valores booleanos, como se detalla en la Tabla 3.4.</p>
+
+  <table border="1">
+    <caption>Tabla 3.4. Operadores lógicos en JavaScript.</caption>
+    <thead>
+      <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>&&</code></td>
+        <td>Lógico "y" —devuelve true cuando ambos operandos son true; de lo contrario, devuelve false.</td>  
+      </tr>
+      <tr>
+        <td><code>||</code></td>
+        <td>Lógico "o" —devuelve true si alguno de los operandos es true. Solo devuelve false cuando ambos operandos son false.</td>  
+      </tr>
+      <tr>
+        <td><code>!</code></td>
+        <td>Lógico "no" —devuelve true si el operando es false y false si el operando es true. Este es un operador unario y precede al operando.</td>  
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Al discutir operadores y expresiones lógicas, es necesario hablar de la <em>evaluación de cortocircuito</em>. Con la evaluación de cortocircuito, JavaScript terminará de evaluar una expresión después de evaluar el primer operando (izquierdo), si el primer operando proporciona suficiente información para evaluar la expresión. La evaluación de cortocircuito utiliza las siguientes reglas:</p>
+
+  <ul>
+    <li>false && cualquier cosa siempre es false.</li>
+    <li>true || cualquier cosa siempre es true.</li>
+  </ul>
+  
+  <p>Por ejemplo, si x es igual a 10 y y es igual a 20, entonces la expresión (x > y) && (x < y) se evaluaría inmediatamente como false una vez que la primera parte de la expresión (x > y) se evalúe como false. De igual manera, (y > x) || (x > y) se evalúa como true simplemente porque la primera parte de la expresión (y > x) es true. Estos ejemplos utilizan operadores de comparación, los cuales se discuten en la siguiente sección.</p>
+
+  <p>Debido a que el operador lógico "no" (!) toma un solo operador, no hay evaluación de cortocircuito para él.</p>
+
+  <h5>Operadores de Comparación</h5>
+  <p>Los operadores de comparación son similares a los operadores lógicos en que devuelven valores booleanos. A diferencia de los operadores lógicos, no requieren que sus operandos sean valores booleanos.</p>
+  <p>Los operadores de comparación se utilizan para comparar el valor de los operandos por igualdad, así como por una serie de otras condiciones. La Tabla 3.5 enumera los operadores de comparación disponibles en JavaScript.</p>
+
+  <table border="1">
+    <caption>Tabla 3.5. Operadores de comparación en JavaScript.</caption>
+    <thead>
+      <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>==</code></td>
+        <td>Devuelve true si los operandos son iguales</td>  
+      </tr>
+      <tr>
+        <td><code>!=</code></td>
+        <td>Devuelve true si los operandos no son iguales</td>  
+      </tr>
+      <tr>
+        <td><code>></code></td>
+        <td>Devuelve true si el operando izquierdo es mayor que el operando derecho</td>  
+      </tr>
+      <tr>
+        <td><code><</code></td>
+        <td>Devuelve true si el operando izquierdo es menor que el operando derecho</td>  
+      </tr>
+      <tr>
+        <td><code>>=</code></td>
+        <td>Devuelve true si el operando izquierdo es mayor o igual que el operando derecho</td>  
+      </tr>
+      <tr>
+        <td><code><=</code></td>
+        <td>Devuelve true si el operando izquierdo es menor o igual que el operando derecho</td>  
+      </tr>
+    </tbody>
+  </table>
+
+  <p>En JavaScript, todos los operadores de comparación son operadores binarios.</p>
+
+  <p>Los operadores de comparación se pueden usar para comparar números, así como cadenas de texto; por ejemplo:</p>
+  
+  <table border="1">
+      <tr>
+        <td><code>1 == 1</code></td>
+        <td>devuelve verdadero.</td>  
+      </tr>
+      <tr>
+        <td><code>3 < 1</code></td>
+        <td>devuelve falso.</td>  
+      </tr>
+      <tr>
+        <td><code>5 >= 4</code></td>
+        <td>devuelve verdadero.</td>  
+      </tr>
+      <tr>
+        <td><code>"the" != "he"</code></td>
+        <td>devuelve verdadero.</td>  
+      </tr>
+      <tr>
+        <td><code>4 == "4"</code></td>
+        <td>devuelve verdadero.</td>  
+      </tr>
+  </table>
+ 
+  <blockquote>
+    <strong>Nota: </strong>Al comparar valores de cadena y numéricos, si el valor de la cadena comienza con caracteres no numéricos, JavaScript generará un error.
+  </blockquote>
+
+  <h5>Operadores Condicionales</h5>
+  <p>Las expresiones condicionales son un poco diferentes de las otras que has visto hasta ahora porque una expresión condicional puede evaluar a uno de dos valores diferentes según una condición. La estructura de una expresión condicional es:</p>
+
+  <pre>
+  <code>
+    (condición) ? val1 : val2
+  </code>
+  </pre>
+
+  <p>La forma en que funciona una expresión condicional es que la condición, que es cualquier expresión que se pueda evaluar a un valor booleano, se evalúa; según el resultado, toda la expresión se evalúa como val1 (condición verdadera) o val2 (condición falsa).</p>
+  <p>La expresión</p>
+  <pre>
+  <code>
+    (día == "Sábado") ? "Fin de semana!" : "No es Sábado!"
+  </code>
+  </pre>
+
+  <p>se evalúa como "Fin de semana!" cuando día es "Sábado". De lo contrario, la expresión se evalúa como "No es Sábado!".</p>
+  
+  <h5>Operadores de Cadenas</h5>
+  <p>En el Capítulo 2, aprendiste a usar el operador de concatenación (+). La concatenación devuelve la unión de dos cadenas de manera que</p>
+
+  <pre>
+  <code>
+    "Bienvenido a" + "Netscape Navigator"
+  </code>
+  </pre>
+
+  <p>se evalúa como una sola cadena con el valor "Bienvenido a Netscape Navigator." Al igual que con los números, esto se puede hacer con un operador de concatenación abreviado. Por ejemplo, si la variable <code>bienvenido</code> tiene el valor "Bienvenido a", entonces</p>
+
+  <pre>
+  <code>
+    bienvenido += "Netscape Navigator";
+  </code>
+  </pre>
+
+  <p>asignaría la cadena "Bienvenido a Netscape Navigator" a la variable <code>bienvenido</code>.</p>
+
+  <h3>Precedencia de Operadores</h3>
+  <p>Debido a que las expresiones pueden ser los operandos de otras expresiones, es necesario entender la precedencia de los operadores. La precedencia de operadores es el conjunto de reglas que determina el orden en el cual se evalúan estas expresiones compuestas.</p>
+  <p>Los operadores que has aprendido se evalúan en el siguiente orden (de menor a mayor precedencia):</p>
+
+  <p>
+    Operadores de asignación (<code>= += -= = /= %=</code>)<br>
+    Condicional (<code>?:</code>)<br>
+    Lógico o (<code>||</code>)<br>
+    Lógico y (<code>&&</code>)<br>
+    Igualdad (<code>== !=</code>)<br>
+    Relacionales (<code>< <= > >=</code>)<br>
+    Suma/resta (<code>+ -</code>)<br>
+    Multiplicación/división/módulo (<code>* / %</code>)<br>
+    Paréntesis (<code>()</code>)
+  </p>
+
+  <p>Basado en estas reglas, la expresión</p>
+
+  <pre>
+  <code>
+    5 + 3 * 2
+  </code>
+  </pre>
+
+  <p>se evalúa como</p>
+
+  <pre>
+  <code>
+    5 + 6
+  </code>
+  </pre>
+
+  <p>lo cual se evalúa como 11. Sin estas reglas, el operador de suma se evaluaría antes que el operador de multiplicación y el resultado sería 16. De manera similar, la expresión</p>
+
+  <pre>
+  <code>
+    false || true && false
+  </code>
+  </pre>
+
+  <p>se evalúa como</p>
+
+  <pre>
+  <code>
+    false
+  </code>
+  </pre>
+
+  <p>porque la expresión && se evalúa primero como false, y luego la expresión || (que se convierte en false || false) se evalúa como false.</p>
+  <p>Las reglas de precedencia de operadores pueden ser anuladas mediante el uso de paréntesis. Las expresiones entre paréntesis se evalúan antes que las fuera de los paréntesis, de modo que la expresión</p>
+
+  <pre>
+  <code>
+    (5 + 3) * 2
+  </code>
+  </pre>
+
+  <p>se evaluaría como 16, en lugar de 11 sin los paréntesis.</p>
+
+  <h3>Probando la Respuesta de un Usuario</h3>
+  <p>En este ejemplo, irás más allá de los scripts “Bienvenido a Netscape Navigator 2” en los que has estado trabajando, hacia algo un poco diferente. En el Listado 3.3, plantearás una pregunta de prueba al usuario y, según la respuesta, mostrarás un resultado diferente para el usuario en forma de una de dos imágenes GIF diferentes.</p>
+  <p>La pregunta se presentará en un cuadro de diálogo de aviso, y el resultado se mostrará en la ventana del cliente.</p>
+
+  <blockquote>
+    <strong>Entrada: </strong>Listado 3.3. Uso de operadores condicionales para probar la entrada.
+  </blockquote>
+
+  <pre>
+  <code>
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Ejemplo 3.3&lt;/TITLE&gt;
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- OCULTAR DE OTROS NAVEGADORES
+    // DEFINIR VARIABLES PARA EL RESTO DEL SCRIPT
+    var question=&quot;&iquest;Cu&aacute;nto es 10+10?&quot;;
+    var answer=20;
+    var correct=&apos;&lt;IMG SRC=&quot;correcto.gif&quot;&gt;&apos;;
+    var incorrect=&apos;&lt;IMG SRC=&quot;incorrecto.gif&quot;&gt;&apos;;
+    // HACER LA PREGUNTA
+    var response = prompt(question) ;
+    // VERIFICAR LA RESPUESTA
+    var output = (response == answer) ? correct : incorrect;
+    // DEJAR DE OCULTAR DE OTROS NAVEGADORES - -&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY&gt;
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- OCULTAR DE OTROS NAVEGADORES
+    // MOSTRAR RESULTADO
+    document.write(output) ;
+    // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/BODY&gt;
+    &lt;/HTML&gt;
+  </code>
+  </pre>
+
+  <blockquote>
+    <strong>Salida: </strong>Los resultados de este script se verían como en las Figuras 3.5 y 3.6.
+  </blockquote>
+
+  <figure>
+    <img src="images/fig3.5.webp" alt="Figura 3.5: El cuadro de diálogo de solicitud se utiliza para evaluar al usuario.">
+    <figcaption>Figura 3.5: El cuadro de diálogo de solicitud se utiliza para evaluar al usuario.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/fig3.6.webp" alt="Figura 3.6: Los operadores condicionales determinan la página web final.">
+    <figcaption>Figura 3.6: Los operadores condicionales determinan la página web final.</figcaption>
+  </figure>
+
+  <p>
+    <strong>Análisis: </strong>En este ejemplo, puedes ver el uso de varios de los conceptos aprendidos anteriormente en este
+capítulo y en secciones anteriores.
+  </p>
+  <p>La primera parte del script aparece en el encabezado porque este es el estilo aconsejable, excepto
+    cuando el script debe generar salida en secuencia con el archivo HTML. Por esta razón, todas
+    las declaraciones de variables—hacer la pregunta y verificar la respuesta—tienen lugar en el
+    encabezado. El script en el cuerpo del documento HTML solo muestra los resultados finales.</p>
+  <p>Observa el uso extensivo de variables, tanto cadenas de texto como números, todas declaradas con el comando var. Cada elemento importante en el script se asigna a una variable. Esto hace que el script sea más fácil de leer y de modificar. Al cambiar las variables de pregunta y respuesta, puedes cambiar la prueba, y al cambiar las variables de correcto e incorrecto, puedes cambiar la respuesta dada al usuario.</p>
+  <p>Además, ves un ejemplo práctico de expresiones condicionales ((respuesta == respuesta) ? correcto : incorrecto) y cómo el valor de una expresión condicional puede asignarse a una variable.</p>
+
+  <h3>Aplicando Comparación: Construcciones if-else</h3>
+  <p>Ahora que sabes cómo crear expresiones y, lo que es más importante, cómo crear expresiones de comparación y expresiones lógicas, estás listo para aplicarlas.</p>
+  <p>En la sección anterior viste cómo una expresión, como una comparación, podía ser la condición en una expresión condicional. El operador condicional te ofrece una manera simple de tomar una decisión: evaluar un valor cuando la condición es verdadera y otro cuando la condición es falsa.</p>
+  <p>Aun así, al usar expresiones condicionales, no puedes ir más allá de los límites de un flujo de programa lineal. Es decir, cada línea del script se evalúa y se ejecuta en orden; aún no puedes alterar el orden.</p>
+  <p>Usando la estructura if-else, combinada con expresiones, puedes alterar el flujo de un programa para determinar qué secciones del código se ejecutan según una condición.</p>
+  <p>En su estructura más simple, la declaración if se usa de la siguiente manera:</p>
+
+  <pre>
+  <code>
+    if condición
+       comando;
+  </code>
+  </pre>
+
+  <p>Es decir, si la condición es verdadera, ejecuta el comando. De lo contrario, no lo ejecutes y pasa al siguiente comando o condición. Sin embargo, como aprendiste en el Capítulo 2, los comandos pueden agruparse en bloques de comandos utilizando llaves. La declaración if también puede usarse con bloques de comandos:</p>
+
+  <pre>
+  <code>
+    if condición {
+       varias líneas de código JavaScript
+    }      
+  </code>
+  </pre>
+
+  <p>Por ejemplo, estas líneas</p>
+
+  <pre>
+  <code>
+    if (día == "sábado") {
+      document.writeln("¡Es el fin de semana!");
+      alert("¡Es el fin de semana!");
+    }
+  </code>
+  </pre>
+
+  <p>escribirán "¡Es el fin de semana!" tanto en la ventana del documento como en un cuadro de diálogo de alerta solo si la variable día tiene el valor "sábado". Si día tiene cualquier otro valor, ninguna línea se ejecuta.</p>
+  <p>Usando esto puedes tener un mensaje diferente tanto para el sábado como para cualquier otro día de la semana:</p>
+
+  <pre>
+  <code>
+    if (día == "sábado") {
+      document.writeln("¡Es el fin de semana!");
+    }
+    if (día != "sábado") {
+      document.writeln("No es sábado.");
+    }
+  </code>
+  </pre>
+
+  <p>La estructura if-else proporciona una manera más fácil de hacer esto usando else:</p>
+
+  <pre>
+  <code>
+    if (día == "sábado") {
+      document.writeln("¡Es el fin de semana!");
+      } else {
+      document.writeln("No es sábado.");
+    }      
+  </code>
+  </pre>
+
+  <p>La estructura else permite la creación de un bloque de comandos para ejecutar cuando la condición en la sentencia if asociada es falsa.</p>
+  <p>Además, ten en cuenta que las estructuras if-else pueden estar anidadas:</p>
+
+  <pre>
+  <code>
+    if condición1 {
+      Comandos JavaScript
+      if condición2 {
+        Comandos JavaScript
+      } else {
+        Otros comandos
+      }
+      Más comandos JavaScript
+    } else {
+      Otros comandos
+    }
+  </code>
+  </pre>
+
+  <h3>Usando if para Repetición</h3>
+  <p>Usando la sentencia if, vas a extender el Listado 3.3 un paso más: vas a permitir que el usuario indique si quiere una segunda oportunidad para responder la pregunta correctamente, como se muestra en el Listado 3.4.</p>
+  <p>Lo que quieres hacer es formular la pregunta y verificar el resultado. Si el resultado es incorrecto, preguntarás al usuario si desea intentarlo de nuevo. Si lo desea, le preguntarás una vez más.</p>
+  <p>Para facilitar esto, usarás el método confirm(), que es similar a los métodos alert() y prompt() que ya sabes cómo usar. El método confirm() toma una única cadena como argumento. Muestra la cadena en un cuadro de diálogo con los botones OK y Cancelar y devuelve un valor de true si el usuario selecciona OK o false si selecciona Cancelar.</p>
+
+  <blockquote>
+    <strong>Entrada: </strong>Listado 3.4. El método confirm() con la sentencia if.
+  </blockquote>
+
+  <pre>
+  <code>
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Ejemplo 3.4&lt;/TITLE&gt;
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- OCULTAR DE OTROS NAVEGADORES
+    // DEFINIR VARIABLES PARA EL RESTO DEL SCRIPT
+    var pregunta=&quot;&iquest;Qu&eacute; es 10+10?&quot;;
+    var respuesta=20;
+    var correcto=&apos;&lt;IMG SRC=&quot;correcto.gif&quot;&gt;&apos;;
+    var incorrecto=&apos;&lt;IMG SRC=&quot;incorrecto.gif&quot;&gt;&apos;;
+    // HACER LA PREGUNTA
+    var respuestaUsuario = prompt(pregunta, &quot;0&quot;);
+    // VERIFICAR LA RESPUESTA LA PRIMERA VEZ
+    if (respuestaUsuario != respuesta) {
+    // LA RESPUESTA FUE INCORRECTA: OFRECER UNA SEGUNDA OPORTUNIDAD
+      if (confirm(&quot;&iexcl;Incorrecto! Presiona OK para una segunda oportunidad.&quot;))
+      response = prompt(pregunta, &quot;0&quot;) ;
+      }
+    // VERIFICAR LA RESPUESTA
+    var resultado = (response == respuesta) ? correcto : incorrecto;
+    // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY&gt;
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- OCULTAR DE OTROS NAVEGADORES
+    // MOSTRAR RESULTADO
+    document.write (resultado) ;
+    // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/BODY&gt;
+    &lt;/HTML&gt;
+  </code>
+  </pre>
+
+  <p>
+    <strong>Análisis: </strong>Para agregar la segunda oportunidad, solo necesitas agregar dos declaraciones if embebidas. Para entender cómo funciona esto, veamos el programa línea por línea comenzando con el primer método prompt().
+  </p>
+
+  <pre>
+  <code>
+    var response = prompt(pregunta,"0");
+  </code>
+  </pre>
+
+  <p>En esta línea, declaras la variable response, pides al usuario que responda la pregunta y asignas la respuesta del usuario a response.</p>
+
+  <pre>
+  <code>
+    if (response != respuesta)
+  </code>
+  </pre>
+
+  <p>Aquí, comparas la respuesta del usuario con la respuesta correcta. Si la respuesta es incorrecta, entonces se ejecuta la siguiente línea. Si la respuesta es correcta, el programa salta hacia abajo para mostrar el resultado.</p>
+
+  <pre>
+  <code>
+    if (confirm("¡Incorrecto! Presiona OK para una segunda oportunidad."))
+  </code>
+  </pre>
+
+  <p>El usuario ha dado una respuesta incorrecta. Ahora verificas si el usuario quiere una segunda oportunidad con el método confirm(), que devuelve un valor booleano, el cual es evaluado por la declaración if.</p>
+
+  <pre>
+  <code>
+    response = prompt(pregunta,"0");
+  </code>
+  </pre>
+
+  <p>Si el usuario selecciona OK en el cuadro de diálogo de confirmación, el método confirm() devuelve true, y esta línea se ejecuta. Con este comando, se vuelve a preguntar al usuario la pregunta, y la segunda respuesta se almacena en la variable response, reemplazando la respuesta anterior.</p>
+
+  <h3>Resumen</h3>
+  <p>JavaScript tiene cuatro tipos de datos básicos: numérico (tanto entero como de punto flotante), cadena de texto, booleano y el valor nulo. Los literales, que expresan un valor literalmente, pueden ser de tipo numérico, de cadena de texto o booleano; reglas específicas gobiernan el formato de estos literales.</p>
+  <p>Las variables, que son contenedores nombrados para almacenar datos e información en un programa, se declaran usando la declaración var. Debido a que JavaScript es un lenguaje de tipado débil, el tipo de literales y variables cambia dinámicamente dependiendo de las acciones que se realicen sobre ellos o con ellos.</p>
+  <p>Las expresiones proporcionan un medio para analizar y trabajar con variables y literales. Hay varios tipos de expresiones, incluidas las expresiones de asignación, expresiones aritméticas, expresiones lógicas, expresiones de comparación, expresiones de cadena de texto y expresiones condicionales. Las expresiones están compuestas por una serie de operandos y operadores que evalúan a un solo valor.</p>
+  <p>Las reglas de precedencia de operadores te indican el orden en el que se evaluarán las expresiones compuestas. Se pueden usar paréntesis para anular la precedencia de operadores.</p>
+  <p>La construcción if-else te permite decidir qué código del programa se ejecutará según el valor de variables, literales o expresiones.</p>
+  <p>En el Capítulo 4, veremos funciones y objetos como los bloques de construcción de la mayoría de los programas.</p>
+  
+  <h3>Revisión de Comandos y Extensiones</h3>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Comando/Extensión</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>var</code></td>
+        <td>Comando de JavaScript</td>
+        <td>Declara una variable</td>  
+      </tr>
+      <tr>
+        <td><code>=</code></td>
+        <td>Operador de asignación</td>
+        <td>Asigna el valor del operando derecho al operando izquierdo</td>  
+      </tr>
+      <tr>
+        <td><code>+=</code></td>
+        <td>Operador de asignación</td>
+        <td>Suma los operandos y asigna el resultado al operando izquierdo</td>  
+      </tr>
+      <tr>
+        <td><code>-=</code></td>
+        <td>Operador de asignación</td>
+        <td>Resta el operando derecho del operando izquierdo y asigna el resultado al operando izquierdo</td>  
+      </tr>
+      <tr>
+        <td><code>*=</code></td>
+        <td>Operador de asignación</td>
+        <td>Multiplica los operandos y asigna el resultado al operando izquierdo</td>  
+      </tr>
+      <tr>
+        <td><code>/=</code></td>
+        <td>Operador de asignación</td>
+        <td>Divide el operando izquierdo por el operando derecho y asigna el resultado al operando izquierdo</td>  
+      </tr>
+      <tr>
+        <td><code>%=</code></td>
+        <td>Operador de asignación</td>
+        <td>Divide el operando izquierdo por el operando derecho y asigna el residuo al operando izquierdo</td>  
+      </tr>
+      <tr>
+        <td><code>+</code></td>
+        <td>Operador aritmético</td>
+        <td>Suma los operandos</td>  
+      </tr>
+      <tr>
+        <td><code>-</code></td>
+        <td>Operador aritmético</td>
+        <td>Resta el operando derecho del operando izquierdo</td>  
+      </tr>
+      <tr>
+        <td><code>*</code></td>
+        <td>Operador aritmético</td>
+        <td>Multiplica los operandos</td>  
+      </tr>
+      <tr>
+        <td><code>/</code></td>
+        <td>Operador aritmético</td>
+        <td>Divide el operando izquierdo por el operando derecho</td>  
+      </tr>
+      <tr>
+        <td><code>%</code></td>
+        <td>Operador aritmético</td>
+        <td>Divide el operando izquierdo por el operando derecho y calcula el residuo</td>  
+      </tr>
+      <tr>
+        <td><code>&&</code></td>
+        <td>Operador lógico</td>
+        <td>Evalúa como verdadero cuando ambos operandos son verdaderos</td>  
+      </tr>
+      <tr>
+        <td><code>||</code></td>
+        <td>Operador lógico</td>
+        <td>Evalúa como verdadero cuando cualquiera de los operandos es verdadero</td>  
+      </tr>
+      <tr>
+        <td><code>!</code></td>
+        <td>Operador lógico</td>
+        <td>Evalúa como verdadero si el operando es falso y como falso si el operando es verdadero</td>  
+      </tr>
+      <tr>
+        <td><code>==</code></td>
+        <td>Operador de comparación</td>
+        <td>Evalúa como verdadero si los operandos son iguales</td>  
+      </tr>
+      <tr>
+        <td><code>!=</code></td>
+        <td>Operador de comparación</td>
+        <td>Evalúa como verdadero si los operandos no son iguales</td>  
+      </tr>
+      <tr>
+        <td><code>&gt;</code></td>
+        <td>Operador de comparación</td>
+        <td>Evalúa como verdadero si el operando izquierdo es mayor que el derecho</td>  
+      </tr>
+      <tr>
+        <td><code>&lt;</code></td>
+        <td>Operador de comparación</td>
+        <td>Evalúa como verdadero si el operando izquierdo es menor que el derecho</td>  
+      </tr>
+      <tr>
+        <td><code>&gt;=</code></td>
+        <td>Operador de comparación</td>
+        <td>Evalúa como verdadero si el operando izquierdo es mayor o igual al derecho</td>  
+      </tr>
+      <tr>
+        <td><code>&lt;=</code></td>
+        <td>Operador de comparación</td>
+        <td>Evalúa como verdadero si el operando izquierdo es menor o igual al derecho</td>  
+      </tr>
+      <tr>
+        <td><code>+</code></td>
+        <td>Operador de cadena</td>
+        <td>Combina los operandos en una sola cadena</td>  
+      </tr>
+      <tr>
+        <td><code>if</code></td>
+        <td>Comando de JavaScript</td>
+        <td>Ejecuta un comando o bloque de comandos si una condición es verdadera</td>  
+      </tr>
+      <tr>
+        <td><code>else</code></td>
+        <td>Comando de JavaScript</td>
+        <td>Ejecuta un comando o bloque de comandos si la condición de una sentencia if asociada es falsa</td>  
+      </tr>
+      <tr>
+        <td><code>parseInt()</code></td>
+        <td>Comando de JavaScript</td>
+        <td>Convierte una cadena a un número entero</td>  
+      </tr>
+      <tr>
+        <td><code>parseFloat()</code></td>
+        <td>Función de JavaScript</td>
+        <td>Convierte una cadena a un número de punto flotante</td>  
+      </tr>
+      <tr>
+        <td><code>isNaN()</code></td>
+        <td>Función de JavaScript</td>
+        <td>Devuelve verdadero si la evaluación de su argumento es NaN (un valor especial que representa algo que “No es un Número”). Devuelve falso de otro modo.</td>  
+      </tr>
+      <tr>
+        <td><code>confirm()</code></td>
+        <td>Método de JavaScript</td>
+        <td>Muestra un mensaje en un cuadro de diálogo con botones de OK y Cancelar.</td>  
+      </tr>    
+    </tbody>
+  </table>
+
+  <h3>Ejercicios</h3>
+  <ol>
+    <li>Evalúa cada una de las siguientes expresiones:
+      <ol type="a">
+        <li>7 + 5</li>
+        <li>"7" + "5"</li>
+        <li>7 == 7</li>
+        <li>7 &gt;= 5</li>
+        <li>7 &lt;= 7</li>
+        <li>(7 &lt; 5) ? 7 : 5</li>
+        <li>(7 &gt;= 5) && (5 &gt; 5)</li>
+        <li>(7 &gt;= 5) || (5 &gt; 5)</li>
+      </ol>
+    </li>
+    <li>Escribe el segmento de un script que le pregunte al usuario si quiere un mensaje de saludo y, si lo quiere, muestre un archivo GIF llamado welcome.gif y muestre "¡Bienvenido a Netscape Navigator!" en la ventana del documento después del GIF.</li>
+    <li>Extiende el Listado 3.4 para que si los usuarios responden correctamente, tengan la opción de responder una segunda pregunta, pero solo tienen una oportunidad para responder la segunda pregunta.</li>
+  </ol>
+
+  <h3>Respuestas</h3>
+  <ol>
+    <li>Las expresiones se evalúan de la siguiente manera:
+      <ol type="a">
+        <li>2</li>
+        <li>"75"</li>
+        <li>verdadero</li>
+        <li>verdadero</li>
+        <li>verdadero</li>
+        <li>5</li>
+        <li>falso</li>
+        <li>verdadero</li>
+      </ol>
+    </li>
+    <li>El siguiente código utiliza el método confirm() y una declaración if para completar la tarea:
+    <pre>
+    <code>
+    if (confirm(&quot;Haz clic en Aceptar para ver un mensaje de bienvenida&quot;)) {
+      document.write(&apos;&lt;IMG SRC=&quot;welcome.gif&quot;&gt;&apos;);
+      document.write(&quot;&lt;BR&gt;&lt;H1&gt;Bienvenido a Netscape Navigator&lt;/H1&gt;&quot;);
+    }
+    </code>
+    </pre>
+    </li>
+    <li>Para agregar esta funcionalidad, usa una estructura if-else:
+    <pre>
+    <code>
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Ejercicio 3.3&lt;/TITLE&gt;
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- OCULTAR DE OTROS NAVEGADORES --&gt;
+    // DEFINIR VARIABLES PARA EL RESTO DEL SCRIPT
+    var pregunta = &quot;&iquest;Cu&aacute;nto es 10+10?&quot;;
+    var respuesta = 20;
+    var correcto = &apos;&lt;IMG SRC=&quot;correct.gif&quot;&gt;&apos;;
+    var incorrecto = &apos;&lt;IMG SRC=&quot;incorrect.gif&quot;&gt;&apos;;
+    // HACER LA PREGUNTA
+    var respuestaUsuario = prompt(pregunta, &quot;0&quot;);
+    // VERIFICAR LA RESPUESTA LA PRIMERA VEZ
+    if (respuestaUsuario != respuesta) {
+        // LA RESPUESTA ESTABA MAL: OFRECER UNA SEGUNDA OPORTUNIDAD
+        if (confirm(&quot;&iexcl;Incorrecto! Presiona Aceptar para una segunda oportunidad.&quot;))
+            respuestaUsuario = prompt(pregunta, &quot;0&quot;);
+    } else {
+        // LA RESPUESTA ESTABA BIEN: OFRECER UNA SEGUNDA PREGUNTA
+        if (confirm(&quot;&iexcl;Correcto! Presiona Aceptar para una segunda pregunta.&quot;)) {
+            pregunta = &quot;&iquest;Cu&aacute;nto es 10*10?&quot;;
+            respuesta = 100;
+            respuestaUsuario = prompt(pregunta, &quot;0&quot;);
+        }
+    }
+    // VERIFICAR LA RESPUESTA
+    var salida = (respuestaUsuario == respuesta) ? correcto : incorrecto;
+    // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY&gt;
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- OCULTAR DE OTROS NAVEGADORES --&gt;
+    // MOSTRAR RESULTADO
+    document.write(salida);
+    // DEJAR DE OCULTAR DE OTROS NAVEGADORES --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/BODY&gt;
+    &lt;/HTML&gt;
+    </code>
+    </pre>
+    </li>
+  </ol>
+  <hr>
+
+  <!-- ----------------------------------------------------------------- -->
+  
+  <h1>Capítulo 4<br>
+  Funciones y Objetos — Los Componentes Fundamentales de los Programas</h1>
+
+  <p>Una vez que comiences a escribir programas más complejos, rápidamente te darás cuenta de la necesidad de realizar algunas tareas y acciones más de una vez durante el transcurso de un programa.</p>
+  <p>Esta necesidad se aborda con las funciones, que son similares a los métodos pero no están adjuntas a ningún objeto en particular. Como programador, puedes crear numerosas funciones en tus programas—esto ayuda a organizar la estructura de tus aplicaciones y facilita el mantenimiento y la modificación de tu código de programa.</p>
+  <p>Además, las funciones son particularmente útiles para trabajar con eventos y manejadores de eventos, como aprenderás en el Capítulo 5, "Eventos en JavaScript".</p>
+  <p>También puedes usar funciones como base para crear tus propios objetos y complementar aquellos que están disponibles en JavaScript.</p>
+  <p>En este capítulo cubriremos los siguientes temas:</p>
+
+  <ul>
+    <li>La naturaleza de las funciones</li>
+    <li>Funciones integradas versus funciones creadas por el programador</li>
+    <li>Cómo definir y usar funciones</li>
+    <li>Cómo crear nuevos objetos, propiedades y métodos</li>
+    <li>Cómo usar arreglos asociativos</li>
+  </ul>
+
+  <h2>¿Qué son las funciones?</h2>
+  <p>Las funciones ofrecen a los programadores la capacidad de agrupar código de programa que realiza una tarea específica—o función—en una sola unidad que se puede usar repetidamente a lo largo de un programa.</p>
+  <p>Al igual que los métodos que has visto en capítulos anteriores, una función se define por su nombre y se invoca usando su nombre.</p>
+  <p>También, al igual que algunos de los métodos que has visto antes (como prompt() y confirm()), las funciones pueden aceptar información en forma de argumentos y pueden devolver resultados.</p>
+  <p>JavaScript incluye varias funciones incorporadas, así como métodos de objetos base. Ya has visto esto cuando usaste alert(), document.write(), parseInt(), o cualquiera de los otros métodos y funciones con los que has estado trabajando. Sin embargo, la flexibilidad de JavaScript radica en la capacidad de los programadores para crear sus propias funciones para complementar las disponibles en la especificación de JavaScript.</p>
+
+  <h2>Usando funciones</h2>
+  <p>Para poder utilizar las funciones, necesitas saber cómo definirlas, pasar argumentos a ellas y devolver los resultados de sus cálculos. También es importante entender el concepto de ámbito de las variables, que rige si una variable está disponible en todo un script o solo dentro de una función específica.</p>
+
+  <h3>Definición de Funciones</h3>
+  <p>Las funciones se definen utilizando la declaración de función. La declaración de función requiere un nombre para la función, una lista de parámetros—o argumentos—que se pasarán a la función, y un bloque de comandos que define lo que la función hace:</p>
+
+  <pre>
+  <code>
+    function nombre_de_la_función(parámetros, argumentos) {
+      bloque de comandos
+    }    
+  </code>
+  </pre>
+
+  <p>Como notarás, la nomenclatura de las funciones sigue básicamente las mismas reglas que las variables: son sensibles a mayúsculas y minúsculas, pueden incluir guiones bajos (_), y comienzan con una letra. La lista de argumentos que se pasan a la función aparece entre paréntesis y se separa por comas.</p>
+  <p>Es importante darse cuenta de que definir una función no ejecuta los comandos que la componen. Solo cuando la función es llamada por su nombre en alguna otra parte del script es que la función se ejecuta.</p>
+
+  <h3>Pasando Parámetros</h3>
+  <p>En la siguiente función, puedes ver que printName() acepta un argumento llamado name:</p>
+
+  <pre>
+  <code>
+    function printName(name) {
+      document.write(&quot;&lt;HR&gt;Tu Nombre es &lt;B&gt;&lt;I&gt;&quot;);
+      document.write(name);
+      document.write(&quot;&lt;/B&gt;&lt;/I&gt;&lt;HR&gt;&quot;);
+    }
+  </code>
+  </pre>
+
+  <p>Dentro de la función, las referencias a name se refieren al valor pasado a la función.</p>
+  <p>Hay varios puntos a tener en cuenta aquí:</p>
+
+  <ul>
+    <li>Tanto las variables como los literales se pueden pasar como argumentos al llamar a una función.</li>
+    <li>Si se pasa una variable a la función, cambiar el valor del parámetro dentro de la función no cambia el valor de la variable pasada a la función.</li>
+    <li>Los parámetros existen solo durante la vida de la función—si llamas a la función varias veces, los parámetros se crean de nuevo cada vez que llamas a la función, y los valores que tenían cuando la función terminó la última vez no se retienen.</li>
+  </ul>
+
+  <p>Por ejemplo, si llamas a printName() con el comando:</p>
+
+  <pre>
+  <code>
+    printName("Bob");
+  </code>
+  </pre>
+
+  <p>Entonces, cuando printName() se ejecute, el valor de name será "Bob". Si llamas a printName() usando una variable como argumento:</p>
+
+  <pre>
+  <code>
+    var user = "John";
+    printName(user);
+  </code>
+  </pre>
+
+  <p>entonces el nombre tiene el valor "John". Si añadieras una línea a printName() cambiando el valor de nombre:</p>
+
+  <pre>
+  <code>
+    name = "Mr. " + name;
+  </code>
+  </pre>
+
+  <p>el nombre cambiaría, pero la variable usuario, que se envió como argumento, no cambiaría.</p>
+
+  <blockquote>
+    <strong>Nota: </strong>Al pasar argumentos a una función, se crean dos propiedades que pueden ser útiles al trabajar con los argumentos: functionname.arguments y functionname.arguments.length.<br>
+    functionname.arguments es un array con una entrada para cada argumento y functionname.arguments.length es una variable entera que indica el número de variables pasadas a la función. Puedes usar estas propiedades para producir funciones que acepten un número variable de argumentos.
+  </blockquote>
+
+  <h4>Alcance de las Variables (Variable Scope)</h4>
+  <p>Esto nos lleva a una discusión sobre el alcance de las variables. El alcance de las variables se refiere a dónde existe una variable.</p>
+  <p>Por ejemplo, en el ejemplo printName(), el nombre solo existe dentro de la función printName()—no se puede referir ni manipular fuera de la función. Entra en existencia cuando se llama a la función y deja de existir cuando la función termina. Si la función se llama nuevamente, se crea una nueva instancia de nombre.</p>
+  <p>Además, cualquier variable declarada usando el comando var dentro de la función tendrá un alcance limitado a la función.</p>
+  <p>Si una variable se declara fuera del cuerpo de una función, está disponible en todo el script—dentro de todas las funciones y en otros lugares.</p>
+  
+  <blockquote>
+    <strong>Nuevo Término: </strong>Las variables declaradas dentro de una función se conocen como variables locales. Las variables declaradas fuera de las funciones y disponibles en todo el script se conocen como variables globales.
+  </blockquote>
+
+  <p>Si declaras una variable local dentro de una función que tiene el mismo nombre que una variable global existente, entonces dentro de la función, ese nombre de variable se refiere a la nueva variable local y no a la variable global. Si cambias el valor de la variable dentro de la función, no afecta el valor de la variable global.</p>
+
+  <h3>Retornando Resultados</h3>
+  <p>
+    Como se mencionó en la sección anterior, las funciones pueden retornar resultados. Los resultados se retornan utilizando la declaración return. La declaración return puede utilizarse para devolver cualquier expresión válida que se evalúe a un único valor. Por ejemplo, en la función cube(),</p>
+  
+  <pre>
+  <code>
+    function cube(number) {
+      var cube = number * number * number;
+      return cube;
+    }
+  </code>
+  </pre>
+
+  <p>
+    La declaración de retorno devolverá el valor de la variable cubo. Esta función podría haber sido escrita de la siguiente manera con la misma facilidad:
+  </p>
+
+  <pre>
+  <code>
+    function cube(number) {
+      return number * number * number;
+    }
+  </code>
+  </pre>
+
+  <p>
+    Esto funciona porque la expresión number * number * number se evalúa a un único valor.
+  </p>
+
+  <h3>Funciones en el encabezado del archivo</h3>
+  <p>
+    Como se mencionó en el Capítulo 3, "Trabajando con Datos e Información", existen razones convincentes para incluir las definiciones de funciones dentro de las etiquetas HEAD del archivo HTML.
+  </p>
+  <p>
+    Esto asegura que todas las funciones hayan sido interpretadas antes de que sea posible que los eventos del usuario invoquen una función. Esto es especialmente relevante cuando se empieza a trabajar con manejadores de eventos, donde la ubicación incorrecta de una definición de función puede significar que un evento pueda provocar la llamada a una función que aún no ha sido evaluada y Navigator no sabe que existe. Cuando esto ocurre, se muestra un mensaje de error.
+  </p>
+
+  <blockquote>
+    <strong>Nuevo término:</strong> El término "parsed" se refiere al proceso mediante el cual el intérprete de JavaScript evalúa cada línea de código de script y la convierte en un Byte Code pseudo-compilado (similar a Java), antes de intentar ejecutarlo. En este momento, se pueden detectar y reportar errores de sintaxis y otros errores de programación que podrían evitar que el script se ejecute, informándolos al usuario o al programador.
+  </blockquote>
+
+  <h3>El operador <code>typeof</code></h3>
+  <p>
+    JavaScript ofrece un operador que no discutimos en el último capítulo cuando examinamos variables, expresiones y operadores. El operador `typeof` se utiliza para identificar el tipo de un elemento en JavaScript. Dado un operando no evaluado (como un nombre de variable o un nombre de función), el operador `typeof` devuelve una cadena que identifica el tipo del operando.
+  </p>
+  <p>
+    Por ejemplo, supongamos que tienes el siguiente código JavaScript:
+  </p>
+
+  <pre>
+  <code>
+    var pregunta="What is 10 x 10?";
+    var respuesta=10;
+    var correcto=false;
+    function showResult(results) {
+    document.write(results) ;
+    }
+  </code>
+  </pre>
+
+  <p>
+    Entonces, typeof <code>pregunta</code> devuelve cadena; typeof <code>respuesta</code> devuelve número; typeof <code>correcto</code> devuelve booleano; y typeof <code>showResult</code> devuelve función. Otros resultados posibles devueltos por el operador typeof incluyen undefined y objeto.
+  </p>
+
+  <blockquote>
+    <strong>Nota: </strong>El operador typeof puede ser útil para determinar si una función ha sido cargada y está lista para ser llamada. Esto es especialmente útil en páginas con múltiples marcos (frames) donde un script cargado en un marco (frame) podría intentar llamar a una función ubicada en otro marco (frame) que aún no ha completado su carga.
+  </blockquote>
+
+  <p>Los marcos (frames) se tratan con más detalle en el Capítulo 8.</p>
+
+  <h2>Poniendo las funciones a trabajar</h2>
+  <p>
+    Para demostrar el uso de funciones, vas a reescribir el ejemplo de la pregunta de prueba simple que usaste en el Listado 3.3. Para hacer esto, vas a crear una función que reciba una pregunta como argumento, plantee la pregunta, verifique la respuesta y devuelva una cadena de salida basada en la exactitud de la respuesta del usuario, como se muestra en el Listado 4.1.
+  </p>
+  <p>
+    Para hacer esto, necesitas aprender el método eval(), que evalúa una cadena y la convierte en un valor numérico; por ejemplo,
+  </p>
+
+  <pre>
+  <code>
+    eval("10*10")
+  </code>
+  </pre>
+
+  <p>devuelve un valor numérico de 100.</p>
+
+  <blockquote>
+    <strong>Entrada:</strong>Listado 4.1. Evaluando una expresión con la función eval().
+  </blockquote>
+
+  <pre>
+  <code>
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Example 4.1&lt;/TITLE&gt;
+
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- HIDE FROM OTHER BROWSERS
+
+    //DEFINE FUNCTION testQuestion( )
+    function testQuestion(question) {
+    //DEFINE LOCAL VARIABLES FOR THE FUNCTION
+    var answer=eval(question) ;
+    var output=&quot;What is &quot; + question + &quot;?&quot;;
+    var correct=&apos;&lt;IMG SRC=&quot;correct.gif&quot;&gt;&apos;;
+    var incorrect=&apos;&lt;IMG SRC=&quot;incorrect.gif&quot;&gt;&apos;;
+
+    //ASK THE QUESTION
+    var response=prompt(output,&quot;0&quot;);
+
+    //CHECK THE RESULT
+    return (response == answer) ? correct : incorrect;
+    }
+    // STOP HIDING FROM OTHER BROWSERS --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY&gt;
+
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- HIDE FROM OTHER BROWSERS
+
+    //ASK QUESTION AND OUTPUT RESULTS
+    var result=testQuestion(&quot;10 + 10&quot;);
+    document.write(result);
+
+    //STOP HIDING FROM OTHER BROWSERS --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/BODY&gt;
+    &lt;/HTML&gt;
+  </code>
+  </pre>
+
+  <p>
+    <strong>Análisis: </strong>A primera vista, este script puede parecer un poco más complicado que la versión utilizada en el Listado 3.3. En realidad, sin embargo, simplemente separa el trabajo en bloques lógicos y traslada la mayor parte del trabajo a la función <code>testQuestion()</code>.
+  </p>
+
+  <p>Para entender la función, analicemos las líneas clave.</p>
+
+  <pre>
+  <code>
+    function testQuestion(question) {
+  </code>
+  </pre>
+
+  <p>
+    En esta línea, defines la función `testQuestion()` e indicas que recibe un argumento, que se refiere como `question` dentro de la función. En el caso de esta función, se espera que `question` sea una cadena que contiene una expresión aritmética.
+  </p>
+
+  <pre>
+  <code>
+    var answer = eval(question);
+  </code>
+  </pre>
+
+  <p>
+    Lo primero que haces al entrar en la función es declarar la variable `answer` y asignarle el valor numérico de la expresión aritmética contenida en la cadena `question`. Esto se logra utilizando la función `eval()`.
+  </p>
+
+  <pre>
+  <code>
+    var output=&quot;What is &quot; + question + &quot;2&quot;;
+    var correct=&apos;&lt;IMG SRC=&quot;correct.gif&quot;&gt;&apos;;
+    var incorrect=&apos;&lt;IMG SRC=&quot;incorrect.gif&quot;&gt;&apos;;
+  </code>
+  </pre>
+
+  <p>
+    En estas líneas declaras varias variables más. La variable `output` contiene la pregunta actual que se mostrará, la cual es creada utilizando el operador de concatenación.
+  </p>
+
+  <pre>
+  <code>
+    var response=prompt(output, "O");
+  </code>
+  </pre>
+
+  <p>Aquí haces la pregunta y asignas la respuesta del usuario a la variable `response`.</p>
+
+  <pre>
+  <code>
+    return (response == answer) ? correct : incorrect;
+  </code>
+  </pre>
+
+  <p>
+    En esta línea usas el operador condicional para verificar la respuesta del usuario. El valor resultante es devuelto por el comando `return`.
+  </p>
+
+  <p>
+    Ahora que entiendes la función, debería ser claro cómo la estás invocando más adelante en el cuerpo del archivo HTML. La línea
+  </p>
+
+  <pre>
+  <code>
+    var result=testQuestion("10 + 10");
+  </code>
+  </pre>
+
+  <p>
+    llama a `testQuestion()` y le pasa una cadena que contiene una expresión aritmética. La función devuelve un resultado, el cual se almacena en la variable `result`. Luego puedes mostrar el resultado usando `document.write()`.
+  </p>
+
+  <p>
+    Estas dos líneas podrían condensarse en una sola línea:
+  </p>
+
+  <pre>
+  <code>
+    document.write(testQuestion("10 + 10"));
+  </code>
+  </pre>
+
+  <h2>Funciones Recursivas</h2>
+  <p>Ahora que has visto un ejemplo de cómo funcionan las funciones, echemos un vistazo a una aplicación de las funciones llamada recursión.</p>
+
+  <blockquote>
+    <strong>Nuevo Término: </strong>La recursión se refiere a situaciones en las que las funciones se llaman a sí mismas. Este tipo de funciones se conocen como funciones recursivas.
+  </blockquote>
+
+  <p>Por ejemplo, lo siguiente es un ejemplo de una función recursiva que calcula un factorial:</p>
+
+  <blockquote>
+    <strong>Nota: </strong>Un factorial es una función matemática. Por ejemplo, el factorial de 5 (escrito 5!) es igual a 5x4x3x2x1 y 7! = 7x6x5x4x3x2x1.
+  </blockquote>
+
+  <pre>
+  <code>
+    function factorial(number) {
+      if (number &gt; 1) {
+      return number * factorial(number - 1);
+      } else {
+      return number;
+      }
+    }
+  </code>
+  </pre>
+
+  <p>
+    A primera vista, esta función puede parecer extraña. Esta función se basa en el hecho de que el factorial de un número es igual al número multiplicado por el factorial del número menos uno. Expresado matemáticamente, esto podría escribirse así:
+  </p>
+
+  <pre>
+  <code>
+    x! = x * (x-1)!
+  </code>
+  </pre>
+
+  <p>
+    Para aplicar esta fórmula, has creado una función recursiva llamada factorial(). La función recibe un número como argumento. Utilizando la siguiente estructura if-else:
+  </p>
+
+  <pre>
+  <code>
+    if (number > 1) {
+      return number * factorial(number - 1);
+      } else {
+      return number;
+    }
+  </code>
+  </pre>
+
+  <p>
+    La función devuelve un valor de 1 si el argumento es igual a 1, o aplica la fórmula y devuelve el número multiplicado por el factorial del número menos uno.
+  </p>
+
+  <p>
+    Para lograr esto, debe llamar a la función factorial() desde dentro de la función factorial(). Aquí es donde el concepto de alcance de variables se vuelve extremadamente importante. Es crucial darse cuenta de que cuando la función llama a factorial(), se invoca una nueva instancia de la función, lo que significa que se crea una nueva instancia de número. Esto continúa ocurriendo hasta que la expresión number - 1 tenga un valor de 1.
+  </p>
+
+  <blockquote>
+    <strong>Consejo: </strong>Las funciones recursivas son poderosas, pero pueden ser peligrosas si no se tiene cuidado con la recursión infinita. La recursión infinita ocurre cuando la función está diseñada de tal manera que se llama a sí misma indefinidamente sin detenerse.<br>
+      A nivel práctico, en JavaScript, la recursión infinita no es probable que ocurra debido a la forma en que JavaScript maneja la asignación de memoria. Esto significa que las recursiones profundas, incluso si no son infinitas, pueden hacer que el navegador se bloquee.
+  </blockquote>
+
+  <p>
+    Es importante destacar que la función factorial() previene la recursión infinita porque la estructura if-else asegura que eventualmente la función dejará de llamarse a sí misma una vez que el número pasado a ella sea igual a uno. Además, si la función es llamada inicialmente con un valor menor que dos, la función retornará inmediatamente sin recursión alguna.
+  </p>
+
+  <p>
+    Usando funciones recursivas, es posible extender el programa utilizado en el Listado 4.1 para que continúe haciendo la pregunta hasta que el usuario proporcione la respuesta correcta, como se muestra en el Listado 4.2.
+  </p>
+
+  <blockquote>
+    <strong>Entrada: </strong>Listado 4.2. Utilizando una función recursiva para repetir la entrada.
+  </blockquote>
+
+  <pre>
+  <code>
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Example 4.2&lt;/TITLE&gt;
+
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- HIDE FROM OTHER BROWSERS
+
+    //DEFINE FUNCTION testQuestion()
+    function testQuestion(question) {
+    //DEFINE LOCAL VARIABLES FOR THE FUNCTION
+    var answer=eval(question) ;
+    var output=&quot;What is &quot; + question + &quot;2&quot;;
+    var correct=&apos;&lt;IMG SRC=&quot;correct.gif&quot;&gt;&apos;;
+    var incorrect=&apos;&lt;IMG SRC=&quot;incorrect.gif&quot;&gt;&apos;;
+
+    //ASK THE QUESTION
+    var response=prompt (output, &quot;0&quot;);
+
+    //CHECK THE RESULT
+    return (response == answer) ? correct : testQuestion(question) ;
+    }
+
+    // STOP HIDING FROM OTHER BROWSERS --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY&gt;
+
+    &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;
+    &lt;!-- HIDE FROM OTHER BROWSERS
+
+    //ASK QUESTION AND OUTPUT RESULTS
+    var result=testQuestion(&quot;10 + 10&quot;);
+    document.write(result);
+
+    //STOP HIDING FROM OTHER BROWSERS --&gt;
+    &lt;/SCRIPT&gt;
+    &lt;/BODY&gt;
+    &lt;/HTML&gt;
+  </code>
+  </pre>
+
+  <p>
+    <strong>Análisis: </strong>Observa que solo has realizado un cambio en la expresión condicional:
+  </p>
+  
+  <pre>
+  <code>
+    return (response == answer) ? correct : testQuestion(question);
+  </code>
+  </pre>
+
+  <p>
+    Donde originalmente devolvías el valor de la variable `incorrect` cuando el usuario proporcionaba una respuesta incorrecta, ahora estás devolviendo el resultado de hacer la pregunta nuevamente (llamando a `testQuestion()` de nuevo).
+  </p>
+
+ 
+
+  <script src="script.js"></script>
+</body>
+<!-- 
+https://mothereff.in/html-entities
+-->
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>HTML, Manual de Estilo | Capítulo 3: Escribiendo Documentos HTML</title>
+</head>
+<body> 
+
+  <a href="cap2.html">Cápitulo 2</a> &#9664; | &#9679 <a href="index.html">Indice</a> | &#9654; <a href="cap4.html">Cápitulo 4</a>
+  <hr>
+
+  <h1>Capítulo 3<br>
+    Escribiendo Documentos HTML</h1>
+  <p>
+    HTML es tan fácil que es tentador lanzarse directamente y comenzar a escribir texto con etiquetas de marcado, revisando los archivos con Mosaic u otro de los navegadores gráficos y haciendo correcciones mientras avanzas. Puedes poner información en la World Wide Web muy rápidamente. En uno o dos días, puedes crear un trabajo hipertexto en HTML que establecerá una sólida presencia en la Web para ti o tu organización. Sin embargo, es igual de fácil crear un trabajo hipertexto descuidado que uno ordenado. En este capítulo encontrarás una discusión de los principios de escribir buenas páginas web de la World Wide Web, además de tutoriales paso a paso de dos tipos de aplicaciones web: construir una página de inicio personal y convertir un documento existente a hipertexto.
+  </p>
+  <p>
+    Por supuesto, todo esto está creciendo y cambiando rápidamente. Quizás la convención más ampliamente observada que se encuentra en los documentos web es la inclusión de la frase "En Construcción". Puedes escribir una página de inicio en unas pocas horas, pero nunca terminarás con ella; crecerá a medida que tú lo hagas. Esta es una razón por la cual observar algunos principios de buen diseño puede ser tan importante. La creación de una página de inicio personal, en particular, es un acto de expresión creativa en un medio completamente nuevo. Es la configuración de tu rincón en el ciberespacio para proporcionar información, bienes y servicios, y para definir quién eres ante la Aldea Electrónica Global.
+  </p>
+  <h2>Principios generales de HTML</h2>
+  <p>
+    Otra razón por la cual el buen diseño es tan importante en las aplicaciones web es que no tienes control sobre el contexto desde el cual las personas establecerán enlaces a tus páginas web. Piensa en tu aplicación web como una casa en el ciberespacio; la puerta siempre está abierta. Cada página HTML es una habitación en esta casa. La mayoría de las personas ingresarán a través de tu página de inicio. Una buena página de inicio se asegura de dar la bienvenida adecuadamente a sus visitantes y hacerles saber dónde están y qué recursos interesantes se pueden encontrar dentro. Los controles de navegación de su navegador permitirán al lector salir de la misma manera en que ingresaron; aún así, es agradable cuando la página de inicio proporciona sugerencias y enlaces a otros lugares en el ciberespacio para visitar.
+  </p>
+  <p>
+    No todos entrarán a tu aplicación web a través de su página de inicio. Algunas personas entrarán por las ventanas de otras habitaciones en tu casa cibernética. Hay varios programas automatizados que exploran continuamente la World Wide Web, construyendo bases de datos de títulos, encabezados y URL mientras se vinculan de un servidor web a otro. A veces se les llama robots, arañas, gusanos o caminantes web. Hay una página en la Web con información sobre los robots conocidos en http://web.nexor.co.uk/mak/doc/robots/robots.html. Podrías pedirle al World Wide Web Worm, por ejemplo, que proporcione una lista de todas las páginas web que tengan la palabra fractal en su título. Tales enlaces son independientes de la estructura que los autores de esas páginas pretendían. El punto es que los lectores encontrarán formas que no anticipaste para ingresar a tu trabajo hipertextual. Ayuda a estas personas; como mínimo, proporciona un enlace de regreso a tu página de inicio desde cada otra página que pongas en la Web. No dejes a los lectores perdidos sintiéndose más perdidos que cuando entraron.
+  </p>
+  <p>
+    Recuerda también que tus documentos HTML, el código fuente de tu aplicación web, están fácilmente disponibles para cualquiera que pueda acceder a la web. Otros autores de HTML pueden copiar elementos de tus páginas e incorporarlos en sus aplicaciones web. Las obras de hipertexto en la World Wide Web son estructuras vivas y en constante crecimiento. Si tienes esto en mente, con un poco de preparación, práctica y planificación, tus obras de hipertexto pueden crecer y evolucionar tan suavemente como lo hace la web.
+  </p>
+  <p>
+    Probablemente la mejor preparación para escribir documentos HTML para la World Wide Web es leer documentos HTML de la World Wide Web. Obtén una idea de lo que otros autores han puesto en la Web y los enfoques que han tomado para organizar y formatear su trabajo. Necesitarás un navegador gráfico para apreciar completamente lo que otros han hecho con HTML. Deberías tener al menos NCSA Mosaic. Otros navegadores pueden tener más funciones que Mosaic; sin embargo, la mayoría de los documentos actualmente en la Web han sido escritos con Mosaic en mente. Mosaic es un gran software. Viene en versiones para Microsoft Windows, Apple Macintosh y Unix X/Windows, y es gratuito, una oferta increíble.
+  </p>
+  <p>
+    La página de inicio para las tres versiones de Mosaic, http://www.ncsa.uiuc.edu/SDG/Software/Mosaic, es un buen lugar para comenzar tu estudio de las páginas web. Otro buen lugar es la página de Novedades de NCSA en el mismo servidor, http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/Docs/whats-new.html. Esta página se actualiza cada dos semanas con enlaces a páginas web que acaban de ser creadas. Es una buena muestra de lo que las personas en muchos campos diferentes están haciendo actualmente en la Web con HTML.
+  </p>
+  <p>
+    Mosaic y la mayoría de los otros navegadores gráficos pueden guardar cualquier documento HTML en la World Wide Web en su forma original como un archivo HTML. Entonces es cuestión simple abrir ese archivo HTML en un editor de texto para ver cómo se utilizó HTML para crear la visualización vista en la ventana de Mosaic. Como práctica en la redacción de documentos HTML, edita estos archivos y cambia las etiquetas. Mosaic tiene una opción "Abrir local..." bajo su menú Archivo que puedes usar para ver las páginas reeditadas y ver tus cambios reflejados en la visualización del navegador. Después de mirar varios documentos HTML y jugar con los elementos de HTML, deberías empezar a tener una idea de lo que puedes hacer con tus propias aplicaciones. Pero antes de comenzar, es bueno revisar algunos principios que se aplican a la programación de computadoras en general pero tienen una aplicación especial en los documentos HTML en la World Wide Web.
+  </p>
+  <p>
+    <strong>Principio general número 1:</strong> Mantenlo simple. Enfatiza el contenido sobre la forma.
+Tienes poco control sobre cómo se verá exactamente tu documento cuando sea visto por los diversos navegadores que tienen a su disposición los lectores, así que no pierdas mucho esfuerzo tratando de que algo luzca perfecto; en cambio, dedica tu tiempo a hacer que el contenido, la información que deseas transmitir al lector, sea claro y convincente. Si la tipografía de un documento debe ser exacta, considera poner una versión de ese documento en tu servidor web en un formato que pueda ser descargado por el lector, como un documento de Microsoft Word en formato RTF (Rich Text Format) o un archivo de Adobe PostScript o Acrobat, por ejemplo.
+  </p>
+  <p>
+    Asegúrate de que las imágenes en tu página web sean informativas. Una pequeña foto tuya en tu página de inicio proporciona a los lectores información que solo las palabras no pueden transmitir. Una foto de tu automóvil, a menos que hayas hecho algo extraordinario con él, no lo hace. Evita poner páginas web que imiten cajeros automáticos con grandes botones gráficos para enlaces. Tardan demasiado en cargar y son más difíciles de mantener. HTML proporciona diferentes estructuras de listas, una de las cuales debería ser suficiente para organizar cualquier conjunto de enlaces. A medida que la aplicación evolucione, encontrarás mucho más fácil cambiar estas estructuras de listas que un conjunto de imágenes. Tu página web tampoco debería parecer la portada de una revista. Los lectores elegirán enlazar a tu página porque están buscando información relacionada, no por tus gráficos geniales. Las páginas web no compiten entre sí por la atención del lector.
+  </p>
+  <p>
+    El Internet, y la World Wide Web en particular, están creciendo tan rápido que muchos expertos en Internet están preocupados de que el ancho de banda, esencialmente la capacidad de las redes para manejar el tráfico, esté comenzando a escasear. Por lo tanto, se considera una práctica educada (buena netiqueta) mantener al mínimo la cantidad de datos que estás solicitando a otros que muevan a través de sus redes en tu nombre. Los elementos gráficos grandes consumen ancho de banda. Es probable que tu programa gráfico de PC sea excelente para crear hermosos gráficos de barras tridimensionales con rellenos de colores degradados, pero probablemente puedas proporcionar la misma información con un gráfico bidimensional en blanco y negro. Un enfoque comúnmente encontrado en la Web es el uso de una versión pequeña de un gráfico, a menudo llamada miniatura, como enlace a una versión más grande. Por ejemplo, este fragmento de HTML
+  </p>
+  <pre>
+    Click &lt;A HREF=&quot;Large_AE.GIF&quot;&gt; Albert
+    &lt;IMG SRC=&quot;Small_AE.GIF&quot; ALT=&quot;Einstein&quot; ALIGN=MIDDLE&gt;
+    &lt;/A&gt; Para ver una imagen grande (90 kilobytes) del científico.
+  </pre>
+  <p>
+    crea la visualización Mosaic mostrada en la Figura 3.1.
+  </p>
+  <figure>
+    <img src="images/fig3.1.webp" alt="Figura 3.1: Utilizando una miniatura para acceder a una imagen más grande.">
+    <figcaption>Figura 3.1: Utilizando una miniatura para acceder a una imagen más grande.</figcaption>
+  </figure>
+  <p>
+    El direccionamiento de URL relativa (usando una URL parcial para referirse a la ubicación de un archivo relativo a la URL de la página actual) utilizado en la generación de la Figura 3.1 requiere que los dos archivos de imagen referenciados en los anclajes HTML: Large_AE.GIF y Small_AE.GIF, estén en el mismo directorio que la página web que contiene los enlaces. El nombre Albert y la imagen pequeña son juntos el ancla de un enlace al archivo de imagen más grande, Large_AE.GIF. Al hacer clic en cualquiera de ellos, se descargará el archivo más grande y se enviará a una aplicación auxiliar para mostrarlo en una ventana separada como una imagen externa. Al indicar a los lectores en el texto cuán grande es el archivo de imagen, les proporciona la información necesaria para estimar cuánto tiempo llevará cargarlo. Observa el uso del atributo ALT en la etiqueta IMG para dirigir a los navegadores no gráficos a mostrar el texto "Haz clic en Albert Einstein para ver una imagen grande (90k bytes) del científico".
+  </p>
+  <p>
+    <strong>Principio general número 2:</strong> El buen trabajo nunca está terminado. No es hasta después de que tu información esté disponible en la Web que comenzarás a apreciar la estructura de hipertexto que le es natural. Debes esperar actualizar y revisar frecuentemente cualquier trabajo que coloques en la Web. A medida que añadas y cambies la información en una página, tendrás la oportunidad de trabajar con su estructura, mejorar su apariencia y reemplazar cualquier URL muerta, es decir, enlaces a páginas web o servidores que ya no existen. También tendrás el beneficio de comentarios de otras personas que hayan leído tu trabajo. Es una buena idea, de hecho es una convención aceptada en la Web, incluir tu firma y dirección de correo electrónico en tu trabajo. Y no te avergüences de pedir comentarios.
+  </p>
+  <p>
+    Hace una década, un conferenciante en una conferencia sobre lenguajes informáticos a la que asistí formuló este principio en la siguiente ley que nombró en su honor. Aquí está la ley de Biddlestone:
+  </p>
+  <blockquote>
+    <cite>Los requisitos de cualquier sistema son una función de la experiencia adquirida al instalar ese sistema para el usuario.</cite>
+  </blockquote>
+  <p>
+    Una implicación de esta ley es que cualquier información que tengas, en cualquier estado en que se encuentre, deberías ponerla en tu servidor y permitir que la gente la vea. Es mejor hacer que la información esté disponible con una explicación que no hacerla disponible en absoluto. No es raro encontrarse con una página en la World Wide Web (o en un servidor gopher) con un encabezado seguido de la frase "En construcción" o "Trabajo en progreso", así que no deberías sentirte avergonzado de colocar información incompleta o no verificada en tus páginas web, siempre y cuando informes a tus lectores de este hecho.
+  </p>
+  <p>
+    <strong>Principio general número 3:</strong> ¡Diviértete :-)!<br>
+    La forma en que te acercas a la creación de un trabajo de hipertexto para la World Wide Web depende del tipo de información que desees ofrecer y de cuánta de ella ya esté en forma digital. En términos generales, hay dos enfoques: de arriba hacia abajo y de abajo hacia arriba. Si estás empezando un trabajo desde cero y hay poca o ninguna información existente en línea, entonces trabaja de arriba hacia abajo. Si ya hay mucha información disponible que necesita ser organizada, o si hay un trabajo existente que se debe convertir en hipertexto, entonces comienza desde abajo y avanza. Por supuesto, no todas las aplicaciones de hipertexto encajan fácilmente en una de estas dos categorías. La mayoría de los proyectos del mundo real son una combinación de trabajo nuevo y material existente. Esto es típico de las organizaciones que ya hacen uso de información distribuida.
+  </p>
+  <p>
+    Un tercer enfoque que podrías encontrar útil es el robo. Sí, el robo; si encuentras algo que te gusta, cópialo. Edita las páginas de otras personas y reemplaza su información con la tuya. Puedes preferir pensar en esto como tomar prestadas ideas; si es así, deberías devolver las ideas con interés.
+  </p>
+  <p>
+    Robar de otras páginas web puede ser muy productivo. Sin embargo, debo recomendar que solo copies la estructura y los enlaces de hipertexto, no el contenido de la página web de otra persona. Evita copiar cualquier cosa de páginas que tengan declaraciones de derechos de autor explícitas o que estén conectadas a organizaciones con recursos financieros y legales importantes. Cuando tengas dudas, pregunta. Y da crédito donde corresponda.
+  </p>
+
+  <h2>Buen estilo HTML</h3>
+  <p>
+    A medida que la Web continúa creciendo, se vuelve cada vez más importante escribir HTML que cumpla con ciertas pautas y estilos. En este momento hay alrededor de una docena de navegadores web disponibles. Dentro de un año, espero completamente que ese número se triplique. Los principales servicios en línea tienen planes de proporcionar navegadores web como parte de sus ofertas. Las nuevas versiones de los sistemas operativos más populares, Microsoft Windows 95, Macintosh System 7.5 y OS/2 Warp, tienen conectividad a Internet incorporada. Esto ampliará enormemente la base de usuarios potenciales de Internet y la World Wide Web; es de esperar que los principales editores de software respondan con una avalancha de productos web.
+  </p>
+  <p>
+    Por lo tanto, es importante escribir HTML que se vea bien en cualquier cliente, no solo en Mosaic y en la generación actual de navegadores. Esta sección ofrecerá algunas pautas sobre qué hacer y qué no hacer al escribir buenos documentos HTML que sean fáciles de mantener y que producirán resultados presentables en cualquier navegador. Si sigues estas pautas, es posible que tu documento no se vea perfecto en cada navegador, pero no se verá feo en ninguno. Por favor, ten en cuenta que nada de esto está escrito en piedra. La Web, por grande que sea, aún está en su infancia, y nadie quiere inhibir su crecimiento, ni tampoco el tuyo.
+  </p>
+  <p>
+    Es una buena idea firmar y fechar todos los documentos que coloques en la Web para que tus lectores puedan formarse una impresión sobre la autoridad del documento: qué tan reciente es y qué tan confiable es la fuente de la información. En una página principal o cualquier página que sirva como introducción a un trabajo hipertextual, tu firma debería incluir tu nombre completo y dirección de correo electrónico para que los lectores puedan enviarte comentarios sobre tu trabajo. Puedes convertir tu nombre en un enlace a tu página de inicio personal. En páginas menos importantes del trabajo, tu firma puede ser simplemente tus iniciales vinculadas de regreso a la información de autoría en la página principal.
+  </p>
+  <p>
+    Puedes agregar una firma externa a una página web colocando un elemento de enlace en el encabezado de la página. Debería estar escrito
+  </p>
+  <pre>
+    &lt;LINK REV=&quot;made&quot; HREF=&quot;mailto:email_address&quot;&gt;
+  </pre>
+  <p>
+    Con tu dirección de correo electrónico apareciendo en lugar de "email_address" en el ejemplo. Colócala después de las etiquetas de título y antes del cierre de la etiqueta &lt;/HEAD&gt;. El REV (relación inversa) indica cómo este documento está relacionado con el objeto señalado por la URL HREF: tu dirección de correo electrónico. El valor "made" dice que tu dirección de correo electrónico "creó" este documento. Esta convención es relativamente nueva pero está ganando amplia aceptación como una forma de proporcionar a los servidores y navegadores tu identidad.
+  </p>
+  <p>
+    Recuerda que tus documentos van a ser publicados en la World Wide Web, así que al fechar un documento, utiliza un formato de fecha largo con el nombre completo o abreviado del mes; en otras palabras, 1 de octubre de 1994 o 1-Oct-94. Los formatos como 10/1/94 pueden ser ambiguos.
+  </p>
+  <p>
+    Probablemente el tipo de error más prevalente al escribir HTML es el uso incorrecto de los saltos de párrafo. En parte, esto proviene de trabajar tanto con un navegador que comienzas a aceptar su manejo de los espacios en blanco como común; también proviene de la concepción errónea de que el elemento &lt;P&gt; señala un fin de párrafo, en lugar de un salto de párrafo. Según la especificación de HTML, "&lt;P&gt; se utiliza entre dos piezas de texto que de otra manera se unirían".
+  </p>
+  <p>
+    Por lo general, esto no es importante. Sin embargo, en ciertos contextos, el uso de etiquetas de párrafo adicionales siempre debe evitarse, como antes o después de cualquier elemento que ya implique un salto de párrafo. Evita colocar el elemento &lt;P&gt; ni antes ni después de encabezados o texto marcado con etiquetas ADDRESS, BLOCKQUOTE o PRE. No debes colocar etiquetas de párrafo inmediatamente antes o después de una estructura de lista o entre los elementos de una lista tampoco. Las etiquetas de elementos de lista &lt;LI&gt;, &lt;DT&gt; y &lt;DD&gt; ya implican saltos de párrafo. Se necesita alguna aclaración con las etiquetas de lista de glosario &lt;DT&gt; y &lt;DD&gt;. No es HTML válido tener más de una etiqueta &lt;DD&gt; siguiendo a una etiqueta de término definitorio &lt;DT&gt;. Si la parte de definición de la entrada requiere más de un párrafo de texto, el uso de etiquetas de párrafo para separarlos es correcto; el uso de múltiples etiquetas &lt;DD&gt; por &lt;DT&gt; no lo es.
+  </p>
+  <p>
+    Otro error común es no cerrar correctamente un elemento HTML. Con entidades de caracteres, esto significa olvidar el punto y coma final o tener espacios separando la entidad de caracteres del resto del texto. También es fácil olvidar que el ampersand es el carácter de escape. Asegúrate de escribir AT&amp;amp;T y no AT&T. Olvidar una de las comillas dobles que deberían encerrar una URL también es un error común. Algunos navegadores no les importa si una URL está entre comillas, pero otros sí; muchos tendrán un problema si una comilla está presente y la otra no.
+  </p>
+  <p>
+    Con elementos de etiqueta, pueden ocurrir errores cuando falta el signo de cierre de ángulo derecho (>). Muchos navegadores renderizarán correctamente cadenas que contengan un único signo de ángulo derecho sin un signo de ángulo izquierdo correspondiente (<), como si ese carácter fuera parte del texto. Por ejemplo, &amp;lt;This is not a tag> se mostrará como: &lt;This is not a tag&gt;. Sin embargo, se recomienda utilizar la entidad de caracteres &amp;gt; para el signo de ángulo derecho —&amp;lt;This is not a tag&amp;gt;— porque si hay otros errores de etiquetas en el documento, tener un signo de cierre de ángulo derecho (>) adicional solo empeorará las cosas. Con etiquetas de marcado no vacías, olvidar la barra diagonal (/) que comienza el elemento de cierre causará errores, al igual que tener espacios a ambos lados de la barra diagonal. En ambos casos, la mayoría (pero no todos) de los navegadores ignorarán la etiqueta de cierre incorrecta y producirán los mismos errores que si olvidaras completamente la etiqueta de cierre. Cualquier etiqueta que estuviera en efecto, su formato continuaría en el texto siguiente, posiblemente hasta el final de la página.
+  </p>
+  <p>
+    La anidación de etiquetas debe realizarse con cuidado. Como regla general, las etiquetas que definen estilos deben estar dentro de las etiquetas que implican estructura. Sin enumerar todas las posibles combinaciones, aquí hay algunas pautas:
+  </p>
+  <p>
+    Evita anidar otras etiquetas dentro de un encabezado. La gran excepción a esta regla son los enlaces que marcan el texto del encabezado como el inicio o destino de un enlace de hipertexto. Los encabezados nunca deben contener etiquetas que impliquen saltos de párrafo. Esto incluye otros encabezados, etiquetas de párrafo, líneas horizontales, estructuras de lista, citas en bloque, direcciones y etiquetas de estilo preformateado. Si deseas crear un encabezado de varias líneas, utiliza la etiqueta de salto de línea &lt;BR&gt;. Del mismo modo, los encabezados nunca deben estar encerrados en etiquetas que no sean &lt;BODY&gt;&lt;/BODY&gt; y &lt;FORM&gt;&lt;/FORM&gt;, y por supuesto, las etiquetas &lt;HTML&gt;&lt;/HTML&gt; que definen el documento. Encerrar encabezados con cualquier otra etiqueta no tiene sentido y los resultados son impredecibles.
+  </p>
+  <p>
+    El uso de etiquetas de estilo para cambiar la apariencia de un encabezado debería evitarse, excepto cuando se aplique a una pequeña parte del texto del encabezado, por ejemplo:
+  </p>
+  <pre>
+    &lt;H3&gt;Algunos números de telefónos &lt;STRONG&gt;Importantes&lt;/STRONG&gt;&lt;H3&gt;.
+  </pre>
+  <p>
+    Las etiquetas de imagen se pueden utilizar dentro de un encabezado para proporcionar una contraparte gráfica pequeña al texto del encabezado. Tener la imagen dentro de las etiquetas de encabezado es necesario para que el navegador reconozca el atributo ALIGN y coloque la imagen adecuadamente con respecto al texto del encabezado.
+  </p>
+  <p>
+    Los anclajes deben ser los elementos más internos de un conjunto de etiquetas anidadas. Por ejemplo:
+  </p>
+  <pre>
+    &lt;H3&gt;William Shakespeare&lt;/H3&gt;
+    An English playwright ....etc., etc.,
+    &lt;UL&gt;
+    &lt;LI&gt;&lt;CITE&gt;&lt;A HREF=&quot;. . . &quot;&gt;Macbeth&lt;/A&gt;&lt;/CITE&gt;
+    &lt;LI&gt;..
+    .
+    &lt;/UL&gt;
+  </pre>
+  <p>
+    Un último punto con respecto a las etiquetas es que debes evitar usar cualquier etiqueta obsoleta; pueden infiltrarse en tu trabajo si copias partes de él de otras páginas en la Web. Estos elementos incluyen &lt;PLAINTEXT&gt;&lt;/PLAINTEXT&gt;, &lt;XMP&gt;&lt;/XMP&gt;, &lt;LISTING&gt;&lt;/LISTING&gt;, &lt;HPx&gt;&lt;/HPx&gt;, y &lt;COMMENT&gt;&lt;/COMMENT&gt;. Los tres primeros deberían ser reemplazados con las etiquetas preformateadas &lt;PRE&gt;&lt;/PRE&gt;; &lt;HP&gt;&lt;/HP&gt; (frase resaltada) debería ser reemplazada con etiquetas de estilo apropiadas; y &lt;COMMENT&gt;&lt;/COMMENT&gt; debería ser reemplazado con comentarios SGML que están encerrados por las cadenas &lt;!-- y --&gt;.
+  </p>
+  <p>
+    Las URL pueden ser una fuente de errores. Un error en la URL no afectará la representación de la página en la pantalla del navegador, pero una URL mal compuesta puede interpretarse incorrectamente en algunos navegadores. Las URL relativas, que se utilizan en las dos siguientes secciones de este capítulo, tienen ventajas significativas: son más cortas y hacen que una colección de documentos sea más portátil. Sin embargo, las URL relativas deben usarse con cuidado, ya que la URL no contiene toda la información necesaria para construir el enlace. La información del servidor y la ruta faltante la toma el navegador de la URL del documento que contiene el enlace. Desafortunadamente, no todos los navegadores hacen esto exactamente de la misma manera. Lo que siempre es seguro es una referencia relativa a un archivo en el mismo directorio que la página actual. Los archivos en un subdirectorio generalmente se pueden referenciar usando una barra diagonal ( / ), no la barra invertida ( \ ) utilizada en los nombres de ruta de DOS, como en:
+  </p>
+  <pre>
+    nuestro secretario, &lt;A HREF=&quot;staff/Cratchet.html&quot;&gt;Bob Cratchet&lt;/A&gt;
+  </pre>
+  <p>
+    También puedes referirte al mismo archivo anterior utilizando un punto para referirte al directorio actual:
+  </p>
+  <pre>
+    nuestro secretario, &lt;A HREF=&quot;./staff/Cratchet.html&quot;&gt;Bob Cratchet&lt;/A&gt;
+  </pre>
+  <p>
+    Puedes referirte al directorio padre usando dos puntos (..). Sin embargo, esto puede no funcionar con todos los navegadores y servidores. Para estar absolutamente seguro, cualquier archivo que no esté en el mismo directorio que la página actual debería ser referenciado por su ruta completa y nombre de archivo.
+  </p>
+  <p>
+    Ten cuidado con el uso del método URL de <em>file</em>. Lo que se supone que hace es hacer referencia al archivo en el host local de quien esté navegando por el documento. Esto podría ser un archivo en tu disco duro o podría ser un archivo en la computadora de tu proveedor de servicios de Internet. No se supone que sea un archivo en el servidor web señalado por la URL actual. Desafortunadamente, algunos navegadores antiguos tratan "file" como sinónimo de "ftp". A menos que sepas lo que estás haciendo, evita usar este método URL.
+  </p>
+  <p>
+    Estas son solo algunas de las fuentes de error más comunes. Desarrollar un buen estilo HTML es cuestión de práctica, estudiar el trabajo de otros y, finalmente, tener un buen sentido común.
+  </p>
+
+  <h2>Creando una página de inicio</h2>
+  <p>
+    Una página de inicio es el documento de hipertexto dentro de un trabajo que se considera el punto de partida principal. Aquí se presenta el trabajo y se ubica en el contexto más amplio en el que está contenido. Esta definición es algo abstracta, ya que depende en parte del punto de vista del lector. La World Wide Web puede verse como un único trabajo de hipertexto, aunque con muchos autores. La página de inicio predeterminada de la Web está en el CERN, el Centro Europeo de Investigación en Física de Altas Energías. La URL es
+  </p>
+  <a href="http://info.cern.ch/hypertext/WWW/TheProject.html">http://info.cern.ch/hypertext/WWW/TheProject.html</a>
+  <p>
+    Tu página de inicio personal es el punto de partida para todos tus trabajos en hipertexto. Como se creará desde cero, recomiendo usar un enfoque de arriba hacia abajo, comenzando con un esquema simple como este:
+  </p>
+  <ol type="I">
+    <li>Tu Nombre
+      <ol type="1">
+        <li>Un mensaje de bienvenida</li>
+        <li>Información sobre ti</li>
+        <li>Una declaración de tus objetivos</li>
+        <li>Actividades/Anuncios actuales</li>
+        <li>Información relacionada</li>
+        <li>Firma, dirección, marcas de tiempo</li>
+      </ol>
+    </li>
+  </ol>
+  <p>
+    No es necesario que sigas el esquema anterior exactamente, pero esta es la información que los lectores generalmente esperan ver en una página personal.
+  </p>
+  <p>
+    Antes de comenzar a editar los archivos HTML, necesitas un lugar donde ponerlos. Crea un nuevo directorio para estos archivos. Un subdirectorio del que contiene Mosaic o tu navegador favorito es una buena ubicación para mantener los nombres de ruta cortos. La Figura 3.3 se refiere a este directorio como WebSpace, pero puedes nombrar tu directorio como quieras. En este nuevo directorio, coloca un archivo de texto que contenga una plantilla HTML. Dale a este archivo un nombre obvio como template.html. Si tu sistema operativo soporta documentos estacionarios o de solo lectura, debes guardar esta plantilla de esa manera para evitar sobrescribirla accidentalmente. Asegúrate de guardarla también como un archivo de texto plano en lugar de guardarlo en el formato normal de tu procesador de textos. Luego, comienza con una copia del archivo de plantilla y llena las secciones TITLE y BODY basándote en el esquema anterior, de la siguiente manera:
+  </p>
+  <pre>
+    <code>
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Johannes Kepler&apos;s Home Page&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+    &lt;B0DY&gt;
+    &lt;Hl&gt;Johannes Kepler&lt;/Hl&gt;
+    &lt;STRONG&gt;Welcome to my Home Page ! &lt;/STR0NG&gt;
+    &lt;HR&gt;
+    &lt;H2&gt;Who am I&lt;/H2&gt;
+    &lt;H2&gt;What is this Document&lt;/H2&gt;
+    &lt;H2&gt;Current Projects&lt;/H2&gt;
+    &lt;H2&gt;Related Information&lt;/H2&gt;
+    &lt;HR&gt;
+    &lt;ADDRESS&gt;
+    Johannes Kepler &amp;lt; kepler@nasa.gov&amp;gt;
+    &lt;/ADDRESS&gt;
+    Created: September 26, 1994,
+    Updated: September 27. 1994
+    &lt;/B0DY&gt;
+    &lt;/HTML&gt;
+    </code>
+  </pre>
+  <p>
+    Y guárdalo en el directorio WebSpace como homepage.html. Todos los documentos HTML deben tener nombres de archivo que terminen con la extensión .html a menos que los archivos residan en un sistema DOS, en cuyo caso deberían tener la extensión .htm. Si cargas este archivo en Mosaic ahora, obtendrás la visualización mostrada en la Figura 3.2.
+  </p>
+  <figure>
+    <img src="images/fig3.2.webp" alt="Figura 3.2: Página de inicio de Johannes Kepler: primer borrador">
+    <figcaption>Figura 3.2: Página de inicio de Johannes Kepler: primer borrador</figcaption>
+  </figure>
+  <p>
+    Desde aquí en adelante, es simplemente cuestión de completar párrafos de texto narrativo bajo cada título, quizás con algunos subtítulos y tal vez una imagen de ti mismo. En esta etapa, no te preocupes por la estructura de hipertexto; eso evolucionará a medida que desarrolles la página de arriba hacia abajo. Si descubres que bajo algún título solo estás enumerando elementos, entonces utiliza una de las estructuras de lista HTML. Una característica común de muchas páginas de inicio es una lista de enlaces a los sitios web favoritos del autor. Coloca tales listas bajo el título de Información Relacionada.
+  </p>
+  <p>
+    Ahora lee lo que has escrito. ¿Mencionaste la World Wide Web? Si lo hiciste, entonces convierte esa referencia en un enlace a la página de inicio de la World Wide Web en CERN:
+  </p>
+  <pre>
+    <code>
+      &lt;A HREF=&quot;http://info.cern.ch/hypertext/WWW/TheProject.html&quot;&gt;World Wide Web&lt;/A&gt;
+    </code>
+  </pre>
+  <p>
+    Del mismo modo para cualquier organización a la que hagas referencia en el texto y que tenga páginas de inicio en la web.
+  </p>
+  <p>
+    ¿Tienes una copia de tu currículum en línea? Si es así, entonces crea una versión de texto plano de ese archivo y guárdalo en el directorio WebSpace como resume.txt. La extensión .txt (y la ausencia de etiquetas &lt;HTML&gt;&lt;/HTML&gt;) indica a los navegadores que no interpreten el archivo como un documento de hipertexto, en otras palabras, que respeten los saltos de línea y otros espacios en blanco en el archivo y lo presenten tal como está. Más adelante puedes crear una versión HTML de este archivo de texto, pero esto servirá por ahora. Tu estructura de archivos debería verse algo así como el listado de directorios (ligeramente simplificado) en la Figura 3.3. En la sección que informa al lector quién eres, haz un enlace al archivo de texto, así:
+  </p>
+  <pre>
+    <code>
+      ...puedes ver mi &lt;A HREF=&quot;curriculum.txt&quot;&gt;curr&iacute;culum&lt;/A&gt;, si deseas.
+    </code>
+  </pre>
+  <p>
+    Intenta incorporar el texto que ancla los enlaces de hipertexto en el flujo natural del párrafo, como hace el ejemplo anterior, y no hacer referencia explícita al texto del ancla, como en:
+  </p>
+  <pre>
+    <code>
+      Haz clic &lt;A HREF=&quot;resume.txt&quot;&gt;aqu&iacute;&lt;/A&gt; para ver mi curr&iacute;culum.
+    </code>
+  </pre>
+  <p>
+    La palabra "aquí" no tiene relación semántica con el archivo al que apunta. Es decir, si un programa escaneara tu página web registrando cada URL de anclaje y su texto de anclaje asociado, la palabra "resumen" proporcionaría información adicional sobre el archivo al que apunta; la palabra "aquí" no lo haría. Además, puedes asumir bastante bien que los lectores saben qué es y qué no es un enlace para cuando llegan a tu página.
+  </p>
+  <p>
+    La página de inicio completa no debe ser más larga que unas pocas pantallas. Si alguna sección comienza a tener más de unos cuantos párrafos, es hora de crear una nueva página y enlazarla desde tu página de inicio. Por ejemplo, supongamos que bajo el encabezado "¿Quién soy yo?" enumeras tu actividad favorita, la astronomía. De la misma manera que creaste tu página de inicio, crea una página de astronomía que contenga una descripción de tu equipo, tus planetas favoritos y tal vez un enlace al grupo de noticias Usenet news:sci.astro. Guarda la página de astronomía en el directorio WebSpace y en tu página de inicio, convierte la palabra "astronomía" en un enlace, así:
+  </p>
+  <pre>
+    <code>
+      bla, bla, bla, actividad favorita: 
+      &lt;A HREF=&quot;astronomia.html&quot;&gt;astronom&iacute;a&lt;/A&gt;
+    </code>
+  </pre>
+  <figure>
+    <img src="images/fig3.3.webp" alt="Figura 3.3: Estructura de directorios de una página de inicio simple.">
+    <figcaption>Figura 3.3: Estructura de directorios de una página de inicio simple.</figcaption>
+  </figure>
+  <p>
+    Al mantener todos los archivos en el mismo directorio que tu página de inicio, todos los enlaces pueden especificarse de forma relativa con nombres de archivo simples. Cuando copies estos documentos a un directorio en un servidor web, estos enlaces seguirán siendo válidos. De esta manera, mantienes una copia de trabajo local de tu aplicación web que refleja lo que tienes disponible en la web.
+  </p>
+  <p>
+    El toque final es agregar tu imagen a tu página de inicio. Hay muchas formas de obtener una imagen en tu computadora: escáner, cámara digital, CD de fotos; y los formatos de archivo de imagen difieren de un sistema operativo a otro. Sin importar cómo obtuviste tu imagen en tu computadora y en qué formato de archivo se encuentre, debe ser convertida a uno de dos formatos de archivo de imagen, GIF o JPEG, antes de subirla a tu espacio web como parte de tu página de inicio.
+  </p>
+  <p>
+    El Formato de Intercambio Gráfico (GIF) es el formato más antiguo y comúnmente encontrado. Fue inventado por CompuServe y se utiliza ampliamente en Internet y BBS para imágenes descargables. Es el formato preferido para imágenes en línea. JPEG, un estándar desarrollado por el Grupo de Equipos Fotográficos Conjuntos, es más nuevo y aún no es compatible con muchos navegadores. Incorpora compresión de datos para que un archivo de imagen en formato JPEG pueda ser considerablemente más pequeño que la misma imagen en formato GIF. Hay muchos programas de utilidades, tanto shareware como freeware, para convertir archivos de un formato de imagen a otro.
+  </p>
+  <p>
+    Cuando una imagen se expande en una página web, se trata como si fuera un carácter de texto. Si la imagen sigue un salto de párrafo explícito o implícito, se posicionará en el margen izquierdo de la página. Si la imagen comienza con o está incrustada en una línea de texto, ese texto se alineará con la parte superior, media o inferior de la imagen según el valor del atributo ALIGN. No se inserta espacio ni antes ni después de la imagen para separarla del texto en el que está incrustada; debes proporcionar explícitamente ese espacio si lo deseas.
+  </p>
+  <p>
+    Es bastante permisible colocar una imagen en un encabezado, por ejemplo:
+  </p>
+  <pre>
+    <code>
+      &lt;H2&gt;&lt;IMG SRO&quot;kepler.gif&quot; ALIGN=MIDDLE&gt;Johannes Kepler&lt;/H2&gt;
+    </code>
+  </pre>
+  <p>o usar una imagen como ancla de un enlace, como en</p>
+  <pre>
+    <code>
+      &lt;A HREF=&quot;kepler.html&quot;&gt;
+      &lt;IMG SRC=&quot;kepler.gif&quot; ALT=&quot;Johannes Kepler&quot; ALIGN=B0TT0M&gt;
+      &lt;/A&gt;
+    </code>
+  </pre>
+  <p>
+    Ten en cuenta el uso del atributo ALT; sin él, los lectores con navegadores no gráficos no sabrían qué era el enlace. Todo lo que verían sería [IMAGEN].
+  </p>
+  <p>
+    Desafortunadamente, no hay disposición en HTML nivel 2 para envolver texto alrededor de una imagen. Sin embargo, una cosa que puedes hacer es crear una imagen GIF transparente. El formato GIF permite que un color en la paleta de la imagen sea transparente, de modo que cuando la imagen se coloca sobre el color de fondo de la página de visualización, el fondo se muestra a través de los píxeles que tienen ese color. Los GIF transparentes son especialmente útiles para colocar imágenes en una página de modo que aparezcan sin un borde, como letras en una tipografía elegante o coloreada. Consulta el Capítulo 4, Figura 4.7, para ver una página de inicio con una imagen GIF transparente.
+  </p>
+
+  <h2>Convirtiendo un documento existente a HTML</h2>
+  <p>
+    A diferencia de crear una página de inicio, convertir un documento existente a hipertexto es mejor abordarlo de abajo hacia arriba. Supongamos que tienes una guía del usuario para algún aspecto de tu negocio. Incluso podría ser una guía para usar Internet. Supondremos que el documento es de texto enriquecido, un término general para cualquier documento que sea más que un simple archivo de texto. Un documento de texto enriquecido utiliza estilos y tamaños de letra, márgenes y espaciado entre líneas. La capacidad de crear documentos de texto enriquecido es lo que distingue a los programas de procesamiento de texto, como Microsoft Word, WordPerfect y MacWrite, de los editores de texto. Los lenguajes SGML como HTML proporcionan métodos independientes de máquina para agregar información de texto enriquecido a un documento de texto plano. Los documentos de hipertexto en servidores de la World Wide Web son archivos de texto, así que primero debes crear una versión de texto plano de la guía antes de reconstruirla como texto enriquecido con elementos HTML.
+  </p>
+  <p>
+    Trabajando desde abajo hacia arriba, crearás una serie de versiones, cada una siendo un refinamiento de la anterior. Cuando la conversión de la guía esté completada, tendrás una versión completa en hipertexto compuesta de archivos enlazados, una versión en un único archivo adecuada para imprimir, una versión solo texto para lectores con navegadores no gráficos, y la versión original en un formato comprimido y codificado para descargar vía FTP. Además de todo esto, puedes crear una página de inicio para la guía que describa el trabajo y tenga enlaces a las diferentes versiones, así como información sobre autoría y estado, y enlaces a trabajos relacionados.
+  </p>
+  <p>
+    Supongamos que nuestra guía de usuario está escrita y mantenida en Microsoft Word. Lo primero que hay que hacer es crear un nuevo directorio para el proyecto, llamémoslo Guía. Puede ser un subdirectorio de WebSpace o un hermano, según sea apropiado para la relación de este trabajo con tus otras obras de hipertexto. Haz copias de trabajo del archivo (no trabajes en el original), una en el formato normal de Microsoft Word y otra en formato de texto plano, y ponlas en el directorio Guía. Dale a la última un nombre de archivo que termine con la extensión .txt. Este archivo es al que señalarás a los lectores con navegadores de línea. Más tarde puede que quieras editar esta versión solo texto e incluir anotaciones donde estaban las figuras e ilustraciones.
+  </p>
+  <p>
+    Regresa a la copia de trabajo en formato normal. Será la base desde la cual se crearán las otras versiones. Puedes crear la versión FTP a partir de este archivo comprimiéndolo y codificándolo. Comprimir compacta el archivo al eliminar el espacio excesivo, la codificación crea una versión portátil de 7 bits del archivo, lo que permite moverlo y almacenarlo como un archivo de texto en cualquier tipo de sistema operativo. Coloca el nuevo archivo en el directorio de la Guía.
+  </p>
+  <p>
+    Antes de poder agregar cualquier etiqueta de marcado al archivo de trabajo, debes reemplazar los caracteres especiales necesarios para el marcado HTML con entidades de caracteres apropiadas. Primero, realiza un reemplazo global del signo de ampersand con la cadena &amp;amp;. Esto garantizará que el documento HTML final esté libre de cualquier entidad de caracteres no deseada. A continuación, reemplaza todas las ocurrencias del símbolo de menor que (<) y el símbolo de mayor que (>) con las cadenas &amp;lt; y &amp;gt;, respectivamente, para asegurarte de que las únicas etiquetas de marcado en el documento sean las que pretendías que estuvieran ahí. Luego, intenta encontrar y reemplazar cualquier caracter especial en el texto del conjunto de caracteres ISO Latin-1 (como å o ç), comillas curvas y símbolos.
+  </p>
+  <p>
+    Las pestañas horizontales presentan un problema ya que no son interpretadas uniformemente por todos los navegadores, aunque la mayoría de los navegadores las ignorarán por completo excepto en texto preformateado. Generalmente, es una buena idea deshacerse de tantas pestañas como sea posible reemplazándolas con un número apropiado de espacios en blanco. Elimina cualquier pestaña que se use solo para la indentación de párrafos y encierra cualquier tabla u otro texto no parágrafo con las etiquetas de marcado de estilo preformateado &lt;PRE&gt; y &lt;/PRE&gt; para preservar sus saltos de línea y espaciado. Más tarde, puedes volver atrás y reemplazar algunas de las secciones preformateadas con otras estructuras HTML.
+  </p>
+  <blockquote>
+    Nota: La especificación de HTML+ incluye una marcación de TABLA. En el momento de escribir esto, esa especificación no está completa y no puedo recomendar su uso. Esto puede cambiar para cuando usted lea esto.
+  </blockquote>
+  <p>
+    Si hay figuras e ilustraciones en el archivo (las figuras tienen leyendas, las ilustraciones no), tendrán que ser copiadas a archivos individuales y eliminadas del texto. Utiliza una convención de nombres de archivo que conserve la ubicación de la imagen, por ejemplo, GUIDE03-F04.PICT, para la cuarta figura en el Capítulo 3 de la guía. Los ceros principales en el nombre del archivo garantizarán una correcta clasificación en una lista de directorios si tienes más de nueve elementos. La extensión .PICT utilizada aquí indica que este archivo está en formato Macintosh PICT. Estos archivos de imagen ahora deben ser codificados en formato GIF. A medida que elimines cada figura e ilustración, deja una etiqueta de imagen en línea en su lugar con un atributo AIT que la describa, por ejemplo.
+  </p>
+  <pre>
+    <code>
+      &lt;IMG SRC=&quot;GUIDE03-F04.GIF&quot; ALT=&quot;Fig. 3-4. A typical Gopher menu&quot;&gt;
+    </code>
+  </pre>
+  <p>
+    Como con cualquier otro proyecto informático, guarda con frecuencia y haz copias de seguridad.
+  </p>
+  <p>
+    Elimina cualquier encabezado y pie de página de la guía, ya que no tienes control sobre cuántas líneas mostrará un navegador por página o pantalla, y la numeración de páginas no es importante en obras de hipertexto. Al comienzo del archivo, crea una sección head de HTML con el título principal encerrado en etiquetas de título, seguido por la etiqueta de inicio para la sección body, seguido nuevamente por el título principal como un encabezado de nivel 1. Coloca las etiquetas de cierre correspondientes al final del archivo. Debería lucir algo así:
+  </p>
+  <pre>
+    <code>
+      &lt;HTML&gt;
+      &lt;HEAD&gt;
+      &lt;TITLE&gt;Internet Guide&lt;/TITLE&gt;
+      &lt;/HEAD&gt;
+      &lt;!-- Guide.html, a hypertext guide to the Internet --&gt;
+      &lt;!-- Converted from MS Word file: INT_GUIDE --&gt;
+      &lt;!-- J. Kepler. September 29, 1994. --&gt;
+      &lt;B0DY&gt;
+      &lt;Hl&gt;Internet Guide&lt;/Hl&gt;
+      { rest of the file }
+      &lt;/B0DY&gt;
+      &lt;/HTML&gt;
+    </code>
+  </pre>
+  <p>
+    Guarda este archivo como un archivo de solo texto. Dale un nombre de archivo con la extensi&oacute;n .html, por ejemplo, Guide.html. A continuaci&oacute;n, comenzando desde el principio del archivo, trabaja en &eacute;l, colocando saltos de l&iacute;nea (&lt;BR&gt;) y etiquetas de p&aacute;rrafo (&lt;P&gt;) donde sea necesario y encerrando los encabezados en etiquetas de encabezado. Utiliza el nivel de encabezado 2 para las divisiones principales de la gu&iacute;a, nivel 3 para el siguiente nivel, y as&iacute; sucesivamente. A medida que avances en el archivo, encierra el texto con estilo con etiquetas apropiadas: &lt;STRONG&gt;&lt;/STRONG&gt; para texto en negrita, &lt;EM&gt;&lt;/EM&gt; para texto subrayado, &lt;CITE&gt;&lt;/CITE&gt; para texto en cursiva, y as&iacute; sucesivamente. Trata de evitar el uso de las etiquetas de estilo expl&iacute;citas &lt;B&gt;&lt;/B&gt;, &lt;U&gt;&lt;/U&gt; y &lt;I&gt;&lt;/I&gt; a menos que ese estilo se refiera expl&iacute;citamente dentro del texto. Busca lugares en el texto donde se puedan usar listas HTML para estructurar la informaci&oacute;n que anteriormente marcaste como texto preformateado. Cuando hayas completado este proceso, la primera versi&oacute;n del archivo HTML de la gu&iacute;a estar&aacute; terminada. Guarda este archivo. Tu directorio deber&iacute;a verse algo as&iacute; como en la Figura 3.4.
+  </p>
+  <figure>
+    <img src="images/fig3.4.webp" alt="Figura 3.4: Listado de directorio con archivos "Guía"">
+    <figcaption>Figura 3.4: Listado de directorio con archivos "Guía"</figcaption>
+  </figure>
+  <p>
+    Es hora de cargar tu trabajo en Mosaic y ver cómo se ve. Imprímelo y muéstralo. En este punto, es posible que desees trabajar con un editor HTML o un editor de texto con extensiones HTML; Consulta el Apéndice C para conocer algunos de los programas disponibles actualmente.
+  </p>
+  <p>
+    El siguiente paso es revisar el archivo agregando anclas y enlaces. Haz que el texto de cada uno de los encabezados principales sea un ancla nombrada. Usa el índice del encabezado de la tabla de contenido como el nombre, por ejemplo:
+  </p>
+  <pre>
+    <code>
+      &lt;H3&gt;&lt;A NAME=&quot;G32&quot;&gt;3.2 Gopher&lt;/A&gt;&lt;/H3&gt;
+    </code>
+  </pre>
+  <p>
+    En la tabla de contenido, crea un enlace para cada uno de estos encabezados:
+  </p>
+  <pre>
+    <code>
+      &lt;LI&gt;&lt;A HREF=&quot;#G32&quot;&gt;3.2 Gopher&lt;/A&gt;
+    </code>
+  </pre>
+  <p>
+    Haz lo mismo con cualquier nota al pie en el trabajo. Si hay referencias a otros documentos en tu red o referencias a recursos en Internet, crea enlaces hacia ellos también. Si no estás seguro acerca de la URL, haz una suposición. Una URL incorrecta no hará que el sistema se bloquee; puedes corregir estos enlaces incorrectos cuando tengas la información correcta.
+  </p>
+  <p>
+    Cuando hayas terminado con este proceso, tendrás la versión larga en hipertexto de la guía. Esta versión será más adecuada para imprimir que tu versión final, pero seguirá siendo adecuada para la navegación en línea (aunque puede tardar un poco en cargarse en una conexión lenta). Tómate un tiempo para limpiar y probar esta versión, utilizando diferentes navegadores si es posible. Si la guía original tenía un glosario, un índice o una sección de referencia rápida, ahora es el momento de decidir cómo implementar estas características en el hipertexto.
+  </p>
+  <p>
+    Cuando la versión larga esté bastante estable, decide cómo dividirla en archivos separados. Tener una obra hipertextual en una serie de archivos vinculados tiene varias ventajas. Los archivos individuales se cargan más rápido y el lector puede tener más de una sección de la obra mostrada al mismo tiempo. Idealmente, ninguna parte única de la guía debería ser más que una docena de pantallas de información. La excepción a esto son las estructuras de lista muy largas, que deberían ir en archivos separados para facilitar el mantenimiento. La tabla de contenido irá en la página principal de la guía. Si una sección de la guía es larga y tiene muchas subsecciones, considera crear una mini página principal para esa sección con su propia tabla de contenido miniatura vinculada.
+  </p>
+  <p>
+    Cada archivo deberá comenzar y terminar con las etiquetas HTML que definen la cabeza y el cuerpo de la página. Copia el título del trabajo en su totalidad y conviértelo en un encabezado de nivel 1 como el primer elemento del cuerpo de la página de cada archivo para que tus lectores sepan qué están leyendo. Pon una línea horizontal debajo del encabezado de nivel 1 y tendrás un encabezado de página. Así es como podría lucir el inicio de la página del Capítulo 3:
+  </p>
+  <pre>
+    <code>
+      &lt;HTML&gt;
+      &lt;HEAD&gt;
+      &lt;TITLE&gt;Internet Guide. Chap. 3&lt;/TITLE&gt;
+      &lt;/HEAD&gt;
+      &lt;!-- Guide03.html, Chapter 3 of Internet Guide --&gt;
+      &lt;!-- Converted from MS Word file: INT_GUIDE --&gt;
+      &lt;!-- J. Kepler. September 29, 1994. --&gt;
+      &lt;B0DY&gt;
+      &lt;Hl&gt;Internet Guide&lt;/Hl&gt;
+      &lt;HR&gt;
+      &lt;H2&gt;&lt;A NAME=&quot;G30&quot;&gt;Chapter 3 - Clients&lt;/A&gt;&lt;/H2&gt;
+      A nice introductory paragraph should go here.
+      &lt;H3&gt;Contents&lt;/H3&gt;
+      &lt;MENU C0MPACT&gt;
+      &lt;LI&gt;&lt;A HREF=&quot;#G31&quot;&gt;ftp&lt;/A&gt;
+      &lt;LI&gt;&lt;A HREF=&quot;#G32&quot;&gt;Gopher&lt;/A&gt;
+      &lt;LI&gt;&lt;A HREF-&quot;#G33&quot;&gt;...&lt;/A&gt;
+      &lt;/MENU&gt;
+      &lt;H3&gt;&lt;A NAME=&quot;G31&quot;&gt;3.1 ftp&lt;/A&gt;&lt;/H3&gt;
+      ...
+    </code>
+  </pre>
+  <p>
+    Cualquier enlace a anclas que ahora estén en diferentes archivos debe actualizarse para incluir el nombre del archivo de destino. Los enlaces en otros archivos a anclas en este archivo, Guide03.html, también deberán actualizarse. La página de inicio de toda la guía contendrá la tabla de contenido, la introducción, la información sobre la autoría de la guía (haz que tu nombre sea un enlace a tu página de inicio personal) y enlaces a obras relacionadas.
+  </p>
+  <p>
+    Un buen detalle es añadir un conjunto de botones de navegación en la parte inferior de cada página en la guía. El siguiente fragmento de HTML, al final del archivo del Capítulo 3, crea un conjunto de cuatro botones de texto que enlazan con otros archivos de la guía. El último enlace, [CONTENIDO], va a un anclaje llamado ToC en la página de inicio de la guía, el archivo GuideHome.html. También puedes usar pequeños iconos para estos botones, pero cada icono tendrá que estar en un archivo separado. Después de los botones hay un enlace de vuelta a la información de autoría en la página de inicio de la guía.
+  </p>
+  <pre>
+    <code>
+      &lt;HR&gt;
+      &lt;A HREF=&quot;GuideHome.html&quot;&gt;[TOP]&lt;/A&gt;
+      &lt;A HREF=&quot;Guide02.html&quot;&gt;[PREVIOUS]&lt;/A&gt;
+      &lt;A HREF=&quot;Guide04. html&quot;&gt;[NEXT]&lt;/A&gt;
+      &lt;A HREF=&quot;GuideHome.html#ToC&quot;&gt;[CONTENTS]&lt;/A&gt;
+      &lt;ADDRESS&gt;
+      &lt;A HREF=M Guide.Home#author&quot;&gt;JK&lt;/A&gt;
+      &lt;/ADDRESS&gt;
+      &lt;/B0DY&gt;
+      &lt;/HTML&gt;
+    </code>
+  </pre>
+  <p>La figura 3.5 muestra cómo se ve la página del Capítulo 3 (excepto gran parte del medio) en Mosaic.</p>
+  <figure>
+    <img src="images/fig3.5.webp" alt="Figura 3.5: Página de inicio de un capítulo">
+    <figcaption>Figura 3.5: Página de inicio de un capítulo</figcaption>
+  </figure>
+
+
+  <hr>
+  <a href="cap2.html">Cápitulo 2</a> &#9664; | &#9679 <a href="index.html">Indice</a> | &#9654; <a href="cap4.html">Cápitulo 4</a>
+  
+  <script src="script.js"></script>
+</body>
+</html>
