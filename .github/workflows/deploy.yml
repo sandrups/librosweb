@@ -1,26 +1,26 @@
 name: Deploy to VPS
 
-   on:
-     push:
-       branches:
-         - main  # o master, dependiendo de tu rama principal
+on:
+  push:
+    branches:
+      - main  # o master, dependiendo de tu rama principal
 
-   jobs:
-     deploy:
-       runs-on: ubuntu-latest
-       steps:
-       - uses: actions/checkout@v2
-       
-       - name: Install SSH Key
-         uses: shimataro/ssh-key-action@v2
-         with:
-           key: ${{ secrets.SSH_PRIVATE_KEY }}
-           known_hosts: ${{ secrets.KNOWN_HOSTS }}
-       
-       - name: Deploy to VPS
-         run: |
-           ssh sandrups@${{ secrets.HOST }} << EOF
-             cd /var/www/html
-             git pull origin main
-             # Agrega aquí cualquier comando adicional que necesites ejecutar después del pull
-           EOF
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+        
+    - name: Deploy to VPS
+      run: |
+        ssh -p 5305 root@149.50.142.57 << EOF
+          cd /var/www/html
+          git pull origin main
+          # Agrega aquí cualquier comando adicional que necesites ejecutar después del pull
+        EOF
